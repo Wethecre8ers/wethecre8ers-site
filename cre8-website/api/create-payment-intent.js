@@ -17,9 +17,12 @@ module.exports = async (req, res) => {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   try {
-    const { items } = req.body || {};
+    const { items, shipping } = req.body || {};
     if (!Array.isArray(items) || items.length === 0) {
       return res.status(400).json({ error: 'Cart is empty.' });
+    }
+    if (!shipping || !shipping.firstName || !shipping.address || !shipping.city || !shipping.zip) {
+      return res.status(400).json({ error: 'Shipping details are incomplete.' });
     }
 
     let amount = 0;
@@ -40,9 +43,27 @@ module.exports = async (req, res) => {
       amount,
       currency: 'usd',
       automatic_payment_methods: { enabled: true },
+      receipt_email: shipping.email,
+      shipping: {
+        name: `${shipping.firstName} ${shipping.lastName}`,
+        address: {
+          line1: shipping.address,
+          city: shipping.city,
+          postal_code: shipping.zip,
+          country: 'US'
+        }
+      },
       metadata: {
-        // Handy for looking orders up in the Stripe dashboard later
-        items: JSON.stringify(items).slice(0, 490)
+        // Handy for looking orders up in the Stripe dashboard later.
+        // Shipping is duplicated here (not just in the `shipping` field
+        // above) because metadata reliably persists and displays,
+        // regardless of any edge cases with the `shipping` parameter.
+        items: JSON.stringify(items).slice(0, 490),
+        ship_name: `${shipping.firstName} ${shipping.lastName}`.slice(0, 490),
+        ship_email: shipping.email.slice(0, 490),
+        ship_address: shipping.address.slice(0, 490),
+        ship_city: shipping.city.slice(0, 490),
+        ship_zip: shipping.zip.slice(0, 490)
       }
     });
 
