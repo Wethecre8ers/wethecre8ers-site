@@ -1,0 +1,8 @@
+{
+  "name": "cre8-checkout-backend",
+  "version": "1.0.0",
+  "description": "Serverless backend for the WeTheCre8ers / Cre8 storefront Stripe checkout.",
+  "dependencies": {
+    "stripe": "^16.0.0"
+  }
+}

@@ -1,0 +1,11 @@
+[
+  { "id": "nameplate-01", "name": "Layered Desk Nameplate", "price": 38 },
+  { "id": "planter-02", "name": "Faceted Geometric Planter", "price": 26 },
+  { "id": "standtablet-03", "name": "Adjustable Tablet & Phone Stand", "price": 22 },
+  { "id": "keychain-04", "name": "Personalized Initial Keychain", "price": 14 },
+  { "id": "topper-05", "name": "Custom Cake Topper", "price": 19 },
+  { "id": "ornament-06", "name": "Engraved Photo Ornament", "price": 16 },
+  { "id": "miniset-07", "name": "Tabletop Terrain Set (6pc)", "price": 44 },
+  { "id": "dicetower-08", "name": "Dice Tower & Tray", "price": 32 },
+  { "id": "orgtray-09", "name": "Modular Desk Organizer Tray", "price": 29 }
+]
