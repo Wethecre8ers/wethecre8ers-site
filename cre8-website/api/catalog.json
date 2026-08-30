@@ -8,5 +8,6 @@
   { "id": "miniset-07", "name": "Tabletop Terrain Set (6pc)", "price": 44 },
   { "id": "dicetower-08", "name": "Dice Tower & Tray", "price": 32 },
   { "id": "orgtray-09", "name": "Modular Desk Organizer Tray", "price": 29 },
-  { "id": "concho-frog-01", "name": "Concho The Frog", "price": 29.99 }
+  { "id": "concho-frog-01", "name": "Concho The Frog", "price": 29.99 },
+  { "id": "minipallets-01", "name": "Mini Pallets (3-Pack)", "price": 9.99 }
 ]
