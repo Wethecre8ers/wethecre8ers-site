@@ -6,5 +6,6 @@
   { "id": "flexiturtle-01", "name": "Flexi Turtle", "price": 10.99 },
   { "id": "pumpkinspinner-01", "name": "Pumpkin Spinner", "price": 12.99 },
   { "id": "skullplanter-01", "name": "Skull Planter", "price": 15.99 },
-  { "id": "photolightbox-01", "name": "Customized Photo Light Box", "price": 34.99, "needsPhoto": true }
+  { "id": "photolightbox-01", "name": "Customized Photo Light Box", "price": 34.99, "needsPhoto": true },
+  { "id": "training-glock19-01", "name": "Training Glock 19 Replica", "price": 23.99 }
 ]
