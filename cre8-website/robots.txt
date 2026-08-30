@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://wethecre8ers.com/sitemap.xml
