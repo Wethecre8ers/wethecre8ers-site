@@ -1,16 +1,9 @@
 [
-  { "id": "nameplate-01", "name": "Layered Desk Nameplate", "price": 38 },
-  { "id": "planter-02", "name": "Faceted Geometric Planter", "price": 26 },
-  { "id": "standtablet-03", "name": "Adjustable Tablet & Phone Stand", "price": 22 },
-  { "id": "keychain-04", "name": "Personalized Initial Keychain", "price": 14 },
-  { "id": "topper-05", "name": "Custom Cake Topper", "price": 19 },
-  { "id": "ornament-06", "name": "Engraved Photo Ornament", "price": 16 },
-  { "id": "miniset-07", "name": "Tabletop Terrain Set (6pc)", "price": 44 },
-  { "id": "dicetower-08", "name": "Dice Tower & Tray", "price": 32 },
-  { "id": "orgtray-09", "name": "Modular Desk Organizer Tray", "price": 29 },
   { "id": "concho-frog-01", "name": "Concho The Frog", "price": 29.99 },
   { "id": "minipallets-01", "name": "Mini Pallets (3-Pack)", "price": 9.99 },
   { "id": "dumpling-01", "name": "Mini Clicker Dumpling (2-Pack)", "price": 10.99 },
   { "id": "minicrates-01", "name": "Mini Crates (2-Pack)", "price": 10.99 },
-  { "id": "flexiturtle-01", "name": "Flexi Turtle", "price": 10.99 }
+  { "id": "flexiturtle-01", "name": "Flexi Turtle", "price": 10.99 },
+  { "id": "pumpkinspinner-01", "name": "Pumpkin Spinner", "price": 12.99 },
+  { "id": "skullplanter-01", "name": "Skull Planter", "price": 15.99 }
 ]
