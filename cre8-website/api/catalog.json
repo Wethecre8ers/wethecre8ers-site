@@ -8,5 +8,6 @@
   { "id": "skullplanter-01", "name": "Skull Planter", "price": 15.99 },
   { "id": "photolightbox-01", "name": "Customized Photo Light Box", "price": 34.99, "needsPhoto": true },
   { "id": "training-glock19-01", "name": "Training Glock 19 Replica", "price": 23.99 },
-  { "id": "training-glock17-mag-01", "name": "Training Glock 17 Magazine", "price": 10.99 }
+  { "id": "training-glock17-mag-01", "name": "Training Glock 17 Magazine", "price": 10.99 },
+  { "id": "training-karambit-01", "name": "Training Karambit Replica", "price": 10.99 }
 ]
