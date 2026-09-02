@@ -1322,6 +1322,28 @@ async function placeOrder(){
   payBtn.textContent = 'Processing…';
   errBox.textContent = '';
 
+  const resetPayBtn = () => {
+    payBtn.disabled = false;
+    payBtn.textContent = window._checkoutTotalCents ? `Pay ${money(window._checkoutTotalCents / 100)}` : 'Pay';
+  };
+
+  // Stripe requires elements.submit() before stripe.confirmPayment(), and
+  // it has to run before any other async work (creating/updating the
+  // PaymentIntent, confirming). It validates the Payment Element and
+  // gathers the payment details up front — if it fails, show the error
+  // and stop, same as any other checkout error.
+  if (!stripeElements) {
+    errBox.textContent = 'Add your shipping address so a payment method can load, then try again.';
+    resetPayBtn();
+    return;
+  }
+  const { error: submitError } = await stripeElements.submit();
+  if (submitError) {
+    errBox.textContent = submitError.message || 'Please check your payment details and try again.';
+    resetPayBtn();
+    return;
+  }
+
   try {
     // 1. Make sure a PaymentIntent exists and its amount matches the
     //    current cart + address (creates it if the customer clicked Pay
@@ -1366,8 +1388,7 @@ async function placeOrder(){
 
     if (error) {
       errBox.textContent = error.message || 'Payment could not be completed.';
-      payBtn.disabled = false;
-      payBtn.textContent = amountCents ? `Pay ${money(amountCents / 100)}` : 'Pay';
+      resetPayBtn();
       sessionStorage.removeItem('cre8_pending_order');
       sessionStorage.removeItem('cre8_pending_cart');
       return;
@@ -1379,8 +1400,7 @@ async function placeOrder(){
     }
   } catch (err) {
     errBox.textContent = err.message || 'Something went wrong. Please try again.';
-    payBtn.disabled = false;
-    payBtn.textContent = 'Pay';
+    resetPayBtn();
   }
 }
 
