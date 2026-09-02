@@ -1,41 +1,50 @@
-// Vercel serverless function: POST /api/create-payment-intent
+// Vercel serverless function: POST /api/update-payment-intent
 //
-// Receives the cart (product ids + quantities) from the front end,
-// looks up real prices from catalog.json (never trusts a price sent
-// by the browser), calculates sales tax via Stripe Tax based on the
-// shipping address, and creates a Stripe PaymentIntent for the full,
-// tax-inclusive total. Returns a client secret that the front end uses
-// to render Stripe's Payment Element and confirm the payment (card,
-// Apple Pay, Google Pay, or PayPal) directly with Stripe.
+// Stripe's Payment Element needs a PaymentIntent (and its client secret)
+// to render, so one is created by create-payment-intent.js as soon as the
+// customer finishes their shipping address. If they then change that
+// address, this endpoint updates the amount, tax, and shipping on that
+// SAME PaymentIntent — via stripe.paymentIntents.update — rather than
+// creating a second one.
 //
-// The Payment Element needs a real PaymentIntent to render, so this is
-// called as soon as the shipping address is complete (not only on the
-// final Pay click). If the address then changes, the front end calls
-// update-payment-intent.js to adjust this same intent rather than
-// creating a duplicate.
+// Prices and tax are always re-derived server-side from the trusted
+// catalog; a total sent by the browser is never used.
 //
-// IMPORTANT: Stripe Tax only charges tax in states you've told Stripe
-// you're registered in (Stripe Dashboard → Tax → Registrations). If
-// no registration matches the shipping state, tax_amount_exclusive
-// comes back as 0 — so this is safe to leave on for every order.
+// Keep the pricing / tax logic below in sync with create-payment-intent.js.
 
 const Stripe = require('stripe');
 const catalog = require('./catalog.json');
 
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
 
-const FLAT_SHIPPING_CENTS = 650; // $6.50 — adjust or replace with real shipping logic
+const FLAT_SHIPPING_CENTS = 650; // keep in sync with create-payment-intent.js
 
 module.exports = async (req, res) => {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   try {
-    const { items, shipping } = req.body || {};
+    const { paymentIntentId, items, shipping } = req.body || {};
+    if (!paymentIntentId) {
+      return res.status(400).json({ error: 'Missing payment reference.' });
+    }
     if (!Array.isArray(items) || items.length === 0) {
       return res.status(400).json({ error: 'Cart is empty.' });
     }
     if (!shipping || !shipping.firstName || !shipping.address || !shipping.city || !shipping.state || !shipping.zip || !shipping.email) {
       return res.status(400).json({ error: 'Shipping details are incomplete.' });
+    }
+
+    // Only touch an intent that's still waiting to be paid. If it's
+    // already processing/succeeded, hand back what it was charged for.
+    const existing = await stripe.paymentIntents.retrieve(paymentIntentId);
+    const updatable = ['requires_payment_method', 'requires_confirmation', 'requires_action'];
+    if (!updatable.includes(existing.status)) {
+      return res.status(200).json({
+        amount: existing.amount,
+        taxAmount: Number(existing.metadata?.tax_cents) || 0,
+        subtotal: Number(existing.metadata?.subtotal_cents) || 0,
+        locked: true
+      });
     }
 
     // Build tax-calculation line items from the trusted catalog
@@ -69,11 +78,8 @@ module.exports = async (req, res) => {
       tax_code: 'txcd_92010001' // standard shipping tax code
     });
 
-    // Ask Stripe Tax to calculate the correct tax for this address.
-    // If Stripe Tax isn't activated yet on this account (a real setup
-    // step involving your business's tax registrations), fall back to
-    // $0 tax rather than blocking checkout entirely — the moment Stripe
-    // Tax is activated, this starts calculating real tax automatically.
+    // Ask Stripe Tax to recalculate for the new address. Same $0 fallback
+    // as create-payment-intent.js if Stripe Tax isn't activated yet.
     let amount = subtotal + FLAT_SHIPPING_CENTS;
     let taxAmount = 0;
     let calculationId = null;
@@ -99,11 +105,9 @@ module.exports = async (req, res) => {
       console.error('Stripe Tax calculation skipped (charging $0 tax):', taxErr.message);
     }
 
-    const paymentIntent = await stripe.paymentIntents.create({
+    const updated = await stripe.paymentIntents.update(paymentIntentId, {
       amount,
-      currency: 'usd',
-      automatic_payment_methods: { enabled: true },
-      receipt_email: shipping.email,
+      receipt_email: shipping.email || undefined,
       shipping: {
         name: `${shipping.firstName} ${shipping.lastName}`,
         address: {
@@ -115,13 +119,13 @@ module.exports = async (req, res) => {
         }
       },
       metadata: {
-        // Handy for looking orders up in the Stripe dashboard later.
-        // Shipping is duplicated here (not just in the `shipping` field
-        // above) because metadata reliably persists and displays,
-        // regardless of any edge cases with the `shipping` parameter.
+        // Same set of keys create-payment-intent.js writes, refreshed for
+        // the new address. metadata updates merge, so this overwrites the
+        // originals (including tax_calculation_id, which the webhook uses
+        // to record the tax transaction).
         items: JSON.stringify(items).slice(0, 490),
         ship_name: `${shipping.firstName} ${shipping.lastName}`.slice(0, 490),
-        ship_email: shipping.email.slice(0, 490),
+        ship_email: (shipping.email || '').slice(0, 490),
         ship_address: shipping.address.slice(0, 490),
         ship_city: shipping.city.slice(0, 490),
         ship_state: shipping.state.slice(0, 490),
@@ -134,15 +138,9 @@ module.exports = async (req, res) => {
       }
     });
 
-    return res.status(200).json({
-      clientSecret: paymentIntent.client_secret,
-      paymentIntentId: paymentIntent.id,
-      amount,
-      taxAmount,
-      subtotal
-    });
+    return res.status(200).json({ amount: updated.amount, taxAmount, subtotal });
   } catch (err) {
-    console.error('create-payment-intent error:', err);
-    return res.status(500).json({ error: 'Could not start payment. Please try again.' });
+    console.error('update-payment-intent error:', err);
+    return res.status(500).json({ error: 'Could not update payment. Please try again.' });
   }
 };

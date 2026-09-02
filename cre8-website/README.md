@@ -179,6 +179,31 @@ Successful orders are also automatically "recorded" in Stripe Tax
 (`stripe.tax.transactions.createFromCalculation`), which is what feeds
 Stripe's tax reporting/filing tools if you use them.
 
+## Payment methods (Apple Pay, Google Pay, PayPal)
+
+Checkout uses Stripe's **Payment Element**, which automatically shows
+whichever methods are turned on in your Stripe Dashboard and supported by
+the shopper's device — card, Apple Pay, Google Pay, and PayPal. Because
+that element needs a live PaymentIntent to render, checkout creates the
+PaymentIntent as soon as the shipping address is complete (the same
+moment the tax preview runs), and updates that same intent if the address
+changes (`api/update-payment-intent.js`).
+
+**One-time setup in Stripe:**
+
+1. **PayPal:** Dashboard → Settings → Payment methods → enable **PayPal**.
+   (Card, Apple Pay, and Google Pay are on by default.)
+2. **Apple Pay domain:** Dashboard → Settings → Payment methods → Apple Pay
+   → **Add new domain**, and add `wethecre8ers.com`. If Stripe hands you a
+   verification file to host, put it in the repo at
+   `cre8-website/.well-known/apple-developer-merchantid-domain-association`
+   (Vercel serves it at the domain root automatically) and redeploy.
+3. No code changes are needed — methods appear as you enable them.
+
+Apple Pay and Google Pay only render over HTTPS on a supporting
+device/browser, so you won't see them on `localhost` — test wallets on the
+deployed Vercel URL.
+
 ## Keeping prices in sync
 
 `api/catalog.json` is a second copy of your product prices, used only to
