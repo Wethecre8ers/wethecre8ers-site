@@ -27,7 +27,7 @@ function renderChrome(){
 <header>
   <div class="nav">
     <a href="/" class="brand" aria-label="WeTheCre8ers Cre8 — home">
-      <img src="/images/logo.jpg" alt="WeTheCre8ers Cre8">
+      <img src="/images/logo.png" alt="WeTheCre8ers Cre8">
     </a>
     <nav class="links">
       <span class="hasSub">
