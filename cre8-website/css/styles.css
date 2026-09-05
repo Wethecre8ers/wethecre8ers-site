@@ -92,12 +92,31 @@
     border-top:1px solid rgba(200,149,61,.18); border-bottom:1px solid rgba(200,149,61,.18);
     max-height:0; overflow:hidden; transition:max-height .3s ease;
   }
-  .mobileMenu.show{max-height:280px;}
+  .mobileMenu.show{max-height:520px;}
   .mobileMenu a{
     padding:16px 28px; font-size:14px; letter-spacing:.06em; text-transform:uppercase;
     color:var(--ivory); border-bottom:1px solid rgba(183,185,188,.1);
   }
   .mobileMenu a:hover{color:var(--gold); background:rgba(200,149,61,.06);}
+
+  /* ---------- Shop dropdown (multi-page nav) ---------- */
+  nav.links .hasSub{ position:relative; display:inline-flex; align-items:center; }
+  nav.links .hasSub > a::after{ content:"\25BE"; margin-left:7px; font-size:.78em; opacity:.6; }
+  nav.links .subMenu{
+    position:absolute; top:100%; left:50%; transform:translateX(-50%);
+    display:none; flex-direction:column; min-width:210px;
+    padding:10px 6px 6px; margin-top:2px;
+    background:var(--charcoal-2); border:1px solid rgba(200,149,61,.2);
+    border-radius:var(--radius); box-shadow:0 24px 48px rgba(0,0,0,.55); z-index:70;
+  }
+  nav.links .hasSub:hover .subMenu,
+  nav.links .hasSub:focus-within .subMenu{ display:flex; }
+  nav.links .subMenu a{
+    padding:10px 14px; font-size:12px; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--ivory); opacity:.85; white-space:nowrap; border-radius:4px;
+  }
+  nav.links .subMenu a:hover{ opacity:1; color:var(--gold); background:rgba(200,149,61,.08); }
+  nav.links .subMenu a.current{ opacity:1; color:var(--gold); }
 
   /* ---------- Hero ---------- */
   .hero{

@@ -37,36 +37,6 @@
 </head>
 <body>
 
-<header>
-  <div class="nav">
-    <a href="#home" class="brand">
-      <img src="/images/logo.jpg" alt="Cre8 logo">
-      <div>
-        <div class="word">Cre<span>8</span></div>
-        <div class="tag">WeTheCre8ers</div>
-      </div>
-    </a>
-    <nav class="links">
-      <a href="#shop">Shop</a>
-      <a href="#process">Process</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="navRight">
-      <button class="cartBtn" onclick="openCart()">
-        Cart <span class="cartCount" id="cartCount">0</span>
-      </button>
-      <button class="menuToggle" id="menuToggleBtn" onclick="toggleMobileNav()">&#9776;</button>
-    </div>
-  </div>
-  <div class="mobileMenu" id="mobileMenu">
-    <a href="#shop" onclick="closeMobileNav()">Shop</a>
-    <a href="#process" onclick="closeMobileNav()">Process</a>
-    <a href="#about" onclick="closeMobileNav()">About</a>
-    <a href="#contact" onclick="closeMobileNav()">Contact</a>
-  </div>
-</header>
-
 <section class="hero" id="home">
   <div class="hero-inner">
     <img class="mark" src="/images/logo.jpg" alt="Cre8 emblem">
@@ -74,7 +44,7 @@
     <h1>Envision. Design. <span class="accent">Produce.</span></h1>
     <p class="lede">Transforming possibility into purpose, one layer at a time. Tell us what you want the piece to do — we'll help shape the path from idea to finished product.</p>
     <div class="hero-ctas">
-      <a href="#shop" class="btn btn-gold">Browse the Shop</a>
+      <a href="/shop-home-desk.html" class="btn btn-gold">Browse the Shop</a>
       <a href="#contact" class="btn btn-outline">Start a Custom Piece</a>
     </div>
   </div>
@@ -109,18 +79,6 @@
         <p>The piece is produced, inspected, and finished to the standard it was designed to.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<section id="shop" class="section-alt">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Shop Cre8</div>
-      <h2>Designed with purpose, produced with care</h2>
-      <p>A working catalog to start from — add your own products, materials, and pricing anytime.</p>
-    </div>
-    <div class="filterRow" id="filterRow"></div>
-    <div class="grid" id="productGrid"></div>
   </div>
 </section>
 
@@ -205,67 +163,16 @@
   </div>
 </section>
 
-<footer>
-  <div class="wrap">
-    <div class="footGrid">
-      <div class="footBrand">
-        <div class="word">Cre<span>8</span></div>
-        <p>The making division of WeTheCre8ers. Envision. Design. Produce.</p>
-      </div>
-      <div>
-        <h5>Shop</h5>
-        <ul>
-          <li><a href="#shop">All Products</a></li>
-          <li><a href="#contact">Custom Orders</a></li>
-          <li><a href="#process">Our Process</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5>Company</h5>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footBottom">
-      <span>&copy; 2026 WeTheCre8ers. All rights reserved.</span>
-      <span>Envision &nbsp;&middot;&nbsp; Design &nbsp;&middot;&nbsp; Produce</span>
-    </div>
-  </div>
-</footer>
-
-<!-- Cart Drawer -->
-<div class="overlay" id="overlay" onclick="closeAllOverlays()"></div>
-<div class="drawer" id="drawer">
-  <div class="drawerHead">
-    <h3>Your Cart</h3>
-    <button class="closeX" onclick="closeCart()">&times;</button>
-  </div>
-  <div class="drawerBody" id="cartBody"></div>
-  <div class="drawerFoot" id="cartFoot"></div>
-</div>
-
-<!-- Product Modal -->
-<div class="modalOverlay" id="productModalOverlay" onclick="closeOnBackdrop(event,'productModalOverlay')">
-  <div class="modal" id="productModal"></div>
-</div>
-
-<!-- Checkout Modal -->
-<div class="modalOverlay" id="checkoutModalOverlay" onclick="closeOnBackdrop(event,'checkoutModalOverlay')">
-  <div class="modal" id="checkoutModal" style="max-width:960px;"></div>
-</div>
-
-<div class="toast" id="toast"><span class="dot"></span><span id="toastMsg"></span></div>
-
 <script src="https://js.stripe.com/v3/"></script>
 <script src="/js/products.js"></script>
 <script src="/js/cart.js"></script>
 <script src="/js/checkout.js"></script>
+<script src="/js/layout.js"></script>
 <script>
 /* ============================================================
-   PAGE BOOTSTRAP — wires the shared modules to this page and
-   handles the contact form (which only appears here).
+   PAGE BOOTSTRAP — home page. Injects the shared chrome, then
+   wires up the cart badge, the redirect-return check, and the
+   contact form (which only appears on this page).
    ============================================================ */
 async function handleInquiry(e){
   e.preventDefault();
@@ -301,8 +208,7 @@ async function handleInquiry(e){
   }
 }
 
-renderFilters();
-renderGrid();
+renderChrome();
 updateCartUI();
 handleCheckoutReturn();
 </script>

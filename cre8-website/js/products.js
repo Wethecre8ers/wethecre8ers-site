@@ -94,16 +94,15 @@ let activeFilter = 'All';
 function money(n){ return '$' + n.toFixed(2); }
 
 function renderFilters(){
-  const cats = ['All', ...new Set(PRODUCTS.map(p=>p.category))];
   const row = document.getElementById('filterRow');
+  if (!row) return;
+  const cats = ['All', ...new Set(PRODUCTS.map(p=>p.category))];
   row.innerHTML = cats.map(c => `<button class="chip ${c===activeFilter?'active':''}" onclick="setFilter('${c}')">${c}</button>`).join('');
 }
 function setFilter(c){ activeFilter = c; renderFilters(); renderGrid(); }
 
-function renderGrid(){
-  const grid = document.getElementById('productGrid');
-  const items = PRODUCTS.filter(p => activeFilter==='All' || p.category===activeFilter);
-  grid.innerHTML = items.map(p => `
+function productCardHTML(p){
+  return `
     <div class="card">
       <div class="thumb" onclick="openProduct('${p.id}')" style="cursor:pointer;">
         <span class="badge">${p.category}</span>
@@ -122,7 +121,22 @@ function renderGrid(){
         </div>
       </div>
     </div>
-  `).join('');
+  `;
+}
+
+// Home page / all-products grid (filtered by the chip row).
+function renderGrid(){
+  const grid = document.getElementById('productGrid');
+  if (!grid) return;
+  const items = PRODUCTS.filter(p => activeFilter==='All' || p.category===activeFilter);
+  grid.innerHTML = items.map(productCardHTML).join('');
+}
+
+// Category page grid — one fixed category, no filter row.
+function renderCategoryGrid(category){
+  const grid = document.getElementById('productGrid');
+  if (!grid) return;
+  grid.innerHTML = PRODUCTS.filter(p => p.category === category).map(productCardHTML).join('');
 }
 
 function quickAdd(id){
