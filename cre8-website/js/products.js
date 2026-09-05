@@ -41,7 +41,7 @@ const PRODUCTS = [
   },
   {
     id:'photolightbox-01', category:'Personalized', name:'Customized Photo Light Box',
-    price:34.99, desc:'A backlit photo panel made from your own picture, engraved so it glows when lit. Made to order — after checkout, email your photo to Motiv8@wethecre8ers.com with your order confirmation.',
+    price:34.99, desc:'A backlit photo panel made from your own picture, engraved so it glows when lit. Made to order — after checkout, email your photo to support@wethecre8ers.com with your order confirmation.',
     icon:'lightbox', images:['/images/products/photolightbox-1.jpg','/images/products/photolightbox-2.jpg','/images/products/photolightbox-3.jpg','/images/products/photolightbox-4.jpg'], asIs:true, needsPhoto:true, materials:[], colors:[]
   },
   {
@@ -189,7 +189,7 @@ function openProduct(id){
     </div>
   `;
   const optionsHtml = p.asIs ? `
-    ${p.needsPhoto ? `<div class="noteBox" style="margin-top:0;margin-bottom:20px;border-color:rgba(200,149,61,.5);"><b style="color:var(--gold);">Made to order:</b> after checkout, email your photo to Motiv8@wethecre8ers.com along with your order confirmation so we can get started.</div>` : `<div class="noteBox" style="margin-top:0;margin-bottom:20px;">This piece ships exactly as shown, with no material or color options.</div>`}
+    ${p.needsPhoto ? `<div class="noteBox" style="margin-top:0;margin-bottom:20px;border-color:rgba(200,149,61,.5);"><b style="color:var(--gold);">Made to order:</b> after checkout, email your photo to support@wethecre8ers.com along with your order confirmation so we can get started.</div>` : `<div class="noteBox" style="margin-top:0;margin-bottom:20px;">This piece ships exactly as shown, with no material or color options.</div>`}
   ` : `
     <div class="optGroup">
       <label>Material</label>

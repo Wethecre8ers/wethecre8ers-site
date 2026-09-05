@@ -300,7 +300,7 @@ function completeOrder(paymentIntent){
     : cart.filter(c => PRODUCTS.find(p => p.id === c.productId)?.needsPhoto)
           .map(c => PRODUCTS.find(p => p.id === c.productId).name);
   if (photoNames.length) {
-    msg += ` One more step: please email your photo for ${photoNames.join(', ')} to Motiv8@wethecre8ers.com along with this order confirmation.`;
+    msg += ` One more step: please email your photo for ${photoNames.join(', ')} to support@wethecre8ers.com along with this order confirmation.`;
   }
   showThankYou(msg);
 }

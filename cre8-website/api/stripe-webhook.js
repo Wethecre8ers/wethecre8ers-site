@@ -12,7 +12,7 @@
 const Stripe = require('stripe');
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
 
-const NOTIFY_EMAIL = 'motiv8@wethecre8ers.com';
+const NOTIFY_EMAIL = 'support@wethecre8ers.com';
 const FROM_EMAIL = 'onboarding@resend.dev'; // Resend's reserved test sender — swap for a verified wethecre8ers.com address once set up in Resend
 
 module.exports.config = {
@@ -105,7 +105,7 @@ async function sendOrderEmail(paymentIntent) {
     : '<li>(item details unavailable)</li>';
 
   const photoNoteHtml = meta.needs_photo
-    ? `<p style="background:#fff3cd; color:#664d03; padding:10px 14px; border-radius:4px;"><b>⚠ Waiting on customer photo for:</b> ${meta.needs_photo}. They were asked to email it to Motiv8@wethecre8ers.com.</p>`
+    ? `<p style="background:#fff3cd; color:#664d03; padding:10px 14px; border-radius:4px;"><b>⚠ Waiting on customer photo for:</b> ${meta.needs_photo}. They were asked to email it to support@wethecre8ers.com.</p>`
     : '';
 
   const html = `

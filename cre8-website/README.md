@@ -118,7 +118,7 @@ Stripe manually.
 
 ## Order notifications by email
 
-A webhook (`api/stripe-webhook.js`) emails **Motiv8@wethecre8ers.com** the
+A webhook (`api/stripe-webhook.js`) emails **support@wethecre8ers.com** the
 moment a payment succeeds, with the customer's shipping info and what they
 ordered — so you don't have to check Stripe manually. Here's how to turn it on:
 
@@ -151,7 +151,7 @@ Same place as before (**Settings → Environment → Production**), add:
 
 Redeploy the project (Deployments → "..." → Redeploy), then place a test
 order with card `4242 4242 4242 4242`. Within a few seconds, an order
-notification email should land at Motiv8@wethecre8ers.com.
+notification email should land at support@wethecre8ers.com.
 
 **Note on the "from" address:** emails currently send from
 `orders@resend.dev` (Resend's shared testing address), which works
