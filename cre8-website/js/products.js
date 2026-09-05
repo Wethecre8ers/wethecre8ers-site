@@ -7,7 +7,8 @@ const PRODUCTS = [
     {
     id:'concho-frog-01', category:'Home & Desk', name:'Concho The Frog',
     price:29.99, desc:'A small desk companion figurine, designed with clean lines and a friendly presence for any workspace.',
-    icon:'frog', images:['/images/products/concho-frog-1.jpg','/images/products/concho-frog-2.jpg'], asIs:true, materials:[], colors:[], featured:true  },
+    icon:'frog', images:['/images/products/concho-frog-1.jpg','/images/products/concho-frog-2.jpg','/images/products/concho-frog-3.jpg'], asIs:true, materials:[], colors:[], featured:true
+  },
   {
     id:'minipallets-01', category:'Home & Desk', name:'Mini Pallets (3-Pack)',
     price:9.99, desc:'A set of three stackable mini pallets, sized to hold a stack of sticky notes or small desk items.',
