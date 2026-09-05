@@ -46,7 +46,7 @@ const PRODUCTS = [
   {
     id:'training-glock19-01', category:'Tactical Training', name:'Training Glock 19 Replica',
     price:23.99, desc:'A solid, non-functional Glock 19-profile training replica for holster fit, draw practice, and handling drills. Inert plastic — no moving parts and cannot fire.',
-    icon:'pistol', images:['/images/products/training-glock19-1.jpg'], materials:['PLA Matte'], colors:['Blue','Red','Yellow']
+    icon:'pistol', images:['/images/products/training-glock19-1.jpg'], materials:['PLA Matte'], colors:['Blue','Red','Yellow'] ,featured:true
   },
   {
     id:'training-glock17-mag-01', category:'Tactical Training', name:'Training Glock 17 Magazine',
@@ -56,7 +56,7 @@ const PRODUCTS = [
   {
     id:'training-karambit-01', category:'Tactical Training', name:'Training Karambit Replica',
     price:10.99, desc:'A solid, blunt karambit-profile trainer for grip, retention, and flow drills. Inert training replica — no cutting edge or point.',
-    icon:'karambit', images:['/images/products/training-karambit-1.jpg'], materials:['PLA Matte'], colors:['Red','Blue','Yellow'], featured:true
+    icon:'karambit', images:['/images/products/training-karambit-1.jpg'], materials:['PLA Matte'], colors:['Red','Blue','Yellow'], 
   },
   {
     id:'anyway-mother-teresa-01', category:'Inspirational Signs & Light Boards', name:'Anyway - Mother Teresa',
