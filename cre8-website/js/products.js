@@ -7,8 +7,7 @@ const PRODUCTS = [
     {
     id:'concho-frog-01', category:'Home & Desk', name:'Concho The Frog',
     price:29.99, desc:'A small desk companion figurine, designed with clean lines and a friendly presence for any workspace.',
-    icon:'frog', images:['/images/products/concho-frog-1.jpg','/images/products/concho-frog-2.jpg'], asIs:true, materials:[], colors:[]
-  },
+    icon:'frog', images:['/images/products/concho-frog-1.jpg','/images/products/concho-frog-2.jpg'], asIs:true, materials:[], colors:[], featured:true  },
   {
     id:'minipallets-01', category:'Home & Desk', name:'Mini Pallets (3-Pack)',
     price:9.99, desc:'A set of three stackable mini pallets, sized to hold a stack of sticky notes or small desk items.',
@@ -17,7 +16,7 @@ const PRODUCTS = [
   {
     id:'dumpling-01', category:'Home & Desk', name:'Mini Clicker Dumpling (2-Pack)',
     price:10.99, desc:'A pair of squeezable dumpling figures with a friendly painted face, sized for a desk or shelf.',
-    icon:'dumpling', images:['/images/products/dumpling-1.jpg','/images/products/dumpling-2.jpg','/images/products/dumpling-3.jpg'], materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold'], featured:true
+    icon:'dumpling', images:['/images/products/dumpling-1.jpg','/images/products/dumpling-2.jpg','/images/products/dumpling-3.jpg'], materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold']
   },
   {
     id:'minicrates-01', category:'Home & Desk', name:'Mini Crates (2-Pack)',
