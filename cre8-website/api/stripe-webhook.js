@@ -105,7 +105,7 @@ async function sendOrderEmail(paymentIntent) {
     : '<li>(item details unavailable)</li>';
 
   const photoNoteHtml = meta.needs_photo
-    ? `<p style="background:#fff3cd; color:#664d03; padding:10px 14px; border-radius:4px;"><b>⚠ Waiting on customer photo for:</b> ${meta.needs_photo}. They were asked to email it to support@wethecre8ers.com.</p>`
+    ? `<p style="background:#fff3cd; color:#664d03; padding:10px 14px; border-radius:4px;"><b>⚠ Waiting on customer details for:</b> ${meta.needs_photo}. They were asked to email what's needed (photo or name) to support@wethecre8ers.com.</p>`
     : '';
 
   const html = `

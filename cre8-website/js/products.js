@@ -40,6 +40,13 @@ const PRODUCTS = [
     icon:'skull', images:['/images/products/skullplanter-1.jpg','/images/products/skullplanter-2.jpg'], materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold'], featured:true
   },
   {
+    id:'namedisplay-01', category:'Home & Desk', name:'Name Display',
+    price:8.99, desc:'A clean standing name sign for a desk, shelf, or door. Made to order in the name of your choice.',
+    icon:'plate', images:[], needsPhoto:true,
+    madeToOrderNote:'after checkout, email the name you\'d like on your Name Display to support@wethecre8ers.com along with your order confirmation so we can get started. We can also make it in other sizes — email us for a quote.',
+    materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold']
+  },
+  {
     id:'photolightbox-01', category:'Personalized', name:'Customized Photo Light Box',
     price:34.99, desc:'A backlit photo panel made from your own picture, engraved so it glows when lit. Made to order — after checkout, email your photo to support@wethecre8ers.com with your order confirmation.',
     icon:'lightbox', images:['/images/products/photolightbox-1.jpg','/images/products/photolightbox-2.jpg','/images/products/photolightbox-3.jpg','/images/products/photolightbox-4.jpg'], asIs:true, needsPhoto:true, materials:[], colors:[], featured:true
@@ -274,8 +281,11 @@ function openProduct(id){
       </div>
     </div>
   `;
+  const madeToOrderNote = p.needsPhoto
+    ? `<div class="noteBox" style="margin-top:18px;margin-bottom:0;border-color:rgba(200,149,61,.5);"><b style="color:var(--gold);">Made to order:</b> ${p.madeToOrderNote || 'after checkout, email your photo to support@wethecre8ers.com along with your order confirmation so we can get started.'}</div>`
+    : '';
   const optionsHtml = p.asIs ? `
-    ${p.needsPhoto ? `<div class="noteBox" style="margin-top:0;margin-bottom:20px;border-color:rgba(200,149,61,.5);"><b style="color:var(--gold);">Made to order:</b> after checkout, email your photo to support@wethecre8ers.com along with your order confirmation so we can get started.</div>` : `<div class="noteBox" style="margin-top:0;margin-bottom:20px;">This piece ships exactly as shown, with no material or color options.</div>`}
+    ${madeToOrderNote || `<div class="noteBox" style="margin-top:0;margin-bottom:20px;">This piece ships exactly as shown, with no material or color options.</div>`}
   ` : `
     <div class="optGroup">
       <label>Material</label>
@@ -284,6 +294,7 @@ function openProduct(id){
       </div>
     </div>
     ${colorBlockHtml}
+    ${madeToOrderNote}
   `;
   modal.innerHTML = `
     <button class="modalClose" onclick="closeModal('productModalOverlay')">&times;</button>
