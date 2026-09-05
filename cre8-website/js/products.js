@@ -7,8 +7,7 @@ const PRODUCTS = [
     {
     id:'concho-frog-01', category:'Home & Desk', name:'Concho The Frog',
     price:29.99, desc:'A small desk companion figurine, designed with clean lines and a friendly presence for any workspace.',
-    icon:'frog', images:['/images/products/concho-frog-1.jpg','/images/products/concho-frog-2.jpg'], asIs:true, materials:[], colors:[]
-  },
+    icon:'frog', images:['/images/products/concho-frog-1.jpg','/images/products/concho-frog-2.jpg'], asIs:true, materials:[], colors:[], featured:true  },
   {
     id:'minipallets-01', category:'Home & Desk', name:'Mini Pallets (3-Pack)',
     price:9.99, desc:'A set of three stackable mini pallets, sized to hold a stack of sticky notes or small desk items.',
@@ -17,7 +16,7 @@ const PRODUCTS = [
   {
     id:'dumpling-01', category:'Home & Desk', name:'Mini Clicker Dumpling (2-Pack)',
     price:10.99, desc:'A pair of squeezable dumpling figures with a friendly painted face, sized for a desk or shelf.',
-    icon:'dumpling', images:['/images/products/dumpling-1.jpg','/images/products/dumpling-2.jpg','/images/products/dumpling-3.jpg'], materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold'], featured:true
+    icon:'dumpling', images:['/images/products/dumpling-1.jpg','/images/products/dumpling-2.jpg','/images/products/dumpling-3.jpg'], materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold']
   },
   {
     id:'minicrates-01', category:'Home & Desk', name:'Mini Crates (2-Pack)',
@@ -47,7 +46,7 @@ const PRODUCTS = [
   {
     id:'training-glock19-01', category:'Tactical Training', name:'Training Glock 19 Replica',
     price:23.99, desc:'A solid, non-functional Glock 19-profile training replica for holster fit, draw practice, and handling drills. Inert plastic — no moving parts and cannot fire.',
-    icon:'pistol', images:['/images/products/training-glock19-1.jpg'], materials:['PLA Matte'], colors:['Blue','Red','Yellow']
+    icon:'pistol', images:['/images/products/training-glock19-1.jpg'], materials:['PLA Matte'], colors:['Blue','Red','Yellow'] ,featured:true
   },
   {
     id:'training-glock17-mag-01', category:'Tactical Training', name:'Training Glock 17 Magazine',
@@ -57,7 +56,7 @@ const PRODUCTS = [
   {
     id:'training-karambit-01', category:'Tactical Training', name:'Training Karambit Replica',
     price:10.99, desc:'A solid, blunt karambit-profile trainer for grip, retention, and flow drills. Inert training replica — no cutting edge or point.',
-    icon:'karambit', images:['/images/products/training-karambit-1.jpg'], materials:['PLA Matte'], colors:['Red','Blue','Yellow'], featured:true
+    icon:'karambit', images:['/images/products/training-karambit-1.jpg'], materials:['PLA Matte'], colors:['Red','Blue','Yellow'], 
   },
   {
     id:'anyway-mother-teresa-01', category:'Inspirational Signs & Light Boards', name:'Anyway - Mother Teresa',
