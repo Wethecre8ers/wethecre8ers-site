@@ -35,7 +35,7 @@ function renderChrome(){
     </a>
     <nav class="links">
       <span class="hasSub">
-        <a href="/shop-home-desk.html">Shop</a>
+        <a href="/shop.html">Shop</a>
         <span class="subMenu">${shopSub}</span>
       </span>
       <a href="${to('process')}">Process</a>
@@ -50,6 +50,7 @@ function renderChrome(){
     </div>
   </div>
   <div class="mobileMenu" id="mobileMenu">
+    <a href="/shop.html" onclick="closeMobileNav()">Shop — All Products</a>
     <a href="/shop-home-desk.html" onclick="closeMobileNav()">Shop — Home &amp; Desk</a>
     <a href="/shop-personalized.html" onclick="closeMobileNav()">Shop — Personalized</a>
     <a href="/shop-tactical-training.html" onclick="closeMobileNav()">Shop — Tactical Training</a>
