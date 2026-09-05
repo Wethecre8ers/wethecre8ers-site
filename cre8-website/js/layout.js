@@ -19,9 +19,11 @@ function renderChrome(){
   const to = (id) => (onHome ? '' : '/') + '#' + id;
   const here = (href) => path === href || path.endsWith(href);
 
-  const shopSub = CATEGORY_PAGES
-    .map(c => `<a href="${c.href}"${here(c.href) ? ' class="current"' : ''}>${c.name}</a>`)
-    .join('');
+  const shopSub =
+    `<a href="/shop.html"${here('/shop.html') ? ' class="current"' : ''}>All Products</a>` +
+    CATEGORY_PAGES
+      .map(c => `<a href="${c.href}"${here(c.href) ? ' class="current"' : ''}>${c.name}</a>`)
+      .join('');
 
   document.body.insertAdjacentHTML('afterbegin', `
 <header>
@@ -35,7 +37,7 @@ function renderChrome(){
     </a>
     <nav class="links">
       <span class="hasSub">
-        <a href="/shop-home-desk.html">Shop</a>
+        <a href="/shop.html">Shop</a>
         <span class="subMenu">${shopSub}</span>
       </span>
       <a href="${to('process')}">Process</a>
@@ -50,6 +52,7 @@ function renderChrome(){
     </div>
   </div>
   <div class="mobileMenu" id="mobileMenu">
+    <a href="/shop.html" onclick="closeMobileNav()">Shop — All Products</a>
     <a href="/shop-home-desk.html" onclick="closeMobileNav()">Shop — Home &amp; Desk</a>
     <a href="/shop-personalized.html" onclick="closeMobileNav()">Shop — Personalized</a>
     <a href="/shop-tactical-training.html" onclick="closeMobileNav()">Shop — Tactical Training</a>
@@ -70,6 +73,7 @@ function renderChrome(){
       <div>
         <h5>Shop</h5>
         <ul>
+          <li><a href="/shop.html">All Products</a></li>
           ${CATEGORY_PAGES.map(c => `<li><a href="${c.href}">${c.name}</a></li>`).join('')}
         </ul>
       </div>
