@@ -69,7 +69,7 @@ function updateCartUI(){
     const p = PRODUCTS.find(x=>x.id===c.productId);
     return `
     <div class="cartItem">
-      <div class="mini">${ICONS[p.icon]}</div>
+      <div class="mini">${p.images && p.images.length ? `<img src="${p.images[0]}" alt="${p.name}">` : ICONS[p.icon]}</div>
       <div>
         <h4>${p.name}</h4>
         <div class="opt">${c.material === 'As-is' ? 'Ships as shown' : `${c.material} · ${c.color}`}</div>
