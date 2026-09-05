@@ -72,7 +72,7 @@ function updateCartUI(){
       <div class="mini">${ICONS[p.icon]}</div>
       <div>
         <h4>${p.name}</h4>
-        <div class="opt">${c.material === 'As-is' ? 'One-of-a-kind, as-is' : `${c.material} · ${c.color}`}</div>
+        <div class="opt">${c.material === 'As-is' ? 'Ships as shown' : `${c.material} · ${c.color}`}</div>
         <div class="qtyRow">
           <button class="qtyBtn" onclick="changeQty(${idx},-1)">-</button>
           <span>${c.qty}</span>
