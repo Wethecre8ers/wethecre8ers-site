@@ -6,9 +6,10 @@
    ============================================================ */
 
 const CATEGORY_PAGES = [
-  { name: 'Home & Desk',       href: '/shop-home-desk.html' },
-  { name: 'Personalized',      href: '/shop-personalized.html' },
-  { name: 'Tactical Training', href: '/shop-tactical-training.html' }
+  { name: 'Home & Desk',                        href: '/shop-home-desk.html' },
+  { name: 'Personalized',                       href: '/shop-personalized.html' },
+  { name: 'Tactical Training',                  href: '/shop-tactical-training.html' },
+  { name: 'Inspirational Signs & Light Boards', href: '/shop-inspirational-signs.html' }
 ];
 
 function renderChrome(){
@@ -47,9 +48,7 @@ function renderChrome(){
   </div>
   <div class="mobileMenu" id="mobileMenu">
     <a href="/shop.html" onclick="closeMobileNav()">Shop — All Products</a>
-    <a href="/shop-home-desk.html" onclick="closeMobileNav()">Shop — Home &amp; Desk</a>
-    <a href="/shop-personalized.html" onclick="closeMobileNav()">Shop — Personalized</a>
-    <a href="/shop-tactical-training.html" onclick="closeMobileNav()">Shop — Tactical Training</a>
+    ${CATEGORY_PAGES.map(c => `<a href="${c.href}" onclick="closeMobileNav()">Shop — ${c.name}</a>`).join('\n    ')}
     <a href="${to('process')}" onclick="closeMobileNav()">Process</a>
     <a href="${to('about')}" onclick="closeMobileNav()">About</a>
     <a href="${to('contact')}" onclick="closeMobileNav()">Contact</a>

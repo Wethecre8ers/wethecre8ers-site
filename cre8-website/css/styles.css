@@ -92,7 +92,7 @@
     border-top:1px solid rgba(200,149,61,.18); border-bottom:1px solid rgba(200,149,61,.18);
     max-height:0; overflow:hidden; transition:max-height .3s ease;
   }
-  .mobileMenu.show{max-height:520px;}
+  .mobileMenu.show{max-height:640px;}
   .mobileMenu a{
     padding:16px 28px; font-size:14px; letter-spacing:.06em; text-transform:uppercase;
     color:var(--ivory); border-bottom:1px solid rgba(183,185,188,.1);

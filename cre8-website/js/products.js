@@ -58,6 +58,11 @@ const PRODUCTS = [
     id:'training-karambit-01', category:'Tactical Training', name:'Training Karambit Replica',
     price:10.99, desc:'A solid, blunt karambit-profile trainer for grip, retention, and flow drills. Inert training replica — no cutting edge or point.',
     icon:'karambit', images:['/images/products/training-karambit-1.jpg'], materials:['PLA Matte'], colors:['Red','Blue','Yellow']
+  },
+  {
+    id:'anyway-mother-teresa-01', category:'Inspirational Signs & Light Boards', name:'Anyway - Mother Teresa',
+    price:39.99, desc:'A backlit light board engraved with the "Anyway" poem attributed to Mother Teresa — the words glow warmly when lit and read as a clean frosted panel when off. Ships ready to display. Want a different quote or saying? Contact us for a custom quote.',
+    icon:'sign', images:['/images/products/anyway-mother-teresa-1.jpg','/images/products/anyway-mother-teresa-2.jpg'], asIs:true, materials:[], colors:[]
   }
 ];
 
@@ -81,7 +86,8 @@ const ICONS = {
   lightbox:`<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="26" y="22" width="48" height="60" rx="2" stroke="#C8953D" stroke-width="2.5"/><circle cx="50" cy="46" r="10" stroke="#B7B9BC" stroke-width="2"/><path d="M32 68 L42 56 L52 66 L60 54 L68 68" stroke="#8A5B1E" stroke-width="2"/></svg>`,
   pistol:`<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 30 L84 30 L84 42 L52 42 L58 72 L40 72 L40 48 L32 48 L32 42 L16 42 Z" stroke="#C8953D" stroke-width="2.5" stroke-linejoin="round"/><path d="M40 48 Q46 60 52 48" stroke="#B7B9BC" stroke-width="2.5"/><line x1="74" y1="32" x2="74" y2="40" stroke="#8A5B1E" stroke-width="2"/><line x1="78" y1="32" x2="78" y2="40" stroke="#8A5B1E" stroke-width="2"/></svg>`,
   magazine:`<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M42 16 L60 16 L62 78 L40 78 Z" stroke="#C8953D" stroke-width="2.5" stroke-linejoin="round"/><rect x="36" y="78" width="30" height="8" rx="2" stroke="#B7B9BC" stroke-width="2.5"/><line x1="43" y1="30" x2="59" y2="30" stroke="#8A5B1E" stroke-width="2"/><line x1="44" y1="44" x2="60" y2="44" stroke="#8A5B1E" stroke-width="2"/><line x1="45" y1="58" x2="61" y2="58" stroke="#8A5B1E" stroke-width="2"/></svg>`,
-  karambit:`<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="36" cy="26" r="8" stroke="#B7B9BC" stroke-width="2.5"/><path d="M44 30 C66 34 78 54 72 74 C67 90 50 92 38 82" stroke="#C8953D" stroke-width="2.5" stroke-linecap="round"/><path d="M45 35 C58 41 65 53 63 66" stroke="#8A5B1E" stroke-width="2" stroke-linecap="round"/></svg>`
+  karambit:`<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="36" cy="26" r="8" stroke="#B7B9BC" stroke-width="2.5"/><path d="M44 30 C66 34 78 54 72 74 C67 90 50 92 38 82" stroke="#C8953D" stroke-width="2.5" stroke-linecap="round"/><path d="M45 35 C58 41 65 53 63 66" stroke="#8A5B1E" stroke-width="2" stroke-linecap="round"/></svg>`,
+  sign:`<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="26" y="16" width="48" height="68" rx="3" stroke="#C8953D" stroke-width="2.5"/><line x1="35" y1="32" x2="65" y2="32" stroke="#B7B9BC" stroke-width="3.5"/><line x1="35" y1="43" x2="59" y2="43" stroke="#8A5B1E" stroke-width="2"/><line x1="35" y1="54" x2="65" y2="54" stroke="#B7B9BC" stroke-width="3.5"/><line x1="35" y1="65" x2="55" y2="65" stroke="#8A5B1E" stroke-width="2"/></svg>`
 };
 
 /* ============================================================
