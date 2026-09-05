@@ -108,11 +108,24 @@ function renderFilters(){
 function setFilter(c){ activeFilter = c; renderFilters(); renderGrid(); }
 
 function productCardHTML(p){
+  let thumbInner;
+  if (p.images && p.images.length > 1) {
+    // Multi-photo: swipeable gallery right on the card, before "Details".
+    thumbInner = `
+        <div class="cardGallery">${p.images.map((src, i) => `<img src="${src}" alt="${p.name}"${i === 0 ? ' class="active"' : ''}>`).join('')}</div>
+        <button class="galNav prev" type="button" onclick="cardGalleryStep(event,this,-1)" aria-label="Previous photo">&#8249;</button>
+        <button class="galNav next" type="button" onclick="cardGalleryStep(event,this,1)" aria-label="Next photo">&#8250;</button>
+        <div class="galDots">${p.images.map((_, i) => `<span${i === 0 ? ' class="on"' : ''}></span>`).join('')}</div>`;
+  } else if (p.images && p.images.length) {
+    thumbInner = `<img src="${p.images[0]}" alt="${p.name}" style="width:100%;height:100%;object-fit:contain;padding:14px;box-sizing:border-box;">`;
+  } else {
+    thumbInner = ICONS[p.icon];
+  }
   return `
     <div class="card">
       <div class="thumb" onclick="openProduct('${p.id}')" style="cursor:pointer;">
         <span class="badge">${p.category}</span>
-        ${p.images && p.images.length ? `<img src="${p.images[0]}" alt="${p.name}" style="width:100%;height:100%;object-fit:contain;padding:14px;box-sizing:border-box;">` : ICONS[p.icon]}
+        ${thumbInner}
       </div>
       <div class="body">
         <h3>${p.name}</h3>
@@ -130,12 +143,61 @@ function productCardHTML(p){
   `;
 }
 
+/* ---- On-card photo gallery (swipe / arrows / dots) ---- */
+function setCardGalleryImage(thumb, n){
+  const imgs = [...thumb.querySelectorAll('.cardGallery img')];
+  const dots = [...thumb.querySelectorAll('.galDots span')];
+  if (!imgs.length) return;
+  const i = (n % imgs.length + imgs.length) % imgs.length;
+  imgs.forEach((im, k) => im.classList.toggle('active', k === i));
+  dots.forEach((d, k) => d.classList.toggle('on', k === i));
+}
+function currentCardGalleryIndex(thumb){
+  const i = [...thumb.querySelectorAll('.cardGallery img')].findIndex(im => im.classList.contains('active'));
+  return i < 0 ? 0 : i;
+}
+// Called by the prev/next arrow buttons. stopPropagation keeps the click
+// off the thumb (which would otherwise open the product modal).
+function cardGalleryStep(e, btn, dir){
+  e.stopPropagation();
+  const thumb = btn.closest('.thumb');
+  setCardGalleryImage(thumb, currentCardGalleryIndex(thumb) + dir);
+}
+// Wires touch/pointer swiping on each card gallery. Idempotent — safe to
+// call again after a re-render.
+function initCardGalleries(){
+  document.querySelectorAll('.thumb .cardGallery').forEach(gal => {
+    if (gal.dataset.wired || gal.querySelectorAll('img').length < 2) return;
+    gal.dataset.wired = '1';
+    const thumb = gal.closest('.thumb');
+    let sx = 0, sy = 0, tracking = false;
+    gal.addEventListener('pointerdown', e => {
+      sx = e.clientX; sy = e.clientY; tracking = true;
+      try { gal.setPointerCapture(e.pointerId); } catch (_) {}
+    });
+    gal.addEventListener('pointercancel', () => { tracking = false; });
+    gal.addEventListener('pointerup', e => {
+      if (!tracking) return;
+      tracking = false;
+      const dx = e.clientX - sx, dy = e.clientY - sy;
+      if (Math.abs(dx) > 30 && Math.abs(dx) > Math.abs(dy)) {
+        setCardGalleryImage(thumb, currentCardGalleryIndex(thumb) + (dx < 0 ? 1 : -1));
+        // Swallow the click that follows this swipe so it doesn't open the modal.
+        const block = ev => { ev.stopPropagation(); ev.preventDefault(); };
+        thumb.addEventListener('click', block, true);
+        setTimeout(() => thumb.removeEventListener('click', block, true), 350);
+      }
+    });
+  });
+}
+
 // Home page / all-products grid (filtered by the chip row).
 function renderGrid(){
   const grid = document.getElementById('productGrid');
   if (!grid) return;
   const items = PRODUCTS.filter(p => activeFilter==='All' || p.category===activeFilter);
   grid.innerHTML = items.map(productCardHTML).join('');
+  initCardGalleries();
 }
 
 // Category page grid — one fixed category, no filter row.
@@ -143,6 +205,7 @@ function renderCategoryGrid(category){
   const grid = document.getElementById('productGrid');
   if (!grid) return;
   grid.innerHTML = PRODUCTS.filter(p => p.category === category).map(productCardHTML).join('');
+  initCardGalleries();
 }
 
 // Compact card for the home-page featured strip. Opens the product modal.
