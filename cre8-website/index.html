@@ -51,6 +51,16 @@
   </div>
 </section>
 
+<section class="featured" aria-label="Featured items">
+  <div class="wrap">
+    <div class="featuredHead">
+      <span class="eyebrow">Featured</span>
+      <a href="/shop.html" class="featuredAll">View all &rarr;</a>
+    </div>
+    <div class="featuredStrip" id="featuredStrip"></div>
+  </div>
+</section>
+
 <section id="process">
   <div class="wrap">
     <div class="section-head">
@@ -210,6 +220,7 @@ async function handleInquiry(e){
 }
 
 renderChrome();
+renderFeatured();
 updateCartUI();
 handleCheckoutReturn();
 </script>

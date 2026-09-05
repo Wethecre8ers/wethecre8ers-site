@@ -17,7 +17,7 @@ const PRODUCTS = [
   {
     id:'dumpling-01', category:'Home & Desk', name:'Mini Clicker Dumpling (2-Pack)',
     price:10.99, desc:'A pair of squeezable dumpling figures with a friendly painted face, sized for a desk or shelf.',
-    icon:'dumpling', images:['/images/products/dumpling-1.jpg','/images/products/dumpling-2.jpg','/images/products/dumpling-3.jpg'], materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold']
+    icon:'dumpling', images:['/images/products/dumpling-1.jpg','/images/products/dumpling-2.jpg','/images/products/dumpling-3.jpg'], materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold'], featured:true
   },
   {
     id:'minicrates-01', category:'Home & Desk', name:'Mini Crates (2-Pack)',
@@ -37,12 +37,12 @@ const PRODUCTS = [
   {
     id:'skullplanter-01', category:'Home & Desk', name:'Skull Planter',
     price:15.99, desc:'A carved skull-and-vine planter, designed to hold a small succulent or cutting.',
-    icon:'skull', images:['/images/products/skullplanter-1.jpg','/images/products/skullplanter-2.jpg'], materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold']
+    icon:'skull', images:['/images/products/skullplanter-1.jpg','/images/products/skullplanter-2.jpg'], materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold'], featured:true
   },
   {
     id:'photolightbox-01', category:'Personalized', name:'Customized Photo Light Box',
     price:34.99, desc:'A backlit photo panel made from your own picture, engraved so it glows when lit. Made to order — after checkout, email your photo to support@wethecre8ers.com with your order confirmation.',
-    icon:'lightbox', images:['/images/products/photolightbox-1.jpg','/images/products/photolightbox-2.jpg','/images/products/photolightbox-3.jpg','/images/products/photolightbox-4.jpg'], asIs:true, needsPhoto:true, materials:[], colors:[]
+    icon:'lightbox', images:['/images/products/photolightbox-1.jpg','/images/products/photolightbox-2.jpg','/images/products/photolightbox-3.jpg','/images/products/photolightbox-4.jpg'], asIs:true, needsPhoto:true, materials:[], colors:[], featured:true
   },
   {
     id:'training-glock19-01', category:'Tactical Training', name:'Training Glock 19 Replica',
@@ -57,12 +57,12 @@ const PRODUCTS = [
   {
     id:'training-karambit-01', category:'Tactical Training', name:'Training Karambit Replica',
     price:10.99, desc:'A solid, blunt karambit-profile trainer for grip, retention, and flow drills. Inert training replica — no cutting edge or point.',
-    icon:'karambit', images:['/images/products/training-karambit-1.jpg'], materials:['PLA Matte'], colors:['Red','Blue','Yellow']
+    icon:'karambit', images:['/images/products/training-karambit-1.jpg'], materials:['PLA Matte'], colors:['Red','Blue','Yellow'], featured:true
   },
   {
     id:'anyway-mother-teresa-01', category:'Inspirational Signs & Light Boards', name:'Anyway - Mother Teresa',
     price:39.99, desc:'A backlit light board engraved with the "Anyway" poem attributed to Mother Teresa — the words glow warmly when lit and read as a clean frosted panel when off. Ships ready to display. Want a different quote or saying? Contact us for a custom quote.',
-    icon:'sign', images:['/images/products/anyway-mother-teresa-1.jpg','/images/products/anyway-mother-teresa-2.jpg'], asIs:true, materials:[], colors:[]
+    icon:'sign', images:['/images/products/anyway-mother-teresa-1.jpg','/images/products/anyway-mother-teresa-2.jpg'], asIs:true, materials:[], colors:[], featured:true
   }
 ];
 
@@ -143,6 +143,29 @@ function renderCategoryGrid(category){
   const grid = document.getElementById('productGrid');
   if (!grid) return;
   grid.innerHTML = PRODUCTS.filter(p => p.category === category).map(productCardHTML).join('');
+}
+
+// Compact card for the home-page featured strip. Opens the product modal.
+function featuredCardHTML(p){
+  return `
+    <button class="featuredCard" type="button" onclick="openProduct('${p.id}')" aria-label="${p.name}">
+      <span class="fThumb">${p.images && p.images.length ? `<img src="${p.images[0]}" alt="${p.name}">` : ICONS[p.icon]}</span>
+      <span class="fBody">
+        <span class="fName">${p.name}</span>
+        <span class="price">${p.materials.length > 1 ? 'From ' : ''}${money(p.price)}</span>
+      </span>
+    </button>
+  `;
+}
+
+// Horizontal-scrolling strip of products flagged `featured:true`. If none
+// are flagged, the whole section is removed so there's no empty heading.
+function renderFeatured(){
+  const strip = document.getElementById('featuredStrip');
+  if (!strip) return;
+  const items = PRODUCTS.filter(p => p.featured);
+  if (!items.length) { strip.closest('.featured')?.remove(); return; }
+  strip.innerHTML = items.map(featuredCardHTML).join('');
 }
 
 function quickAdd(id){
