@@ -42,7 +42,7 @@ const PRODUCTS = [
   {
     id:'namedisplay-01', category:'Home & Desk', name:'Name Display',
     price:8.99, desc:'A clean standing name sign for a desk, shelf, or door. Made to order in the name of your choice.',
-    icon:'plate', images:[], needsPhoto:true,
+    icon:'plate', images:['/images/products/namedisplay-1.jpg','/images/products/namedisplay-2.jpg','/images/products/namedisplay-3.jpg'], needsPhoto:true,
     madeToOrderNote:'after checkout, email the name you\'d like on your Name Display to support@wethecre8ers.com along with your order confirmation so we can get started. We can also make it in other sizes — email us for a quote.',
     materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold']
   },
