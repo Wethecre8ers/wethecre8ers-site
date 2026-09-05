@@ -56,7 +56,9 @@
     max-width:var(--maxw); margin:0 auto;
   }
   .brand{display:flex; align-items:center; gap:14px;}
-  .brand img{width:60px;height:60px;border-radius:50%;object-fit:cover;}
+  /* Logo art has a baked-in near-black background; `lighten` drops it out
+     against the dark header/hero so only the metal artwork shows. */
+  .brand img{height:52px; width:auto; display:block; mix-blend-mode:lighten;}
   .brand .word{
     font-family:var(--display); font-weight:600; letter-spacing:.04em;
     font-size:23px; line-height:1;
@@ -139,7 +141,7 @@
     pointer-events:none;
   }
   .hero-inner{position:relative; z-index:2; max-width:760px; margin:0 auto;}
-  .hero img.mark{width:200px; height:200px; border-radius:50%; margin:0 auto 34px; box-shadow:0 0 0 1px rgba(200,149,61,.35), 0 30px 60px rgba(0,0,0,.5);}
+  .hero img.mark{width:min(480px,84vw); height:auto; margin:0 auto 26px; mix-blend-mode:lighten;}
   .hero h1{
     font-family:var(--display); font-weight:600;
     font-size:clamp(34px,5.4vw,58px);
@@ -405,6 +407,7 @@
     .fieldRow{grid-template-columns:1fr;}
     .footGrid{grid-template-columns:1fr;}
     .hero{padding:90px 20px 70px;}
+    .brand img{height:38px;}
   }
   @media (prefers-reduced-motion: reduce){
     *{transition:none !important; scroll-behavior:auto !important;}
