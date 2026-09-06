@@ -49,7 +49,7 @@ const PRODUCTS = [
   {
     id:'photolightbox-01', category:'Personalized', name:'Customized Photo Light Box',
     price:34.99, desc:'A backlit photo panel made from your own picture, engraved so it glows when lit. Made to order — after checkout, email your photo to support@wethecre8ers.com with your order confirmation.',
-    icon:'lightbox', images:['/images/products/photolightbox-1.jpg','/images/products/photolightbox-2.jpg','/images/products/photolightbox-3.jpg','/images/products/photolightbox-4.jpg'], asIs:true, needsPhoto:true, materials:[], colors:[], featured:4
+    icon:'lightbox', images:['/images/products/photolightbox-1.jpg','/images/products/photolightbox-2.jpg','/images/products/photolightbox-3.jpg','/images/products/photolightbox-4.jpg','/images/products/photolightbox-movie.mp4'], asIs:true, needsPhoto:true, materials:[], colors:[], featured:4
   },
   {
     id:'training-glock19-01', category:'Tactical Training', name:'Training Glock 19 Replica',
@@ -119,17 +119,33 @@ function renderFilters(){
 }
 function setFilter(c){ activeFilter = c; renderFilters(); renderGrid(); }
 
+// A product's `images` array may also contain a video (.mp4/.mov/...).
+// On cards it shows as its poster still; the real player lives in the
+// product modal. Poster convention: "foo.mp4" -> "foo-poster.jpg".
+function isVideoSrc(src){ return /\.(mp4|mov|webm|m4v)$/i.test(src); }
+function posterFor(src){ return src.replace(/\.(mp4|mov|webm|m4v)$/i, '-poster.jpg'); }
+function primaryPhoto(p){
+  if (!p.images || !p.images.length) return null;
+  return p.images.find(s => !isVideoSrc(s)) || p.images[0];
+}
+
 function productCardHTML(p){
   let thumbInner;
   if (p.images && p.images.length > 1) {
     // Multi-photo: swipeable gallery right on the card, before "Details".
     thumbInner = `
-        <div class="cardGallery">${p.images.map((src, i) => `<img src="${src}" alt="${p.name}"${i === 0 ? ' class="active"' : ''}>`).join('')}</div>
+        <div class="cardGallery">${p.images.map((src, i) => {
+          const a = i === 0 ? ' class="active"' : '';
+          return isVideoSrc(src)
+            ? `<img${a} src="${posterFor(src)}" alt="${p.name} video" data-video="1">`
+            : `<img${a} src="${src}" alt="${p.name}">`;
+        }).join('')}</div>
+        <div class="galPlay"${isVideoSrc(p.images[0]) ? '' : ' hidden'} aria-hidden="true">&#9658;</div>
         <button class="galNav prev" type="button" onclick="cardGalleryStep(event,this,-1)" aria-label="Previous photo">&#8249;</button>
         <button class="galNav next" type="button" onclick="cardGalleryStep(event,this,1)" aria-label="Next photo">&#8250;</button>
         <div class="galDots">${p.images.map((_, i) => `<span${i === 0 ? ' class="on"' : ''}></span>`).join('')}</div>`;
   } else if (p.images && p.images.length) {
-    thumbInner = `<img src="${p.images[0]}" alt="${p.name}" style="width:100%;height:100%;object-fit:contain;padding:14px;box-sizing:border-box;">`;
+    thumbInner = `<img src="${primaryPhoto(p)}" alt="${p.name}" style="width:100%;height:100%;object-fit:contain;padding:14px;box-sizing:border-box;">`;
   } else {
     thumbInner = ICONS[p.icon];
   }
@@ -163,6 +179,8 @@ function setCardGalleryImage(thumb, n){
   const i = (n % imgs.length + imgs.length) % imgs.length;
   imgs.forEach((im, k) => im.classList.toggle('active', k === i));
   dots.forEach((d, k) => d.classList.toggle('on', k === i));
+  const play = thumb.querySelector('.galPlay');
+  if (play) play.hidden = !imgs[i].dataset.video;
 }
 function currentCardGalleryIndex(thumb){
   const i = [...thumb.querySelectorAll('.cardGallery img')].findIndex(im => im.classList.contains('active'));
@@ -224,7 +242,7 @@ function renderCategoryGrid(category){
 function featuredCardHTML(p){
   return `
     <button class="featuredCard" type="button" onclick="openProduct('${p.id}')" aria-label="${p.name}">
-      <span class="fThumb">${p.images && p.images.length ? `<img src="${p.images[0]}" alt="${p.name}">` : ICONS[p.icon]}</span>
+      <span class="fThumb">${primaryPhoto(p) ? `<img src="${primaryPhoto(p)}" alt="${p.name}">` : ICONS[p.icon]}</span>
       <span class="fBody">
         <span class="fName">${p.name}</span>
         <span class="price">${p.materials.length > 1 ? 'From ' : ''}${money(p.price)}</span>
@@ -269,7 +287,10 @@ function openProduct(id){
   const mainImg = hasImages ? p.images[0] : null;
   const galleryHtml = hasImages && p.images.length > 1 ? `
     <div id="galleryThumbs" style="display:flex; gap:8px; padding:12px; justify-content:center; flex-wrap:wrap;">
-      ${p.images.map((img,i)=>`<button onclick="switchGalleryImage(this,'${img}')" style="width:52px;height:52px;padding:0;border-radius:4px;overflow:hidden;border:1px solid ${i===0?'var(--gold)':'rgba(183,185,188,.3)'};background:none;cursor:pointer;"><img src="${img}" style="width:100%;height:100%;object-fit:cover;"></button>`).join('')}
+      ${p.images.map((img,i)=>{
+        const vid = isVideoSrc(img);
+        return `<button onclick="switchGalleryImage(this,'${img}')" style="position:relative;width:52px;height:52px;padding:0;border-radius:4px;overflow:hidden;border:1px solid ${i===0?'var(--gold)':'rgba(183,185,188,.3)'};background:none;cursor:pointer;"><img src="${vid?posterFor(img):img}" style="width:100%;height:100%;object-fit:cover;">${vid?'<span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px;text-shadow:0 1px 4px #000;">&#9658;</span>':''}</button>`;
+      }).join('')}
     </div>` : '';
   const colorBlockHtml = p.colorSlots && p.colorSlots > 1 ? `
     <div class="optGroup">
@@ -309,7 +330,7 @@ function openProduct(id){
     <button class="modalClose" onclick="closeModal('productModalOverlay')">&times;</button>
     <div class="productModalGrid">
       <div>
-        <div class="thumb" id="mainProductImg">${mainImg ? `<img src="${mainImg}" alt="${p.name}" style="width:100%;height:100%;object-fit:contain;padding:24px;box-sizing:border-box;">` : ICONS[p.icon]}</div>
+        <div class="thumb" id="mainProductImg">${mainImg ? (isVideoSrc(mainImg) ? `<video src="${mainImg}" poster="${posterFor(mainImg)}" controls playsinline style="width:100%;height:100%;object-fit:contain;background:#000;"></video>` : `<img src="${mainImg}" alt="${p.name}" style="width:100%;height:100%;object-fit:contain;padding:24px;box-sizing:border-box;">`) : ICONS[p.icon]}</div>
         ${galleryHtml}
       </div>
       <div class="pmBody">
@@ -325,8 +346,11 @@ function openProduct(id){
   `;
   openModal('productModalOverlay');
 }
-function switchGalleryImage(btn, imgSrc){
-  document.querySelector('#mainProductImg img').src = imgSrc;
+function switchGalleryImage(btn, src){
+  const main = document.getElementById('mainProductImg');
+  main.innerHTML = isVideoSrc(src)
+    ? `<video src="${src}" poster="${posterFor(src)}" controls autoplay playsinline style="width:100%;height:100%;object-fit:contain;background:#000;"></video>`
+    : `<img src="${src}" alt="" style="width:100%;height:100%;object-fit:contain;padding:24px;box-sizing:border-box;">`;
   const parent = btn.parentElement;
   [...parent.children].forEach(c => c.style.border = '1px solid rgba(183,185,188,.3)');
   btn.style.border = '1px solid var(--gold)';

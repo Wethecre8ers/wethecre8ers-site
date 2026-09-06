@@ -266,6 +266,12 @@
     padding:14px; box-sizing:border-box; opacity:0; transition:opacity .35s ease; pointer-events:none;
   }
   .card .thumb .cardGallery img.active{opacity:1;}
+  .card .thumb .galPlay{
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:4;
+    width:46px; height:46px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+    background:rgba(9,9,9,.55); border:1px solid rgba(200,149,61,.55); color:var(--gold);
+    font-size:15px; padding-left:3px; pointer-events:none;
+  }
   .galNav{
     position:absolute; top:50%; transform:translateY(-50%); z-index:5;
     width:30px; height:30px; padding:0; border-radius:50%;

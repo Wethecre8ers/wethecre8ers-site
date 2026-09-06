@@ -92,11 +92,14 @@ def main():
     products = parse_products(open(PRODUCTS_JS, encoding="utf-8").read())
     category_pages = parse_category_pages(open(LAYOUT_JS, encoding="utf-8").read())
 
+    IMG_EXT = (".jpg", ".jpeg", ".png", ".webp", ".gif")
+
     def imgs_for(prods):
         out = []
         for p in prods:
             for src in p["images"]:
-                out.append((src, p["name"]))
+                if src.lower().endswith(IMG_EXT):   # skip videos (.mp4/.mov/...)
+                    out.append((src, p["name"]))
         return out
 
     blocks = [

@@ -71,7 +71,7 @@ function openCheckout(){
         ${cart.map(c=>{
           const p = PRODUCTS.find(x=>x.id===c.productId);
           const variant = c.material === 'As-is' ? 'Ships as shown' : `${c.material} · ${c.color}`;
-          const olThumb = p.images && p.images.length ? `<img src="${p.images[0]}" alt="${p.name}">` : ICONS[p.icon];
+          const olThumb = primaryPhoto(p) ? `<img src="${primaryPhoto(p)}" alt="${p.name}">` : ICONS[p.icon];
           return `<div class="orderLine"><span class="olItem"><span class="olThumb">${olThumb}</span><span>${p.name}<br><span style="font-size:11.5px;">${variant} × ${c.qty}</span></span></span><b>${money(p.price*c.qty)}</b></div>`;
         }).join('')}
         <div class="orderLine"><span>Subtotal</span><b>${money(sub)}</b></div>
