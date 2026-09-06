@@ -7,7 +7,7 @@ const PRODUCTS = [
     {
     id:'concho-frog-01', category:'Home & Desk', name:'Concho The Frog',
     price:29.99, desc:'A small desk companion figurine, designed with clean lines and a friendly presence for any workspace.',
-    icon:'frog', images:['/images/products/concho-frog-1.jpg','/images/products/concho-frog-2.jpg','/images/products/concho-frog-3.jpg'], asIs:true, materials:[], colors:[], featured:true
+    icon:'frog', images:['/images/products/concho-frog-1.jpg','/images/products/concho-frog-2.jpg','/images/products/concho-frog-3.jpg'], asIs:true, materials:[], colors:[], featured:1
   },
   {
     id:'minipallets-01', category:'Home & Desk', name:'Mini Pallets (3-Pack)',
@@ -37,7 +37,7 @@ const PRODUCTS = [
   {
     id:'skullplanter-01', category:'Home & Desk', name:'Skull Planter',
     price:15.99, desc:'A carved skull-and-vine planter, designed to hold a small succulent or cutting.',
-    icon:'skull', images:['/images/products/skullplanter-1.jpg','/images/products/skullplanter-2.jpg'], materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold'], featured:true
+    icon:'skull', images:['/images/products/skullplanter-1.jpg','/images/products/skullplanter-2.jpg'], materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold'], featured:4
   },
   {
     id:'namedisplay-01', category:'Personalized', name:'Name Display',
@@ -49,12 +49,12 @@ const PRODUCTS = [
   {
     id:'photolightbox-01', category:'Personalized', name:'Customized Photo Light Box',
     price:34.99, desc:'A backlit photo panel made from your own picture, engraved so it glows when lit. Made to order — after checkout, email your photo to support@wethecre8ers.com with your order confirmation.',
-    icon:'lightbox', images:['/images/products/photolightbox-1.jpg','/images/products/photolightbox-2.jpg','/images/products/photolightbox-3.jpg','/images/products/photolightbox-4.jpg'], asIs:true, needsPhoto:true, materials:[], colors:[], featured:true
+    icon:'lightbox', images:['/images/products/photolightbox-1.jpg','/images/products/photolightbox-2.jpg','/images/products/photolightbox-3.jpg','/images/products/photolightbox-4.jpg'], asIs:true, needsPhoto:true, materials:[], colors:[], featured:3
   },
   {
     id:'training-glock19-01', category:'Tactical Training', name:'Training Glock 19 Replica',
     price:23.99, desc:'A solid, non-functional Glock 19-profile training replica for holster fit, draw practice, and handling drills. Inert plastic — no moving parts and cannot fire.',
-    icon:'pistol', images:['/images/products/training-glock19-1.jpg','/images/products/training-glock19-2.jpg'], materials:['PLA Matte'], colors:['Blue','Red','Yellow','Green'], featured:true
+    icon:'pistol', images:['/images/products/training-glock19-1.jpg','/images/products/training-glock19-2.jpg'], materials:['PLA Matte'], colors:['Blue','Red','Yellow','Green'], featured:5
   },
   {
     id:'training-glock17-mag-01', category:'Tactical Training', name:'Training Glock 17 Magazine',
@@ -69,7 +69,7 @@ const PRODUCTS = [
   {
     id:'anyway-mother-teresa-01', category:'Inspirational Signs & Light Boards', name:'Anyway - Mother Teresa',
     price:39.99, desc:'A backlit light board engraved with the "Anyway" poem attributed to Mother Teresa — the words glow warmly when lit and read as a clean frosted panel when off. Ships ready to display. Want a different quote or saying? Contact us for a custom quote.',
-    icon:'sign', images:['/images/products/anyway-mother-teresa-1.jpg','/images/products/anyway-mother-teresa-2.jpg'], asIs:true, materials:[], colors:[], featured:true
+    icon:'sign', images:['/images/products/anyway-mother-teresa-1.jpg','/images/products/anyway-mother-teresa-2.jpg'], asIs:true, materials:[], colors:[], featured:2
   }
 ];
 
@@ -228,12 +228,16 @@ function featuredCardHTML(p){
   `;
 }
 
-// Horizontal-scrolling strip of products flagged `featured:true`. If none
-// are flagged, the whole section is removed so there's no empty heading.
+// Horizontal-scrolling strip of featured products. A product joins the
+// strip by having a truthy `featured` value; set it to a NUMBER to place
+// it — lower numbers show first (e.g. featured:1 is leftmost). `true` (no
+// number) sorts after the numbered ones, in catalog order. If nothing is
+// featured, the whole section removes itself.
 function renderFeatured(){
   const strip = document.getElementById('featuredStrip');
   if (!strip) return;
-  const items = PRODUCTS.filter(p => p.featured);
+  const rank = p => (typeof p.featured === 'number' ? p.featured : 999);
+  const items = PRODUCTS.filter(p => p.featured).sort((a, b) => rank(a) - rank(b));
   if (!items.length) { strip.closest('.featured')?.remove(); return; }
   strip.innerHTML = items.map(featuredCardHTML).join('');
 }
