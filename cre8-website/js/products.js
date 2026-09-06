@@ -330,7 +330,7 @@ function openProduct(id){
     <button class="modalClose" onclick="closeModal('productModalOverlay')">&times;</button>
     <div class="productModalGrid">
       <div>
-        <div class="thumb" id="mainProductImg">${mainImg ? (isVideoSrc(mainImg) ? `<video src="${mainImg}" poster="${posterFor(mainImg)}" controls playsinline style="width:100%;height:100%;object-fit:contain;background:#000;"></video>` : `<img src="${mainImg}" alt="${p.name}" style="width:100%;height:100%;object-fit:contain;padding:24px;box-sizing:border-box;">`) : ICONS[p.icon]}</div>
+        <div class="thumb" id="mainProductImg">${mainImg ? (isVideoSrc(mainImg) ? `<video src="${mainImg}" poster="${posterFor(mainImg)}" controls loop muted playsinline style="width:100%;height:100%;object-fit:contain;background:#000;"></video>` : `<img src="${mainImg}" alt="${p.name}" style="width:100%;height:100%;object-fit:contain;padding:24px;box-sizing:border-box;">`) : ICONS[p.icon]}</div>
         ${galleryHtml}
       </div>
       <div class="pmBody">
@@ -349,7 +349,7 @@ function openProduct(id){
 function switchGalleryImage(btn, src){
   const main = document.getElementById('mainProductImg');
   main.innerHTML = isVideoSrc(src)
-    ? `<video src="${src}" poster="${posterFor(src)}" controls autoplay playsinline style="width:100%;height:100%;object-fit:contain;background:#000;"></video>`
+    ? `<video src="${src}" poster="${posterFor(src)}" controls autoplay loop muted playsinline style="width:100%;height:100%;object-fit:contain;background:#000;"></video>`
     : `<img src="${src}" alt="" style="width:100%;height:100%;object-fit:contain;padding:24px;box-sizing:border-box;">`;
   const parent = btn.parentElement;
   [...parent.children].forEach(c => c.style.border = '1px solid rgba(183,185,188,.3)');
