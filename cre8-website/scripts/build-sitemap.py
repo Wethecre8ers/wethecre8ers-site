@@ -18,7 +18,7 @@ import os
 import re
 import sys
 
-SITE = "https://wethecre8ers.com"
+SITE = "https://www.wethecre8ers.com"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # cre8-website/
 
 PRODUCTS_JS = os.path.join(ROOT, "js", "products.js")
