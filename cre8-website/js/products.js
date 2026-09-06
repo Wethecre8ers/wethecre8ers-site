@@ -69,7 +69,7 @@ const PRODUCTS = [
   {
     id:'anyway-mother-teresa-01', category:'Inspirational Signs & Light Boards', name:'Anyway - Mother Teresa',
     price:39.99, desc:'A backlit light board engraved with the "Anyway" poem attributed to Mother Teresa — the words glow warmly when lit and read as a clean frosted panel when off. Ships ready to display. Want a different quote or saying? Contact us for a custom quote.',
-    icon:'sign', images:['/images/products/anyway-mother-teresa-1.jpg','/images/products/anyway-mother-teresa-2.jpg'], asIs:true, materials:[], colors:[], featured:2
+    icon:'sign', images:['/images/products/anyway-mother-teresa-1.jpg','/images/products/anyway-mother-teresa-2.jpg','/images/products/anyway-mother-teresa-3.jpg'], asIs:true, materials:[], colors:[], featured:2
   }
 ];
 

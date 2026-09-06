@@ -122,6 +122,10 @@
       <image:loc>https://www.wethecre8ers.com/images/products/anyway-mother-teresa-2.jpg</image:loc>
       <image:title>Anyway - Mother Teresa</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/anyway-mother-teresa-3.jpg</image:loc>
+      <image:title>Anyway - Mother Teresa</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.wethecre8ers.com/shop-home-desk.html</loc>
@@ -252,6 +256,10 @@
     </image:image>
     <image:image>
       <image:loc>https://www.wethecre8ers.com/images/products/anyway-mother-teresa-2.jpg</image:loc>
+      <image:title>Anyway - Mother Teresa</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/anyway-mother-teresa-3.jpg</image:loc>
       <image:title>Anyway - Mother Teresa</image:title>
     </image:image>
   </url>
