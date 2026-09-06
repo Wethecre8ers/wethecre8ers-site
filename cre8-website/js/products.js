@@ -49,7 +49,7 @@ const PRODUCTS = [
   {
     id:'photolightbox-01', category:'Personalized', name:'Customized Photo Light Box',
     price:34.99, desc:'A backlit photo panel made from your own picture, engraved so it glows when lit. Made to order — after checkout, email your photo to support@wethecre8ers.com with your order confirmation.',
-    icon:'lightbox', images:['/images/products/photolightbox-1.jpg','/images/products/photolightbox-2.jpg','/images/products/photolightbox-3.jpg','/images/products/photolightbox-4.jpg','/images/products/photolightbox-movie.mp4'], asIs:true, needsPhoto:true, materials:[], colors:[], featured:4
+    icon:'lightbox', images:['/images/products/photolightbox-1.jpg','/images/products/photolightbox-2.jpg','/images/products/photolightbox-3.jpg','/images/products/photolightbox-movie.mp4','/images/products/photolightbox-4.jpg','/images/products/photolightbox-5.jpg'], asIs:true, needsPhoto:true, materials:[], colors:[], featured:4
   },
   {
     id:'training-glock19-01', category:'Tactical Training', name:'Training Glock 19 Replica',
