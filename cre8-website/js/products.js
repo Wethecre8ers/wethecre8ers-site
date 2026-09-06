@@ -37,7 +37,7 @@ const PRODUCTS = [
   {
     id:'skullplanter-01', category:'Home & Desk', name:'Skull Planter',
     price:15.99, desc:'A carved skull-and-vine planter, designed to hold a small succulent or cutting.',
-    icon:'skull', images:['/images/products/skullplanter-1.jpg','/images/products/skullplanter-2.jpg'], materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold'], featured:4
+    icon:'skull', images:['/images/products/skullplanter-1.jpg','/images/products/skullplanter-2.jpg'], materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold'], featured:5
   },
   {
     id:'namedisplay-01', category:'Personalized', name:'Name Display',
@@ -49,12 +49,12 @@ const PRODUCTS = [
   {
     id:'photolightbox-01', category:'Personalized', name:'Customized Photo Light Box',
     price:34.99, desc:'A backlit photo panel made from your own picture, engraved so it glows when lit. Made to order — after checkout, email your photo to support@wethecre8ers.com with your order confirmation.',
-    icon:'lightbox', images:['/images/products/photolightbox-1.jpg','/images/products/photolightbox-2.jpg','/images/products/photolightbox-3.jpg','/images/products/photolightbox-4.jpg'], asIs:true, needsPhoto:true, materials:[], colors:[], featured:3
+    icon:'lightbox', images:['/images/products/photolightbox-1.jpg','/images/products/photolightbox-2.jpg','/images/products/photolightbox-3.jpg','/images/products/photolightbox-4.jpg'], asIs:true, needsPhoto:true, materials:[], colors:[], featured:4
   },
   {
     id:'training-glock19-01', category:'Tactical Training', name:'Training Glock 19 Replica',
     price:23.99, desc:'A solid, non-functional Glock 19-profile training replica for holster fit, draw practice, and handling drills. Inert plastic — no moving parts and cannot fire.',
-    icon:'pistol', images:['/images/products/training-glock19-1.jpg','/images/products/training-glock19-2.jpg'], materials:['PLA Matte'], colors:['Blue','Red','Yellow','Green'], featured:5
+    icon:'pistol', images:['/images/products/training-glock19-1.jpg','/images/products/training-glock19-2.jpg'], materials:['PLA Matte'], colors:['Blue','Red','Yellow','Green']
   },
   {
     id:'training-glock17-mag-01', category:'Tactical Training', name:'Training Glock 17 Magazine',
@@ -69,7 +69,12 @@ const PRODUCTS = [
   {
     id:'anyway-mother-teresa-01', category:'Inspirational Signs & Light Boards', name:'Anyway - Mother Teresa',
     price:39.99, desc:'A backlit light board engraved with the "Anyway" poem attributed to Mother Teresa — the words glow warmly when lit and read as a clean frosted panel when off. Ships ready to display. Want a different quote or saying? Contact us for a custom quote.',
-    icon:'sign', images:['/images/products/anyway-mother-teresa-1.jpg','/images/products/anyway-mother-teresa-2.jpg','/images/products/anyway-mother-teresa-3.jpg'], asIs:true, materials:[], colors:[], featured:2
+    icon:'sign', images:['/images/products/anyway-mother-teresa-1.jpg','/images/products/anyway-mother-teresa-2.jpg','/images/products/anyway-mother-teresa-3.jpg'], asIs:true, materials:[], colors:[], featured:3
+  },
+  {
+    id:'mjquote-01', category:'Inspirational Signs & Light Boards', name:'Michael Jordan Lighted Quote',
+    price:49.99, desc:'A backlit motivational light board featuring Michael Jordan\'s "I\'ve missed more than 9000 shots" quote — bold when lit, a clean frosted panel when off. Ships ready to display. Want a different quote or saying? Contact us for a custom quote.',
+    icon:'sign', images:['/images/products/mjquote-1.jpg','/images/products/mjquote-2.jpg','/images/products/mjquote-3.jpg'], asIs:true, materials:[], colors:[], featured:2
   }
 ];
 
