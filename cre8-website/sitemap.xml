@@ -75,6 +75,10 @@
       <image:title>Skull Planter</image:title>
     </image:image>
     <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/skullplanter-3.jpg</image:loc>
+      <image:title>Skull Planter</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://www.wethecre8ers.com/images/products/namedisplay-1.jpg</image:loc>
       <image:title>Name Display</image:title>
     </image:image>
@@ -217,6 +221,10 @@
     </image:image>
     <image:image>
       <image:loc>https://www.wethecre8ers.com/images/products/skullplanter-2.jpg</image:loc>
+      <image:title>Skull Planter</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/skullplanter-3.jpg</image:loc>
       <image:title>Skull Planter</image:title>
     </image:image>
   </url>

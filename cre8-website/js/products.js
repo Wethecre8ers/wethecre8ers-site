@@ -37,7 +37,7 @@ const PRODUCTS = [
   {
     id:'skullplanter-01', category:'Home & Desk', name:'Skull Planter',
     price:15.99, desc:'A carved skull-and-vine planter, designed to hold a small succulent or cutting.',
-    icon:'skull', images:['/images/products/skullplanter-1.jpg','/images/products/skullplanter-2.jpg'], materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold'], featured:5
+    icon:'skull', images:['/images/products/skullplanter-1.jpg','/images/products/skullplanter-2.jpg','/images/products/skullplanter-3.jpg'], materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold'], featured:5
   },
   {
     id:'namedisplay-01', category:'Personalized', name:'Name Display',
