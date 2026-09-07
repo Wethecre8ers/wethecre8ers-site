@@ -57,7 +57,11 @@
       <span class="eyebrow">Featured</span>
       <a href="/shop.html" class="featuredAll">View all &rarr;</a>
     </div>
-    <div class="featuredStrip" id="featuredStrip"></div>
+    <div class="featStripWrap">
+      <button class="featNav prev" type="button" onclick="scrollFeatured(-1)" aria-label="Scroll featured left" hidden>&#8249;</button>
+      <div class="featuredStrip" id="featuredStrip"></div>
+      <button class="featNav next" type="button" onclick="scrollFeatured(1)" aria-label="Scroll featured right" hidden>&#8250;</button>
+    </div>
   </div>
 </section>
 

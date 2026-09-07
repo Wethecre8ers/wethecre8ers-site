@@ -291,6 +291,33 @@ function renderFeatured(){
   const items = PRODUCTS.filter(p => p.featured).sort((a, b) => rank(a) - rank(b));
   if (!items.length) { strip.closest('.featured')?.remove(); return; }
   strip.innerHTML = items.map(featuredCardHTML).join('');
+  if (!strip.dataset.navWired) {
+    strip.dataset.navWired = '1';
+    strip.addEventListener('scroll', updateFeaturedNav, { passive: true });
+    window.addEventListener('resize', updateFeaturedNav);
+  }
+  updateFeaturedNav();
+}
+
+// Scroll the featured strip by ~1.5 cards. Wired to the prev/next arrows.
+function scrollFeatured(dir){
+  const strip = document.getElementById('featuredStrip');
+  if (!strip) return;
+  const card = strip.querySelector('.featuredCard');
+  const step = (card ? card.getBoundingClientRect().width + 20 : 256) * 1.5;
+  strip.scrollBy({ left: dir * step, behavior: 'smooth' });
+}
+
+// Hide each arrow when there's nothing more to scroll that way.
+function updateFeaturedNav(){
+  const strip = document.getElementById('featuredStrip');
+  const wrap = strip && strip.closest('.featStripWrap');
+  if (!wrap) return;
+  const max = strip.scrollWidth - strip.clientWidth;
+  const prev = wrap.querySelector('.featNav.prev');
+  const next = wrap.querySelector('.featNav.next');
+  if (prev) prev.hidden = max <= 4 || strip.scrollLeft <= 4;
+  if (next) next.hidden = max <= 4 || strip.scrollLeft >= max - 4;
 }
 
 function quickAdd(id){
