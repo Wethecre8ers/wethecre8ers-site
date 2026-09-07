@@ -32,7 +32,7 @@ const PRODUCTS = [
   {
     id:'pumpkinspinner-01', category:'Home & Desk', name:'Pumpkin Spinner',
     price:12.99, desc:'A jack-o-lantern figure with a spinning stem, sized for a desk or seasonal display.',
-    icon:'pumpkin', images:['/images/products/pumpkinspinner-1.jpg'], asIs:true, materials:[], colors:[]
+    icon:'pumpkin', images:['/images/products/pumpkinspinner-1.jpg','/images/products/pumpkinspinner-2.jpg'], asIs:true, materials:[], colors:[]
   },
   {
     id:'skullplanter-01', category:'Home & Desk', name:'Skull Planter',
