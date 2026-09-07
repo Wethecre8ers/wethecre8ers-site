@@ -75,6 +75,11 @@ const PRODUCTS = [
     id:'mjquote-01', category:'Inspirational Signs & Light Boards', name:'Michael Jordan Lighted Quote',
     price:49.99, desc:'A backlit motivational light board featuring Michael Jordan\'s "I\'ve missed more than 9000 shots" quote — bold when lit, a clean frosted panel when off. Ships ready to display. Want a different quote or saying? Contact us for a custom quote.',
     icon:'sign', images:['/images/products/mjquote-1.jpg','/images/products/mjquote-2.jpg','/images/products/mjquote-3.jpg'], asIs:true, materials:[], colors:[], featured:2
+  },
+  {
+    id:'aikmanquote-01', category:'Inspirational Signs & Light Boards', name:'Troy Aikman Lighted Quote',
+    price:49.99, desc:'A backlit motivational light board featuring Troy Aikman\'s "I don\'t try to please anybody. I try to win." quote — bold when lit, a clean frosted panel when off. Ships ready to display. Want a different quote or saying? Contact us for a custom quote.',
+    icon:'sign', images:['/images/products/aikmanquote-1.jpg','/images/products/aikmanquote-2.jpg','/images/products/aikmanquote-3.jpg'], asIs:true, materials:[], colors:[]
   }
 ];
 
