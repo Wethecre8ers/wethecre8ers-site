@@ -101,7 +101,13 @@ async function sendOrderEmail(paymentIntent) {
   } catch (_) { /* ignore parse issues, show raw below */ }
 
   const itemsHtml = items.length
-    ? items.map(i => `<li>${i.qty} × ${i.productId}${i.material === 'As-is' ? ' (ships as shown, no options)' : ` (${i.material || ''} ${i.color || ''})`}${i.frame ? ` — ${i.frame} frame (+$8.99)` : ''}</li>`).join('')
+    ? items.map(i => {
+        const opts = [];
+        if (i.material && i.material !== 'As-is') opts.push(i.material);
+        if (i.color && i.color !== 'As-is') opts.push(i.color);
+        if (i.frame) opts.push(`${i.frame} frame (+$8.99)`);
+        return `<li>${i.qty} × ${i.productId}${opts.length ? ` (${opts.join(', ')})` : ' (ships as shown, no options)'}</li>`;
+      }).join('')
     : '<li>(item details unavailable)</li>';
 
   const photoNoteHtml = meta.needs_photo

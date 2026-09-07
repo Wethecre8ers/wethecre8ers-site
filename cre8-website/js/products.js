@@ -83,9 +83,9 @@ const PRODUCTS = [
   },
   {
     id:'nobodycares-01', category:'Inspirational Signs & Light Boards', name:'Nobody Cares',
-    price:5.99, desc:'A "Nobody Cares — Work Harder" motivational panel. Frame not included. The words and background can be adjusted for color — after checkout, email your color choices to support@wethecre8ers.com along with your order confirmation.',
-    icon:'sign', images:['/images/products/nobodycares-1.jpg'], asIs:true, needsPhoto:true,
-    madeToOrderNote:'the words and background can be adjusted for color. After checkout, email your color choices to support@wethecre8ers.com along with your order confirmation so we can get started.',
+    price:5.99, desc:'A "Nobody Cares — Work Harder" motivational panel. Choose your word color; a frame is optional.',
+    icon:'sign', images:['/images/products/nobodycares-1.jpg'], asIs:true,
+    wordColors:['Red','Grey','Green','White'],
     frameAddon:8.99, frameColors:['Black','Brown','Grey'],
     materials:[], colors:[]
   }
@@ -147,6 +147,14 @@ function linePrice(c){
   const p = PRODUCTS.find(x => x.id === c.productId);
   if (!p) return 0;
   return p.price + (c.frame && p.frameAddon ? p.frameAddon : 0);
+}
+// Human-readable option summary for a cart line (drawer + checkout).
+function optSummary(c){
+  const parts = [];
+  if (c.material && c.material !== 'As-is') parts.push(c.material);
+  if (c.color && c.color !== 'As-is') parts.push(c.color);
+  if (c.frame) parts.push(`${c.frame} frame`);
+  return parts.length ? parts.join(' · ') : 'Ships as shown';
 }
 
 function productCardHTML(p){
@@ -289,7 +297,9 @@ function quickAdd(id){
   const p = PRODUCTS.find(x=>x.id===id);
   const material = p.asIs ? 'As-is' : p.materials[0];
   let color;
-  if (p.asIs) {
+  if (p.wordColors) {
+    color = p.wordColors[0];
+  } else if (p.asIs) {
     color = 'As-is';
   } else if (p.colorSlots && p.colorSlots > 1) {
     color = Array.from({length:p.colorSlots}).map((_,i)=>p.colors[i % p.colors.length]).join(', ');
@@ -335,6 +345,14 @@ function openProduct(id){
     ? `<div class="noteBox" style="margin-top:18px;margin-bottom:0;border-color:rgba(200,149,61,.5);"><b style="color:var(--gold);">Made to order:</b> ${p.madeToOrderNote || 'after checkout, email your photo to support@wethecre8ers.com along with your order confirmation so we can get started.'}</div>`
     : '';
   const selStyle = 'width:100%;background:var(--charcoal-2);border:1px solid rgba(183,185,188,.25);color:var(--ivory);padding:11px 12px;border-radius:var(--radius);font-family:var(--sans);font-size:13.5px;';
+  const wordColorHtml = p.wordColors ? `
+    <div class="optGroup">
+      <label>Word Color</label>
+      <select id="wordColorChoice" style="${selStyle}">
+        ${p.wordColors.map(c=>`<option value="${c}">${c}</option>`).join('')}
+      </select>
+    </div>
+  ` : '';
   const frameHtml = p.frameAddon ? `
     <div class="optGroup">
       <label>Frame</label>
@@ -350,9 +368,13 @@ function openProduct(id){
       </select>
     </div>
   ` : '';
+  const noOptionsNote = (p.wordColors || p.frameAddon)
+    ? ''
+    : `<div class="noteBox" style="margin-top:0;margin-bottom:20px;">This piece ships exactly as shown, with no material or color options.</div>`;
   const optionsHtml = p.asIs ? `
+    ${wordColorHtml}
     ${frameHtml}
-    ${madeToOrderNote || `<div class="noteBox" style="margin-top:0;margin-bottom:20px;">This piece ships exactly as shown, with no material or color options.</div>`}
+    ${madeToOrderNote || noOptionsNote}
   ` : `
     <div class="optGroup">
       <label>Material</label>
@@ -361,6 +383,7 @@ function openProduct(id){
       </div>
     </div>
     ${colorBlockHtml}
+    ${wordColorHtml}
     ${frameHtml}
     ${madeToOrderNote}
   `;
@@ -415,7 +438,9 @@ function addFromModal(id){
   const p = PRODUCTS.find(x=>x.id===id);
   const mat = p.asIs ? 'As-is' : document.querySelector('#matSwatches .active').dataset.val;
   let col;
-  if (p.asIs) {
+  if (p.wordColors) {
+    col = document.getElementById('wordColorChoice').value;
+  } else if (p.asIs) {
     col = 'As-is';
   } else if (p.colorSlots && p.colorSlots > 1) {
     col = Array.from({length:p.colorSlots}).map((_,i)=>document.getElementById(`colorSlot${i}`).value).join(', ');

@@ -71,7 +71,7 @@ function updateCartUI(){
       <div class="mini">${primaryPhoto(p) ? `<img src="${primaryPhoto(p)}" alt="${p.name}">` : ICONS[p.icon]}</div>
       <div>
         <h4>${p.name}</h4>
-        <div class="opt">${c.material === 'As-is' ? 'Ships as shown' : `${c.material} · ${c.color}`}${c.frame ? ` · ${c.frame} frame` : ''}</div>
+        <div class="opt">${optSummary(c)}</div>
         <div class="qtyRow">
           <button class="qtyBtn" onclick="changeQty(${idx},-1)">-</button>
           <span>${c.qty}</span>

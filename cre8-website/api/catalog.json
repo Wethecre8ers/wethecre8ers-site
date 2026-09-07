@@ -14,5 +14,5 @@
   { "id": "anyway-mother-teresa-01", "name": "Anyway - Mother Teresa", "price": 39.99 },
   { "id": "mjquote-01", "name": "Michael Jordan Lighted Quote", "price": 49.99 },
   { "id": "aikmanquote-01", "name": "Troy Aikman Lighted Quote", "price": 49.99 },
-  { "id": "nobodycares-01", "name": "Nobody Cares", "price": 5.99, "frameAddon": 8.99, "needsPhoto": true }
+  { "id": "nobodycares-01", "name": "Nobody Cares", "price": 5.99, "frameAddon": 8.99 }
 ]
