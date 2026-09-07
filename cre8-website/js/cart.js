@@ -18,7 +18,8 @@ function loadCart(){
         productId: c.productId,
         qty: Math.max(1, parseInt(c.qty, 10) || 1),
         material: String(c.material == null ? '' : c.material),
-        color: String(c.color == null ? '' : c.color)
+        color: String(c.color == null ? '' : c.color),
+        frame: String(c.frame == null ? '' : c.frame)
       }));
   } catch (_) {
     return [];
@@ -32,9 +33,10 @@ function saveCart(){
 
 let cart = loadCart(); // {productId, qty, material, color}
 
-function addToCart(id, qty, material, color){
-  const existing = cart.find(c => c.productId===id && c.material===material && c.color===color);
-  if(existing){ existing.qty += qty; } else { cart.push({productId:id, qty, material, color}); }
+function addToCart(id, qty, material, color, frame){
+  frame = frame || '';
+  const existing = cart.find(c => c.productId===id && c.material===material && c.color===color && (c.frame||'')===frame);
+  if(existing){ existing.qty += qty; } else { cart.push({productId:id, qty, material, color, frame}); }
   updateCartUI();
 }
 function changeQty(idx, delta){
@@ -45,10 +47,7 @@ function changeQty(idx, delta){
 function removeItem(idx){ cart.splice(idx,1); updateCartUI(); }
 
 function cartTotal(){
-  return cart.reduce((sum,c)=>{
-    const p = PRODUCTS.find(x=>x.id===c.productId);
-    return sum + p.price * c.qty;
-  },0);
+  return cart.reduce((sum,c)=> sum + linePrice(c) * c.qty, 0);
 }
 function cartCount(){ return cart.reduce((s,c)=>s+c.qty,0); }
 
@@ -72,7 +71,7 @@ function updateCartUI(){
       <div class="mini">${primaryPhoto(p) ? `<img src="${primaryPhoto(p)}" alt="${p.name}">` : ICONS[p.icon]}</div>
       <div>
         <h4>${p.name}</h4>
-        <div class="opt">${c.material === 'As-is' ? 'Ships as shown' : `${c.material} · ${c.color}`}</div>
+        <div class="opt">${c.material === 'As-is' ? 'Ships as shown' : `${c.material} · ${c.color}`}${c.frame ? ` · ${c.frame} frame` : ''}</div>
         <div class="qtyRow">
           <button class="qtyBtn" onclick="changeQty(${idx},-1)">-</button>
           <span>${c.qty}</span>
@@ -80,7 +79,7 @@ function updateCartUI(){
         </div>
       </div>
       <div class="right">
-        <div class="lineTotal">${money(p.price*c.qty)}</div>
+        <div class="lineTotal">${money(linePrice(c)*c.qty)}</div>
         <button class="removeLink" onclick="removeItem(${idx})">Remove</button>
       </div>
     </div>`;

@@ -70,9 +70,9 @@ function openCheckout(){
         <h4 style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin:0 0 18px;">Order Summary</h4>
         ${cart.map(c=>{
           const p = PRODUCTS.find(x=>x.id===c.productId);
-          const variant = c.material === 'As-is' ? 'Ships as shown' : `${c.material} · ${c.color}`;
+          const variant = (c.material === 'As-is' ? 'Ships as shown' : `${c.material} · ${c.color}`) + (c.frame ? ` · ${c.frame} frame` : '');
           const olThumb = primaryPhoto(p) ? `<img src="${primaryPhoto(p)}" alt="${p.name}">` : ICONS[p.icon];
-          return `<div class="orderLine"><span class="olItem"><span class="olThumb">${olThumb}</span><span>${p.name}<br><span style="font-size:11.5px;">${variant} × ${c.qty}</span></span></span><b>${money(p.price*c.qty)}</b></div>`;
+          return `<div class="orderLine"><span class="olItem"><span class="olThumb">${olThumb}</span><span>${p.name}<br><span style="font-size:11.5px;">${variant} × ${c.qty}</span></span></span><b>${money(linePrice(c)*c.qty)}</b></div>`;
         }).join('')}
         <div class="orderLine"><span>Subtotal</span><b>${money(sub)}</b></div>
         <div class="orderLine"><span>Shipping</span><b>${money(shipping)}</b></div>

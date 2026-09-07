@@ -51,7 +51,9 @@ module.exports = async (req, res) => {
       if (qty <= 0) {
         return res.status(400).json({ error: `Invalid quantity for ${item.productId}` });
       }
-      const lineAmount = Math.round(product.price * 100) * qty;
+      // Optional per-item frame add-on (e.g. "Nobody Cares" sign).
+      const frameCents = (item.frame && product.frameAddon) ? Math.round(product.frameAddon * 100) : 0;
+      const lineAmount = (Math.round(product.price * 100) + frameCents) * qty;
       subtotal += lineAmount;
       if (product.needsPhoto) needsPhotoNames.push(product.name);
       taxLineItems.push({

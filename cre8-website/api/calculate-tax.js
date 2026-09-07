@@ -38,7 +38,9 @@ module.exports = async (req, res) => {
       }
       const qty = Number(item.qty) || 0;
       if (qty <= 0) continue;
-      const lineAmount = Math.round(product.price * 100) * qty;
+      // Optional per-item frame add-on (e.g. "Nobody Cares" sign).
+      const frameCents = (item.frame && product.frameAddon) ? Math.round(product.frameAddon * 100) : 0;
+      const lineAmount = (Math.round(product.price * 100) + frameCents) * qty;
       subtotal += lineAmount;
       taxLineItems.push({
         amount: lineAmount,

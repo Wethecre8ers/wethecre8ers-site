@@ -80,6 +80,14 @@ const PRODUCTS = [
     id:'aikmanquote-01', category:'Inspirational Signs & Light Boards', name:'Troy Aikman Lighted Quote',
     price:49.99, desc:'A backlit motivational light board featuring Troy Aikman\'s "I don\'t try to please anybody. I try to win." quote — bold when lit, a clean frosted panel when off. Ships ready to display. Want a different quote or saying? Contact us for a custom quote.',
     icon:'sign', images:['/images/products/aikmanquote-1.jpg','/images/products/aikmanquote-2.jpg','/images/products/aikmanquote-3.jpg'], asIs:true, materials:[], colors:[]
+  },
+  {
+    id:'nobodycares-01', category:'Inspirational Signs & Light Boards', name:'Nobody Cares',
+    price:5.99, desc:'A "Nobody Cares — Work Harder" motivational panel. Frame not included. The words and background can be adjusted for color — after checkout, email your color choices to support@wethecre8ers.com along with your order confirmation.',
+    icon:'sign', images:['/images/products/nobodycares-1.jpg'], asIs:true, needsPhoto:true,
+    madeToOrderNote:'the words and background can be adjusted for color. After checkout, email your color choices to support@wethecre8ers.com along with your order confirmation so we can get started.',
+    frameAddon:8.99, frameColors:['Black','Brown','Grey'],
+    materials:[], colors:[]
   }
 ];
 
@@ -133,6 +141,13 @@ function primaryPhoto(p){
   if (!p.images || !p.images.length) return null;
   return p.images.find(s => !isVideoSrc(s)) || p.images[0];
 }
+// Price of one cart line: base price plus the optional frame add-on.
+// A cart item's `frame` is '' (no frame) or the chosen frame color.
+function linePrice(c){
+  const p = PRODUCTS.find(x => x.id === c.productId);
+  if (!p) return 0;
+  return p.price + (c.frame && p.frameAddon ? p.frameAddon : 0);
+}
 
 function productCardHTML(p){
   let thumbInner;
@@ -165,7 +180,7 @@ function productCardHTML(p){
         <p class="desc">${p.desc}</p>
         <div class="metaRow">
           <span class="price">${money(p.price)}</span>
-          <span class="fromTag">${p.materials.length>1?'From':''}</span>
+          <span class="fromTag">${(p.materials.length>1 || p.frameAddon)?'From':''}</span>
         </div>
         <div class="actions">
           <button class="miniBtn" onclick="openProduct('${p.id}')">Details</button>
@@ -319,7 +334,24 @@ function openProduct(id){
   const madeToOrderNote = p.needsPhoto
     ? `<div class="noteBox" style="margin-top:18px;margin-bottom:0;border-color:rgba(200,149,61,.5);"><b style="color:var(--gold);">Made to order:</b> ${p.madeToOrderNote || 'after checkout, email your photo to support@wethecre8ers.com along with your order confirmation so we can get started.'}</div>`
     : '';
+  const selStyle = 'width:100%;background:var(--charcoal-2);border:1px solid rgba(183,185,188,.25);color:var(--ivory);padding:11px 12px;border-radius:var(--radius);font-family:var(--sans);font-size:13.5px;';
+  const frameHtml = p.frameAddon ? `
+    <div class="optGroup">
+      <label>Frame</label>
+      <select id="frameChoice" onchange="onFrameChange('${p.id}')" style="${selStyle}">
+        <option value="no">No frame</option>
+        <option value="yes">Add a frame (+${money(p.frameAddon)})</option>
+      </select>
+    </div>
+    <div class="optGroup" id="frameColorGroup" hidden>
+      <label>Frame Color</label>
+      <select id="frameColorChoice" style="${selStyle}">
+        ${(p.frameColors || ['Black']).map(c=>`<option value="${c}">${c}</option>`).join('')}
+      </select>
+    </div>
+  ` : '';
   const optionsHtml = p.asIs ? `
+    ${frameHtml}
     ${madeToOrderNote || `<div class="noteBox" style="margin-top:0;margin-bottom:20px;">This piece ships exactly as shown, with no material or color options.</div>`}
   ` : `
     <div class="optGroup">
@@ -329,6 +361,7 @@ function openProduct(id){
       </div>
     </div>
     ${colorBlockHtml}
+    ${frameHtml}
     ${madeToOrderNote}
   `;
   modal.innerHTML = `
@@ -341,10 +374,10 @@ function openProduct(id){
       <div class="pmBody">
         <span class="eyebrow">${p.category}</span>
         <h3>${p.name}</h3>
-        <span class="price">${money(p.price)}</span>
+        <span class="price" id="pmPrice">${money(p.price)}</span>
         <p class="desc">${p.desc}</p>
         ${optionsHtml}
-        <button class="btn btn-gold btn-block" onclick="addFromModal('${p.id}')">Add to Cart — ${money(p.price)}</button>
+        <button class="btn btn-gold btn-block" id="pmAddBtn" onclick="addFromModal('${p.id}')">Add to Cart — ${money(p.price)}</button>
         ${p.asIs ? '' : '<div class="noteBox">Layer lines and slight color variation are part of how this piece is made. We\'ll flag anything unusual before it ships.</div>'}
       </div>
     </div>
@@ -365,6 +398,19 @@ function selectSwatch(btn, group){
   [...parent.children].forEach(c=>c.classList.remove('active'));
   btn.classList.add('active');
 }
+// Frame yes/no selector in the modal: toggles the frame-color dropdown
+// and updates the displayed price + Add-to-Cart button.
+function onFrameChange(id){
+  const p = PRODUCTS.find(x=>x.id===id);
+  const withFrame = document.getElementById('frameChoice').value === 'yes';
+  const grp = document.getElementById('frameColorGroup');
+  if (grp) grp.hidden = !withFrame;
+  const total = p.price + (withFrame ? (p.frameAddon || 0) : 0);
+  const priceEl = document.getElementById('pmPrice');
+  const btn = document.getElementById('pmAddBtn');
+  if (priceEl) priceEl.textContent = money(total);
+  if (btn) btn.textContent = `Add to Cart — ${money(total)}`;
+}
 function addFromModal(id){
   const p = PRODUCTS.find(x=>x.id===id);
   const mat = p.asIs ? 'As-is' : document.querySelector('#matSwatches .active').dataset.val;
@@ -376,7 +422,12 @@ function addFromModal(id){
   } else {
     col = document.querySelector('#colSwatches .active').dataset.val;
   }
-  addToCart(id, 1, mat, col);
+  let frame = '';
+  if (p.frameAddon) {
+    const fc = document.getElementById('frameChoice');
+    if (fc && fc.value === 'yes') frame = document.getElementById('frameColorChoice').value;
+  }
+  addToCart(id, 1, mat, col, frame);
   closeModal('productModalOverlay');
   showToast(`${p.name} added to cart`);
 }
