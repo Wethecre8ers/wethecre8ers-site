@@ -100,8 +100,8 @@ const PRODUCTS = [
     materials:[], colors:[]
   },
   {
-    id:'dragonfidget-01', category:'Fidgets', name:'Crystan Spine Dragon Fidget',
-    price:15.99, desc:'A fully articulated, print-in-place dragon fidget covered in crystal-like spikes — flexible from head to tail for satisfying twisting, coiling, and stress relief. Pictured in Pink/Green; choose your color below. Approximately 2ft long.',
+    id:'dragonfidget-01', category:'Fidgets', name:'Crystal Spine Dragon Fidget',
+    price:15.99, desc:'A fully articulated dragon fidget covered in crystal-like spikes — flexible from head to tail for satisfying twisting, coiling, and stress relief. Pictured in Pink/Green; choose your color below. Approximately 2ft long.',
     icon:'dragon', images:['/images/products/dragonfidget-1.jpg','/images/products/dragonfidget-2.jpg'],
     materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold']
   }
