@@ -40,6 +40,11 @@ const PRODUCTS = [
     icon:'skull', images:['/images/products/skullplanter-1.jpg','/images/products/skullplanter-2.jpg','/images/products/skullplanter-3.jpg'], materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold'], featured:5
   },
   {
+    id:'halloweenblackcat-01', category:'Halloween', name:'Halloween Themed Black Cat',
+    price:39.99, desc:'A "Happy Halloween" lithophane panel featuring a black cat, jack-o-lanterns, and a "Trick or Treat" sign — a clean engraved scene that catches the light beautifully. Ships ready to display.',
+    icon:'sign', images:['/images/products/halloweenblackcat-1.jpg','/images/products/halloweenblackcat-2.jpg','/images/products/halloweenblackcat-3.jpg'], asIs:true, materials:[], colors:[]
+  },
+  {
     id:'namedisplay-01', category:'Personalized', name:'Name Display',
     price:8.99, desc:'A clean standing name sign for a desk, shelf, or door. Made to order in the name of your choice.',
     icon:'plate', images:['/images/products/namedisplay-1.jpg','/images/products/namedisplay-2.jpg','/images/products/namedisplay-3.jpg'], needsPhoto:true,
