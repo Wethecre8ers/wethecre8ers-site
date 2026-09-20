@@ -9,7 +9,8 @@ const CATEGORY_PAGES = [
   { name: 'Home & Desk',                        href: '/shop-home-desk.html' },
   { name: 'Personalized',                       href: '/shop-personalized.html' },
   { name: 'Tactical Training',                  href: '/shop-tactical-training.html' },
-  { name: 'Inspirational Signs & Light Boards', href: '/shop-inspirational-signs.html' }
+  { name: 'Inspirational Signs & Light Boards', href: '/shop-inspirational-signs.html' },
+  { name: 'Halloween',                          href: '/shop-halloween.html' }
 ];
 
 function renderChrome(){

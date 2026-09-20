@@ -196,18 +196,6 @@
       <image:title>Mini Pallets (3-Pack)</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://www.wethecre8ers.com/images/products/dumpling-1.jpg</image:loc>
-      <image:title>Mini Clicker Dumpling (2-Pack)</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.wethecre8ers.com/images/products/dumpling-2.jpg</image:loc>
-      <image:title>Mini Clicker Dumpling (2-Pack)</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.wethecre8ers.com/images/products/dumpling-3.jpg</image:loc>
-      <image:title>Mini Clicker Dumpling (2-Pack)</image:title>
-    </image:image>
-    <image:image>
       <image:loc>https://www.wethecre8ers.com/images/products/minicrates-1.jpg</image:loc>
       <image:title>Mini Crates (2-Pack)</image:title>
     </image:image>
@@ -222,26 +210,6 @@
     <image:image>
       <image:loc>https://www.wethecre8ers.com/images/products/flexiturtle-2.jpg</image:loc>
       <image:title>Flexi Turtle</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.wethecre8ers.com/images/products/pumpkinspinner-1.jpg</image:loc>
-      <image:title>Pumpkin Spinner</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.wethecre8ers.com/images/products/pumpkinspinner-2.jpg</image:loc>
-      <image:title>Pumpkin Spinner</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.wethecre8ers.com/images/products/skullplanter-1.jpg</image:loc>
-      <image:title>Skull Planter</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.wethecre8ers.com/images/products/skullplanter-2.jpg</image:loc>
-      <image:title>Skull Planter</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.wethecre8ers.com/images/products/skullplanter-3.jpg</image:loc>
-      <image:title>Skull Planter</image:title>
     </image:image>
   </url>
   <url>
@@ -349,6 +317,43 @@
     <image:image>
       <image:loc>https://www.wethecre8ers.com/images/products/nobodycares-1.jpg</image:loc>
       <image:title>Nobody Cares</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.wethecre8ers.com/shop-halloween.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/dumpling-1.jpg</image:loc>
+      <image:title>Mini Clicker Dumpling (2-Pack)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/dumpling-2.jpg</image:loc>
+      <image:title>Mini Clicker Dumpling (2-Pack)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/dumpling-3.jpg</image:loc>
+      <image:title>Mini Clicker Dumpling (2-Pack)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/pumpkinspinner-1.jpg</image:loc>
+      <image:title>Pumpkin Spinner</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/pumpkinspinner-2.jpg</image:loc>
+      <image:title>Pumpkin Spinner</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/skullplanter-1.jpg</image:loc>
+      <image:title>Skull Planter</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/skullplanter-2.jpg</image:loc>
+      <image:title>Skull Planter</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/skullplanter-3.jpg</image:loc>
+      <image:title>Skull Planter</image:title>
     </image:image>
   </url>
 </urlset>

@@ -15,7 +15,7 @@ const PRODUCTS = [
     icon:'pallet', images:['/images/products/minipallets-1.jpg','/images/products/minipallets-2.jpg'], colorSlots:3, materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold']
   },
   {
-    id:'dumpling-01', category:'Home & Desk', name:'Mini Clicker Dumpling (2-Pack)',
+    id:'dumpling-01', category:'Halloween', name:'Mini Clicker Dumpling (2-Pack)',
     price:10.99, desc:'A pair of squeezable dumpling figures with a friendly painted face, sized for a desk or shelf.',
     icon:'dumpling', images:['/images/products/dumpling-1.jpg','/images/products/dumpling-2.jpg','/images/products/dumpling-3.jpg'], materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold']
   },
@@ -30,12 +30,12 @@ const PRODUCTS = [
     icon:'turtle', images:['/images/products/flexiturtle-1.jpg','/images/products/flexiturtle-2.jpg'], asIs:true, materials:[], colors:[]
   },
   {
-    id:'pumpkinspinner-01', category:'Home & Desk', name:'Pumpkin Spinner',
+    id:'pumpkinspinner-01', category:'Halloween', name:'Pumpkin Spinner',
     price:12.99, desc:'A jack-o-lantern figure with a spinning stem, sized for a desk or seasonal display.',
     icon:'pumpkin', images:['/images/products/pumpkinspinner-1.jpg','/images/products/pumpkinspinner-2.jpg'], asIs:true, materials:[], colors:[]
   },
   {
-    id:'skullplanter-01', category:'Home & Desk', name:'Skull Planter',
+    id:'skullplanter-01', category:'Halloween', name:'Skull Planter',
     price:15.99, desc:'A carved skull-and-vine planter, designed to hold a small succulent or cutting.',
     icon:'skull', images:['/images/products/skullplanter-1.jpg','/images/products/skullplanter-2.jpg','/images/products/skullplanter-3.jpg'], materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold'], featured:5
   },
