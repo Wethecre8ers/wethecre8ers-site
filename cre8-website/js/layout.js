@@ -6,12 +6,12 @@
    ============================================================ */
 
 const CATEGORY_PAGES = [
-  { name: 'Home & Desk',                        href: '/shop-home-desk.html' },
-  { name: 'Personalized',                       href: '/shop-personalized.html' },
-  { name: 'Tactical Training',                  href: '/shop-tactical-training.html' },
-  { name: 'Inspirational Signs & Light Boards', href: '/shop-inspirational-signs.html' },
+  { name: 'Fidgets',                            href: '/shop-fidgets.html' },
   { name: 'Halloween',                          href: '/shop-halloween.html' },
-  { name: 'Fidgets',                            href: '/shop-fidgets.html' }
+  { name: 'Home & Desk',                        href: '/shop-home-desk.html' },
+  { name: 'Inspirational Signs & Light Boards', href: '/shop-inspirational-signs.html' },
+  { name: 'Personalized',                       href: '/shop-personalized.html' },
+  { name: 'Tactical Training',                  href: '/shop-tactical-training.html' }
 ];
 
 function renderChrome(){

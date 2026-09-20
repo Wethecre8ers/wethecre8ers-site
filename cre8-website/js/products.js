@@ -144,7 +144,7 @@ function money(n){ return '$' + n.toFixed(2); }
 function renderFilters(){
   const row = document.getElementById('filterRow');
   if (!row) return;
-  const cats = ['All', ...new Set(PRODUCTS.map(p=>p.category))];
+  const cats = ['All', ...new Set(PRODUCTS.map(p=>p.category))].sort((a,b) => a==='All' ? -1 : b==='All' ? 1 : a.localeCompare(b));
   row.innerHTML = cats.map(c => `<button class="chip ${c===activeFilter?'active':''}" onclick="setFilter('${c}')">${c}</button>`).join('');
 }
 function setFilter(c){ activeFilter = c; renderFilters(); renderGrid(); }
