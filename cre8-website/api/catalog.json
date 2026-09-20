@@ -7,6 +7,7 @@
   { "id": "pumpkinspinner-01", "name": "Pumpkin Spinner", "price": 12.99 },
   { "id": "skullplanter-01", "name": "Skull Planter", "price": 15.99 },
   { "id": "halloweenblackcat-01", "name": "Halloween Themed Black Cat", "price": 39.99 },
+  { "id": "halloweenskeletoncouple-01", "name": "Halloween Skeleton Couple", "price": 39.99 },
   { "id": "namedisplay-01", "name": "Name Display", "price": 8.99, "needsPhoto": true },
   { "id": "photolightbox-01", "name": "Customized Photo Light Box", "price": 34.99, "needsPhoto": true },
   { "id": "training-glock19-01", "name": "Training Glock 19 Replica", "price": 23.99 },

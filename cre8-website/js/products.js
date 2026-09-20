@@ -45,6 +45,11 @@ const PRODUCTS = [
     icon:'sign', images:['/images/products/halloweenblackcat-1.jpg','/images/products/halloweenblackcat-2.jpg','/images/products/halloweenblackcat-3.jpg'], asIs:true, materials:[], colors:[]
   },
   {
+    id:'halloweenskeletoncouple-01', category:'Halloween', name:'Halloween Skeleton Couple',
+    price:39.99, desc:'A lithophane panel featuring two skeletons on a bench forming a heart with their joined hands, a "Till Death Do Us Part" sign, a black cat, jack-o-lanterns, and a full moon — a charming engraved scene that catches the light beautifully. Ships ready to display.',
+    icon:'sign', images:['/images/products/halloweenskeletoncouple-1.jpg','/images/products/halloweenskeletoncouple-2.jpg','/images/products/halloweenskeletoncouple-3.jpg'], asIs:true, materials:[], colors:[]
+  },
+  {
     id:'namedisplay-01', category:'Personalized', name:'Name Display',
     price:8.99, desc:'A clean standing name sign for a desk, shelf, or door. Made to order in the name of your choice.',
     icon:'plate', images:['/images/products/namedisplay-1.jpg','/images/products/namedisplay-2.jpg','/images/products/namedisplay-3.jpg'], needsPhoto:true,
