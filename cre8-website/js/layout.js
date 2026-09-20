@@ -10,7 +10,8 @@ const CATEGORY_PAGES = [
   { name: 'Personalized',                       href: '/shop-personalized.html' },
   { name: 'Tactical Training',                  href: '/shop-tactical-training.html' },
   { name: 'Inspirational Signs & Light Boards', href: '/shop-inspirational-signs.html' },
-  { name: 'Halloween',                          href: '/shop-halloween.html' }
+  { name: 'Halloween',                          href: '/shop-halloween.html' },
+  { name: 'Fidgets',                            href: '/shop-fidgets.html' }
 ];
 
 function renderChrome(){

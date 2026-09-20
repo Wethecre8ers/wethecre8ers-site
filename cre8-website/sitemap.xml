@@ -194,6 +194,14 @@
       <image:loc>https://www.wethecre8ers.com/images/products/nobodycares-1.jpg</image:loc>
       <image:title>Nobody Cares</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/dragonfidget-1.jpg</image:loc>
+      <image:title>Crystan Spine Dragon Fidget</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/dragonfidget-2.jpg</image:loc>
+      <image:title>Crystan Spine Dragon Fidget</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.wethecre8ers.com/shop-home-desk.html</loc>
@@ -402,6 +410,19 @@
     <image:image>
       <image:loc>https://www.wethecre8ers.com/images/products/halloweenskeletoncouple-3.jpg</image:loc>
       <image:title>Halloween Skeleton Couple</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.wethecre8ers.com/shop-fidgets.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/dragonfidget-1.jpg</image:loc>
+      <image:title>Crystan Spine Dragon Fidget</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/dragonfidget-2.jpg</image:loc>
+      <image:title>Crystan Spine Dragon Fidget</image:title>
     </image:image>
   </url>
 </urlset>

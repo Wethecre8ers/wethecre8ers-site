@@ -98,6 +98,12 @@ const PRODUCTS = [
     wordColors:['Red','Grey','Green','White'],
     frameAddon:8.99, frameColors:['Black','Brown','Grey'],
     materials:[], colors:[]
+  },
+  {
+    id:'dragonfidget-01', category:'Fidgets', name:'Crystan Spine Dragon Fidget',
+    price:15.99, desc:'A fully articulated, print-in-place dragon fidget covered in crystal-like spikes — flexible from head to tail for satisfying twisting, coiling, and stress relief. Pictured in Pink/Green; choose your color below. Approximately 2ft long.',
+    icon:'dragon', images:['/images/products/dragonfidget-1.jpg','/images/products/dragonfidget-2.jpg'],
+    materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold']
   }
 ];
 
@@ -122,7 +128,8 @@ const ICONS = {
   pistol:`<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 30 L84 30 L84 42 L52 42 L58 72 L40 72 L40 48 L32 48 L32 42 L16 42 Z" stroke="#C8953D" stroke-width="2.5" stroke-linejoin="round"/><path d="M40 48 Q46 60 52 48" stroke="#B7B9BC" stroke-width="2.5"/><line x1="74" y1="32" x2="74" y2="40" stroke="#8A5B1E" stroke-width="2"/><line x1="78" y1="32" x2="78" y2="40" stroke="#8A5B1E" stroke-width="2"/></svg>`,
   magazine:`<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M42 16 L60 16 L62 78 L40 78 Z" stroke="#C8953D" stroke-width="2.5" stroke-linejoin="round"/><rect x="36" y="78" width="30" height="8" rx="2" stroke="#B7B9BC" stroke-width="2.5"/><line x1="43" y1="30" x2="59" y2="30" stroke="#8A5B1E" stroke-width="2"/><line x1="44" y1="44" x2="60" y2="44" stroke="#8A5B1E" stroke-width="2"/><line x1="45" y1="58" x2="61" y2="58" stroke="#8A5B1E" stroke-width="2"/></svg>`,
   karambit:`<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="36" cy="26" r="8" stroke="#B7B9BC" stroke-width="2.5"/><path d="M44 30 C66 34 78 54 72 74 C67 90 50 92 38 82" stroke="#C8953D" stroke-width="2.5" stroke-linecap="round"/><path d="M45 35 C58 41 65 53 63 66" stroke="#8A5B1E" stroke-width="2" stroke-linecap="round"/></svg>`,
-  sign:`<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="26" y="16" width="48" height="68" rx="3" stroke="#C8953D" stroke-width="2.5"/><line x1="35" y1="32" x2="65" y2="32" stroke="#B7B9BC" stroke-width="3.5"/><line x1="35" y1="43" x2="59" y2="43" stroke="#8A5B1E" stroke-width="2"/><line x1="35" y1="54" x2="65" y2="54" stroke="#B7B9BC" stroke-width="3.5"/><line x1="35" y1="65" x2="55" y2="65" stroke="#8A5B1E" stroke-width="2"/></svg>`
+  sign:`<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="26" y="16" width="48" height="68" rx="3" stroke="#C8953D" stroke-width="2.5"/><line x1="35" y1="32" x2="65" y2="32" stroke="#B7B9BC" stroke-width="3.5"/><line x1="35" y1="43" x2="59" y2="43" stroke="#8A5B1E" stroke-width="2"/><line x1="35" y1="54" x2="65" y2="54" stroke="#B7B9BC" stroke-width="3.5"/><line x1="35" y1="65" x2="55" y2="65" stroke="#8A5B1E" stroke-width="2"/></svg>`,
+  dragon:`<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 70 C30 74 40 70 46 60 C52 50 60 52 64 46 C68 40 66 34 72 30" stroke="#C8953D" stroke-width="2.5" stroke-linecap="round"/><path d="M14 62 L20 70 L14 74" stroke="#B7B9BC" stroke-width="2.5" stroke-linejoin="round"/><circle cx="76" cy="26" r="1.8" fill="#8A5B1E"/><path d="M30 64 L26 56 M38 64 L36 54 M46 60 L46 50 M54 54 L56 44 M62 48 L66 40" stroke="#B7B9BC" stroke-width="2"/></svg>`
 };
 
 /* ============================================================
