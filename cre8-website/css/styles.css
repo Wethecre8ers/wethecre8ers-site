@@ -285,6 +285,7 @@
     background:rgba(9,9,9,.55); border:1px solid rgba(200,149,61,.55); color:var(--gold);
     font-size:15px; padding-left:3px; pointer-events:none;
   }
+  .card .thumb .galPlay[hidden]{display:none;}
   .galNav{
     position:absolute; top:50%; transform:translateY(-50%); z-index:5;
     width:30px; height:30px; padding:0; border-radius:50%;
