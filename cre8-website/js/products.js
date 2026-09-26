@@ -26,7 +26,7 @@ const PRODUCTS = [
   },
   {
     id:'flexiturtle-01', category:'Home & Desk', name:'Flexi Turtle',
-    price:10.99, desc:'A hand-sized, poseable turtle figure with a flexible print-in-place design — a fun fidget or shelf piece.',
+    price:10.99, desc:'A hand-sized, poseable turtle figure with a flexible design — a fun fidget or shelf piece.',
     icon:'turtle', images:['/images/products/flexiturtle-1.jpg','/images/products/flexiturtle-2.jpg'], asIs:true, materials:[], colors:[]
   },
   {
