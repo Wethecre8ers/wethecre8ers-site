@@ -6,51 +6,71 @@
 const PRODUCTS = [
     {
     id:'concho-frog-01', category:'Home & Desk', name:'Concho The Frog',
+    slug:'concho-the-frog', seoTitle:'Concho the Frog 3D Printed Desk Figurine | WeTheCre8ers',
+    seoDesc:'Concho the Frog is a small 3D printed desk companion figurine with clean lines and a friendly presence, made by Cre8 for any workspace.',
     price:29.99, desc:'A small desk companion figurine, designed with clean lines and a friendly presence for any workspace.',
     icon:'frog', images:['/images/products/concho-frog-1.jpg','/images/products/concho-frog-2.jpg','/images/products/concho-frog-3.jpg'], asIs:true, materials:[], colors:[], featured:1
   },
   {
     id:'minipallets-01', category:'Home & Desk', name:'Mini Pallets (3-Pack)',
+    slug:'mini-pallets-3-pack', seoTitle:'Mini Pallets 3-Pack Desk Organizer | WeTheCre8ers',
+    seoDesc:'A set of three stackable mini pallets, sized to hold a stack of sticky notes or small desk items. 3D printed by Cre8, with a color choice for each pallet.',
     price:9.99, desc:'A set of three stackable mini pallets, sized to hold a stack of sticky notes or small desk items.',
     icon:'pallet', images:['/images/products/minipallets-1.jpg','/images/products/minipallets-2.jpg'], colorSlots:3, materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold']
   },
   {
     id:'dumpling-01', category:'Halloween', name:'Mini Clicker Dumpling (2-Pack)',
+    slug:'mini-clicker-dumpling-2-pack', seoTitle:'Mini Clicker Dumpling 2-Pack | WeTheCre8ers',
+    seoDesc:'A pair of squeezable mini clicker dumplings with a friendly painted face, sized for a desk or shelf. 3D printed by Cre8 in your choice of color.',
     price:10.99, desc:'A pair of squeezable dumpling figures with a friendly painted face, sized for a desk or shelf.',
     icon:'dumpling', images:['/images/products/dumpling-1.jpg','/images/products/dumpling-2.jpg','/images/products/dumpling-3.jpg'], materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold']
   },
   {
     id:'minicrates-01', category:'Home & Desk', name:'Mini Crates (2-Pack)',
+    slug:'mini-crates-2-pack', seoTitle:'Mini Crates 2-Pack Stackable Desk Totes | WeTheCre8ers',
+    seoDesc:'A pair of stackable milk-crate-style mini totes, sized for small desk items, candy, or trinkets. 3D printed by Cre8 in your choice of color.',
     price:10.99, desc:'A pair of stackable milk-crate-style totes, sized for small desk items, candy, or trinkets.',
     icon:'crate', images:['/images/products/minicrates-1.jpg','/images/products/minicrates-2.jpg'], materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold']
   },
   {
     id:'flexiturtle-01', category:'Home & Desk', name:'Flexi Turtle',
+    slug:'flexi-turtle', seoTitle:'Flexi Turtle Poseable 3D Printed Fidget | WeTheCre8ers',
+    seoDesc:'A hand-sized, poseable 3D printed turtle with a flexible design, made by Cre8 as a fun fidget or shelf piece.',
     price:10.99, desc:'A hand-sized, poseable turtle figure with a flexible design — a fun fidget or shelf piece.',
     icon:'turtle', images:['/images/products/flexiturtle-1.jpg','/images/products/flexiturtle-2.jpg'], asIs:true, materials:[], colors:[]
   },
   {
     id:'pumpkinspinner-01', category:'Halloween', name:'Pumpkin Spinner',
+    slug:'pumpkin-spinner', seoTitle:'Pumpkin Spinner Jack-o-Lantern Figure | WeTheCre8ers',
+    seoDesc:'A 3D printed jack-o-lantern figure with a spinning stem, sized for a desk or seasonal display. Made by Cre8.',
     price:12.99, desc:'A jack-o-lantern figure with a spinning stem, sized for a desk or seasonal display.',
     icon:'pumpkin', images:['/images/products/pumpkinspinner-1.jpg','/images/products/pumpkinspinner-2.jpg'], asIs:true, materials:[], colors:[]
   },
   {
     id:'skullplanter-01', category:'Halloween', name:'Skull Planter',
+    slug:'skull-planter', seoTitle:'3D Printed Skull Planter for Succulents | WeTheCre8ers',
+    seoDesc:'A carved skull-and-vine planter, designed to hold a small succulent or cutting. 3D printed by Cre8 in your choice of color.',
     price:15.99, desc:'A carved skull-and-vine planter, designed to hold a small succulent or cutting.',
     icon:'skull', images:['/images/products/skullplanter-1.jpg','/images/products/skullplanter-2.jpg','/images/products/skullplanter-3.jpg'], materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold'], featured:5
   },
   {
-    id:'halloweenblackcat-01', category:'Halloween', name:'Halloween Themed Black Cat',
+    id:'halloweenblackcat-01', category:'Halloween', name:'Halloween Black Cat Lithophane Panel',
+    slug:'halloween-black-cat-lithophane', seoTitle:'Halloween Black Cat Lithophane Panel | WeTheCre8ers',
+    seoDesc:'A "Happy Halloween" lithophane panel featuring a black cat, jack-o-lanterns, and a "Trick or Treat" sign. Ships ready to display.',
     price:39.99, desc:'A "Happy Halloween" lithophane panel featuring a black cat, jack-o-lanterns, and a "Trick or Treat" sign — a clean engraved scene that catches the light beautifully. Ships ready to display.',
     icon:'sign', images:['/images/products/halloweenblackcat-1.jpg','/images/products/halloweenblackcat-2.jpg','/images/products/halloweenblackcat-3.jpg'], asIs:true, materials:[], colors:[]
   },
   {
-    id:'halloweenskeletoncouple-01', category:'Halloween', name:'Halloween Skeleton Couple',
+    id:'halloweenskeletoncouple-01', category:'Halloween', name:'Halloween Skeleton Couple Lithophane Panel',
+    slug:'halloween-skeleton-couple-lithophane', seoTitle:'Halloween Skeleton Couple Lithophane | WeTheCre8ers',
+    seoDesc:'A Halloween lithophane panel of two skeletons on a bench forming a heart with their hands, with a "Till Death Do Us Part" sign. Ships ready to display.',
     price:39.99, desc:'A lithophane panel featuring two skeletons on a bench forming a heart with their joined hands, a "Till Death Do Us Part" sign, a black cat, jack-o-lanterns, and a full moon — a charming engraved scene that catches the light beautifully. Ships ready to display.',
     icon:'sign', images:['/images/products/halloweenskeletoncouple-1.jpg','/images/products/halloweenskeletoncouple-2.jpg','/images/products/halloweenskeletoncouple-3.jpg'], asIs:true, materials:[], colors:[]
   },
   {
     id:'namedisplay-01', category:'Personalized', name:'Name Display',
+    slug:'name-display', seoTitle:'Personalized Name Display Sign | WeTheCre8ers',
+    seoDesc:'A clean standing name sign for a desk, shelf, or door, made to order with the name of your choice. 3D printed by Cre8.',
     price:8.99, desc:'A clean standing name sign for a desk, shelf, or door. Made to order in the name of your choice.',
     icon:'plate', images:['/images/products/namedisplay-1.jpg','/images/products/namedisplay-2.jpg','/images/products/namedisplay-3.jpg'], needsPhoto:true,
     madeToOrderNote:'after checkout, email the name you\'d like on your Name Display to support@wethecre8ers.com along with your order confirmation so we can get started. We can also make it in other sizes — email us for a quote.',
@@ -58,41 +78,57 @@ const PRODUCTS = [
   },
   {
     id:'photolightbox-01', category:'Personalized', name:'Customized Photo Light Box',
+    slug:'custom-photo-light-box', seoTitle:'Custom Photo Light Box | WeTheCre8ers',
+    seoDesc:'A backlit photo panel made from your own picture, engraved so it glows when lit. Made to order: email your photo after checkout.',
     price:34.99, desc:'A backlit photo panel made from your own picture, engraved so it glows when lit. Made to order — after checkout, email your photo to support@wethecre8ers.com with your order confirmation.',
     icon:'lightbox', images:['/images/products/photolightbox-1.jpg','/images/products/photolightbox-2.jpg','/images/products/photolightbox-3.jpg','/images/products/photolightbox-movie.mp4','/images/products/photolightbox-4.jpg','/images/products/photolightbox-5.jpg','/images/products/photolightbox-6.jpg'], asIs:true, needsPhoto:true, materials:[], colors:[], featured:4
   },
   {
     id:'training-glock19-01', category:'Tactical Training', name:'Training Glock 19 Replica',
+    slug:'training-glock-19-replica', seoTitle:'Inert Glock 19 Training Replica | WeTheCre8ers',
+    seoDesc:'A solid, non-functional Glock 19-profile training replica for holster fit, draw practice, and handling drills. Inert plastic that cannot fire.',
     price:23.99, desc:'A solid, non-functional Glock 19-profile training replica for holster fit, draw practice, and handling drills. Inert plastic — no moving parts and cannot fire.',
     icon:'pistol', images:['/images/products/training-glock19-1.jpg','/images/products/training-glock19-2.jpg'], materials:['PLA Matte'], colors:['Blue','Red','Yellow','Green']
   },
   {
     id:'training-glock17-mag-01', category:'Tactical Training', name:'Training Glock 17 Magazine',
+    slug:'training-glock-17-magazine', seoTitle:'Glock 17 Dummy Magazine Training Replica | WeTheCre8ers',
+    seoDesc:'A solid Glock 17-profile dummy magazine for reload and malfunction drills. Inert training replica that does not hold or feed ammunition.',
     price:10.99, desc:'A solid Glock 17-profile dummy magazine for reload and malfunction drills. Inert training replica — does not hold or feed ammunition and has no functional parts.',
     icon:'magazine', images:['/images/products/training-glock17-mag-1.jpg'], materials:['PLA Matte'], colors:['Blue','Red','Yellow']
   },
   {
     id:'training-karambit-01', category:'Tactical Training', name:'Training Karambit Replica',
+    slug:'training-karambit-replica', seoTitle:'Blunt Karambit Training Replica | WeTheCre8ers',
+    seoDesc:'A solid, blunt karambit-profile trainer for grip, retention, and flow drills. Inert training replica with no cutting edge or point.',
     price:10.99, desc:'A solid, blunt karambit-profile trainer for grip, retention, and flow drills. Inert training replica — no cutting edge or point.',
     icon:'karambit', images:['/images/products/training-karambit-1.jpg'], materials:['PLA Matte'], colors:['Red','Blue','Yellow'], 
   },
   {
     id:'anyway-mother-teresa-01', category:'Inspirational Signs & Light Boards', name:'Anyway - Mother Teresa',
+    slug:'anyway-mother-teresa', seoTitle:'Mother Teresa Anyway Lighted Sign | WeTheCre8ers',
+    seoDesc:'A backlit light board engraved with the "Anyway" poem attributed to Mother Teresa. A clean frosted panel when off, a warm glow when lit. Ships ready to display.',
     price:39.99, desc:'A backlit light board engraved with the "Anyway" poem attributed to Mother Teresa — the words glow warmly when lit and read as a clean frosted panel when off. Ships ready to display. Want a different quote or saying? Contact us for a custom quote.',
     icon:'sign', images:['/images/products/anyway-mother-teresa-1.jpg','/images/products/anyway-mother-teresa-2.jpg','/images/products/anyway-mother-teresa-3.jpg'], asIs:true, materials:[], colors:[], featured:3
   },
   {
     id:'mjquote-01', category:'Inspirational Signs & Light Boards', name:'Michael Jordan Lighted Quote',
+    slug:'michael-jordan-lighted-quote', seoTitle:'Michael Jordan Lighted Quote Sign | WeTheCre8ers',
+    seoDesc:'A backlit sign featuring Michael Jordan\'s "I\'ve missed more than 9000 shots" quote: bold when lit, a clean frosted panel when off. Ships ready to display.',
     price:39.99, desc:'A backlit motivational light board featuring Michael Jordan\'s "I\'ve missed more than 9000 shots" quote — bold when lit, a clean frosted panel when off. Ships ready to display. Want a different quote or saying? Contact us for a custom quote.',
     icon:'sign', images:['/images/products/mjquote-1.jpg','/images/products/mjquote-2.jpg','/images/products/mjquote-3.jpg'], asIs:true, materials:[], colors:[], featured:2
   },
   {
     id:'aikmanquote-01', category:'Inspirational Signs & Light Boards', name:'Troy Aikman Lighted Quote',
+    slug:'troy-aikman-lighted-quote', seoTitle:'Troy Aikman Lighted Quote Sign | WeTheCre8ers',
+    seoDesc:'A backlit sign with Troy Aikman\'s "I don\'t try to please anybody. I try to win." quote: bold when lit, a clean frosted panel when off. Ships ready to display.',
     price:39.99, desc:'A backlit motivational light board featuring Troy Aikman\'s "I don\'t try to please anybody. I try to win." quote — bold when lit, a clean frosted panel when off. Ships ready to display. Want a different quote or saying? Contact us for a custom quote.',
     icon:'sign', images:['/images/products/aikmanquote-1.jpg','/images/products/aikmanquote-2.jpg','/images/products/aikmanquote-3.jpg'], asIs:true, materials:[], colors:[]
   },
   {
     id:'nobodycares-01', category:'Inspirational Signs & Light Boards', name:'Nobody Cares',
+    slug:'nobody-cares', seoTitle:'Nobody Cares Work Harder Motivational Sign | WeTheCre8ers',
+    seoDesc:'A "Nobody Cares — Work Harder" motivational panel. Choose your word color, with an optional frame.',
     price:5.99, desc:'A "Nobody Cares — Work Harder" motivational panel. Choose your word color; a frame is optional.',
     icon:'sign', images:['/images/products/nobodycares-1.jpg'], asIs:true,
     wordColors:['Red','Grey','Green','White'],
@@ -101,6 +137,8 @@ const PRODUCTS = [
   },
   {
     id:'dragonfidget-01', category:'Fidgets', name:'Crystal Spine Dragon Fidget',
+    slug:'crystal-spine-dragon-fidget', seoTitle:'Crystal Spine Articulated Dragon Fidget | WeTheCre8ers',
+    seoDesc:'A fully articulated dragon fidget covered in crystal-like spikes, flexible from head to tail. About 2ft long, in your choice of color; pictured in Pink/Green.',
     price:15.99, desc:'A fully articulated dragon fidget covered in crystal-like spikes — flexible from head to tail for satisfying twisting, coiling, and stress relief. Pictured in Pink/Green; choose your color below. Approximately 2ft long.',
     icon:'dragon', images:['/images/products/dragonfidget-1.jpg','/images/products/dragonfidget-2.jpg'],
     materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold']
@@ -174,6 +212,20 @@ function optSummary(c){
   return parts.length ? parts.join(' · ') : 'Ships as shown';
 }
 
+// A real link to the product's own page. A plain left-click still opens the
+// quick-view modal; modified clicks (new tab/window, middle click) and
+// no-JS visitors get the normal page navigation.
+function productLinkHTML(p, inner, cls){
+  if (!p.slug) return inner;
+  return `<a${cls ? ` class="${cls}"` : ''} href="/products/${p.slug}.html" onclick="return productLinkClick(event,'${p.id}')">${inner}</a>`;
+}
+function productLinkClick(e, id){
+  if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return true;
+  e.preventDefault();
+  openProduct(id);
+  return false;
+}
+
 function productCardHTML(p){
   let thumbInner;
   if (p.images && p.images.length > 1) {
@@ -201,14 +253,16 @@ function productCardHTML(p){
         ${thumbInner}
       </div>
       <div class="body">
-        <h3>${p.name}</h3>
+        <h3>${productLinkHTML(p, p.name)}</h3>
         <p class="desc">${p.desc}</p>
         <div class="metaRow">
           <span class="price">${money(p.price)}</span>
           <span class="fromTag">${(p.materials.length>1 || p.frameAddon)?'From':''}</span>
         </div>
         <div class="actions">
-          <button class="miniBtn" onclick="openProduct('${p.id}')">Details</button>
+          ${p.slug
+            ? productLinkHTML(p, 'Details', 'miniBtn')
+            : `<button class="miniBtn" onclick="openProduct('${p.id}')">Details</button>`}
           <button class="miniBtn solid" onclick="quickAdd('${p.id}')">Add to Cart</button>
         </div>
       </div>
@@ -285,15 +339,18 @@ function renderCategoryGrid(category){
 
 // Compact card for the home-page featured strip. Opens the product modal.
 function featuredCardHTML(p){
-  return `
-    <button class="featuredCard" type="button" onclick="openProduct('${p.id}')" aria-label="${p.name}">
+  const inner = `
       <span class="fThumb">${primaryPhoto(p) ? `<img src="${primaryPhoto(p)}" alt="${p.name}">` : ICONS[p.icon]}</span>
       <span class="fBody">
         <span class="fName">${p.name}</span>
         <span class="price">${p.materials.length > 1 ? 'From ' : ''}${money(p.price)}</span>
-      </span>
-    </button>
-  `;
+      </span>`;
+  if (p.slug) {
+    return `<a class="featuredCard" href="/products/${p.slug}.html" onclick="return productLinkClick(event,'${p.id}')" aria-label="${p.name}">${inner}
+    </a>`;
+  }
+  return `<button class="featuredCard" type="button" onclick="openProduct('${p.id}')" aria-label="${p.name}">${inner}
+    </button>`;
 }
 
 // Horizontal-scrolling strip of featured products. A product joins the
@@ -354,18 +411,9 @@ function quickAdd(id){
   showToast(`${p.name} added to cart`);
 }
 
-function openProduct(id){
-  const p = PRODUCTS.find(x=>x.id===id);
-  const modal = document.getElementById('productModal');
-  const hasImages = p.images && p.images.length;
-  const mainImg = hasImages ? p.images[0] : null;
-  const galleryHtml = hasImages && p.images.length > 1 ? `
-    <div id="galleryThumbs" style="display:flex; gap:8px; padding:12px; justify-content:center; flex-wrap:wrap;">
-      ${p.images.map((img,i)=>{
-        const vid = isVideoSrc(img);
-        return `<button onclick="switchGalleryImage(this,'${img}')" style="position:relative;width:52px;height:52px;padding:0;border-radius:4px;overflow:hidden;border:1px solid ${i===0?'var(--gold)':'rgba(183,185,188,.3)'};background:none;cursor:pointer;"><img src="${vid?posterFor(img):img}" style="width:100%;height:100%;object-fit:cover;">${vid?'<span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px;text-shadow:0 1px 4px #000;">&#9658;</span>':''}</button>`;
-      }).join('')}
-    </div>` : '';
+// Option controls + Add to Cart button + trailing note for one product.
+// Shared by the quick-view modal and the standalone product pages.
+function productPurchaseHTML(p){
   const colorBlockHtml = p.colorSlots && p.colorSlots > 1 ? `
     <div class="optGroup">
       <label>Choose ${p.colorSlots} Colors (one per pallet)</label>
@@ -431,6 +479,35 @@ function openProduct(id){
     ${frameHtml}
     ${madeToOrderNote}
   `;
+  return `
+        ${optionsHtml}
+        <button class="btn btn-gold btn-block" id="pmAddBtn" onclick="addFromModal('${p.id}')">Add to Cart — ${money(p.price)}</button>
+        ${p.asIs ? '' : '<div class="noteBox">Layer lines and slight color variation are part of how this piece is made. We\'ll flag anything unusual before it ships.</div>'}
+  `;
+}
+
+// Standalone product page: the crawlable content is static HTML; this fills
+// in the interactive option controls and Add to Cart button.
+function renderProductPage(){
+  const el = document.getElementById('ppPurchase');
+  if (!el) return;
+  const p = PRODUCTS.find(x => x.id === el.dataset.productId);
+  if (!p) return;
+  el.innerHTML = productPurchaseHTML(p);
+}
+
+function openProduct(id){
+  const p = PRODUCTS.find(x=>x.id===id);
+  const modal = document.getElementById('productModal');
+  const hasImages = p.images && p.images.length;
+  const mainImg = hasImages ? p.images[0] : null;
+  const galleryHtml = hasImages && p.images.length > 1 ? `
+    <div id="galleryThumbs" style="display:flex; gap:8px; padding:12px; justify-content:center; flex-wrap:wrap;">
+      ${p.images.map((img,i)=>{
+        const vid = isVideoSrc(img);
+        return `<button onclick="switchGalleryImage(this,'${img}')" style="position:relative;width:52px;height:52px;padding:0;border-radius:4px;overflow:hidden;border:1px solid ${i===0?'var(--gold)':'rgba(183,185,188,.3)'};background:none;cursor:pointer;"><img src="${vid?posterFor(img):img}" style="width:100%;height:100%;object-fit:cover;">${vid?'<span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px;text-shadow:0 1px 4px #000;">&#9658;</span>':''}</button>`;
+      }).join('')}
+    </div>` : '';
   modal.innerHTML = `
     <button class="modalClose" onclick="closeModal('productModalOverlay')">&times;</button>
     <div class="productModalGrid">
@@ -443,9 +520,8 @@ function openProduct(id){
         <h3>${p.name}</h3>
         <span class="price" id="pmPrice">${money(p.price)}</span>
         <p class="desc">${p.desc}</p>
-        ${optionsHtml}
-        <button class="btn btn-gold btn-block" id="pmAddBtn" onclick="addFromModal('${p.id}')">Add to Cart — ${money(p.price)}</button>
-        ${p.asIs ? '' : '<div class="noteBox">Layer lines and slight color variation are part of how this piece is made. We\'ll flag anything unusual before it ships.</div>'}
+        ${productPurchaseHTML(p)}
+        ${p.slug ? `<a class="pmFull" href="/products/${p.slug}.html">View full page &rarr;</a>` : ''}
       </div>
     </div>
   `;
@@ -455,7 +531,7 @@ function switchGalleryImage(btn, src){
   const main = document.getElementById('mainProductImg');
   main.innerHTML = isVideoSrc(src)
     ? `<video src="${src}" poster="${posterFor(src)}" controls autoplay loop muted playsinline style="width:100%;height:100%;object-fit:contain;background:#000;"></video>`
-    : `<img src="${src}" alt="" style="width:100%;height:100%;object-fit:contain;padding:24px;box-sizing:border-box;">`;
+    : `<img src="${src}" alt="${btn.dataset.alt || ''}" style="width:100%;height:100%;object-fit:contain;padding:24px;box-sizing:border-box;">`;
   const parent = btn.parentElement;
   [...parent.children].forEach(c => c.style.border = '1px solid rgba(183,185,188,.3)');
   btn.style.border = '1px solid var(--gold)';

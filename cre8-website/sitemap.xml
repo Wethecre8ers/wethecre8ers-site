@@ -80,27 +80,27 @@
     </image:image>
     <image:image>
       <image:loc>https://www.wethecre8ers.com/images/products/halloweenblackcat-1.jpg</image:loc>
-      <image:title>Halloween Themed Black Cat</image:title>
+      <image:title>Halloween Black Cat Lithophane Panel</image:title>
     </image:image>
     <image:image>
       <image:loc>https://www.wethecre8ers.com/images/products/halloweenblackcat-2.jpg</image:loc>
-      <image:title>Halloween Themed Black Cat</image:title>
+      <image:title>Halloween Black Cat Lithophane Panel</image:title>
     </image:image>
     <image:image>
       <image:loc>https://www.wethecre8ers.com/images/products/halloweenblackcat-3.jpg</image:loc>
-      <image:title>Halloween Themed Black Cat</image:title>
+      <image:title>Halloween Black Cat Lithophane Panel</image:title>
     </image:image>
     <image:image>
       <image:loc>https://www.wethecre8ers.com/images/products/halloweenskeletoncouple-1.jpg</image:loc>
-      <image:title>Halloween Skeleton Couple</image:title>
+      <image:title>Halloween Skeleton Couple Lithophane Panel</image:title>
     </image:image>
     <image:image>
       <image:loc>https://www.wethecre8ers.com/images/products/halloweenskeletoncouple-2.jpg</image:loc>
-      <image:title>Halloween Skeleton Couple</image:title>
+      <image:title>Halloween Skeleton Couple Lithophane Panel</image:title>
     </image:image>
     <image:image>
       <image:loc>https://www.wethecre8ers.com/images/products/halloweenskeletoncouple-3.jpg</image:loc>
-      <image:title>Halloween Skeleton Couple</image:title>
+      <image:title>Halloween Skeleton Couple Lithophane Panel</image:title>
     </image:image>
     <image:image>
       <image:loc>https://www.wethecre8ers.com/images/products/namedisplay-1.jpg</image:loc>
@@ -204,6 +204,80 @@
     </image:image>
   </url>
   <url>
+    <loc>https://www.wethecre8ers.com/shop-fidgets.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/dragonfidget-1.jpg</image:loc>
+      <image:title>Crystal Spine Dragon Fidget</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/dragonfidget-2.jpg</image:loc>
+      <image:title>Crystal Spine Dragon Fidget</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.wethecre8ers.com/shop-halloween.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/dumpling-1.jpg</image:loc>
+      <image:title>Mini Clicker Dumpling (2-Pack)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/dumpling-2.jpg</image:loc>
+      <image:title>Mini Clicker Dumpling (2-Pack)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/dumpling-3.jpg</image:loc>
+      <image:title>Mini Clicker Dumpling (2-Pack)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/pumpkinspinner-1.jpg</image:loc>
+      <image:title>Pumpkin Spinner</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/pumpkinspinner-2.jpg</image:loc>
+      <image:title>Pumpkin Spinner</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/skullplanter-1.jpg</image:loc>
+      <image:title>Skull Planter</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/skullplanter-2.jpg</image:loc>
+      <image:title>Skull Planter</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/skullplanter-3.jpg</image:loc>
+      <image:title>Skull Planter</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/halloweenblackcat-1.jpg</image:loc>
+      <image:title>Halloween Black Cat Lithophane Panel</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/halloweenblackcat-2.jpg</image:loc>
+      <image:title>Halloween Black Cat Lithophane Panel</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/halloweenblackcat-3.jpg</image:loc>
+      <image:title>Halloween Black Cat Lithophane Panel</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/halloweenskeletoncouple-1.jpg</image:loc>
+      <image:title>Halloween Skeleton Couple Lithophane Panel</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/halloweenskeletoncouple-2.jpg</image:loc>
+      <image:title>Halloween Skeleton Couple Lithophane Panel</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/halloweenskeletoncouple-3.jpg</image:loc>
+      <image:title>Halloween Skeleton Couple Lithophane Panel</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.wethecre8ers.com/shop-home-desk.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -242,6 +316,51 @@
     <image:image>
       <image:loc>https://www.wethecre8ers.com/images/products/flexiturtle-2.jpg</image:loc>
       <image:title>Flexi Turtle</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.wethecre8ers.com/shop-inspirational-signs.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/anyway-mother-teresa-1.jpg</image:loc>
+      <image:title>Anyway - Mother Teresa</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/anyway-mother-teresa-2.jpg</image:loc>
+      <image:title>Anyway - Mother Teresa</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/anyway-mother-teresa-3.jpg</image:loc>
+      <image:title>Anyway - Mother Teresa</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/mjquote-1.jpg</image:loc>
+      <image:title>Michael Jordan Lighted Quote</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/mjquote-2.jpg</image:loc>
+      <image:title>Michael Jordan Lighted Quote</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/mjquote-3.jpg</image:loc>
+      <image:title>Michael Jordan Lighted Quote</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/aikmanquote-1.jpg</image:loc>
+      <image:title>Troy Aikman Lighted Quote</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/aikmanquote-2.jpg</image:loc>
+      <image:title>Troy Aikman Lighted Quote</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/aikmanquote-3.jpg</image:loc>
+      <image:title>Troy Aikman Lighted Quote</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/nobodycares-1.jpg</image:loc>
+      <image:title>Nobody Cares</image:title>
     </image:image>
   </url>
   <url>
@@ -307,54 +426,39 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.wethecre8ers.com/shop-inspirational-signs.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.wethecre8ers.com/products/concho-the-frog.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
     <image:image>
-      <image:loc>https://www.wethecre8ers.com/images/products/anyway-mother-teresa-1.jpg</image:loc>
-      <image:title>Anyway - Mother Teresa</image:title>
+      <image:loc>https://www.wethecre8ers.com/images/products/concho-frog-1.jpg</image:loc>
+      <image:title>Concho The Frog</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://www.wethecre8ers.com/images/products/anyway-mother-teresa-2.jpg</image:loc>
-      <image:title>Anyway - Mother Teresa</image:title>
+      <image:loc>https://www.wethecre8ers.com/images/products/concho-frog-2.jpg</image:loc>
+      <image:title>Concho The Frog</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://www.wethecre8ers.com/images/products/anyway-mother-teresa-3.jpg</image:loc>
-      <image:title>Anyway - Mother Teresa</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.wethecre8ers.com/images/products/mjquote-1.jpg</image:loc>
-      <image:title>Michael Jordan Lighted Quote</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.wethecre8ers.com/images/products/mjquote-2.jpg</image:loc>
-      <image:title>Michael Jordan Lighted Quote</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.wethecre8ers.com/images/products/mjquote-3.jpg</image:loc>
-      <image:title>Michael Jordan Lighted Quote</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.wethecre8ers.com/images/products/aikmanquote-1.jpg</image:loc>
-      <image:title>Troy Aikman Lighted Quote</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.wethecre8ers.com/images/products/aikmanquote-2.jpg</image:loc>
-      <image:title>Troy Aikman Lighted Quote</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.wethecre8ers.com/images/products/aikmanquote-3.jpg</image:loc>
-      <image:title>Troy Aikman Lighted Quote</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.wethecre8ers.com/images/products/nobodycares-1.jpg</image:loc>
-      <image:title>Nobody Cares</image:title>
+      <image:loc>https://www.wethecre8ers.com/images/products/concho-frog-3.jpg</image:loc>
+      <image:title>Concho The Frog</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://www.wethecre8ers.com/shop-halloween.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.wethecre8ers.com/products/mini-pallets-3-pack.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/minipallets-1.jpg</image:loc>
+      <image:title>Mini Pallets (3-Pack)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/minipallets-2.jpg</image:loc>
+      <image:title>Mini Pallets (3-Pack)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.wethecre8ers.com/products/mini-clicker-dumpling-2-pack.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
     <image:image>
       <image:loc>https://www.wethecre8ers.com/images/products/dumpling-1.jpg</image:loc>
       <image:title>Mini Clicker Dumpling (2-Pack)</image:title>
@@ -367,6 +471,37 @@
       <image:loc>https://www.wethecre8ers.com/images/products/dumpling-3.jpg</image:loc>
       <image:title>Mini Clicker Dumpling (2-Pack)</image:title>
     </image:image>
+  </url>
+  <url>
+    <loc>https://www.wethecre8ers.com/products/mini-crates-2-pack.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/minicrates-1.jpg</image:loc>
+      <image:title>Mini Crates (2-Pack)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/minicrates-2.jpg</image:loc>
+      <image:title>Mini Crates (2-Pack)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.wethecre8ers.com/products/flexi-turtle.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/flexiturtle-1.jpg</image:loc>
+      <image:title>Flexi Turtle</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/flexiturtle-2.jpg</image:loc>
+      <image:title>Flexi Turtle</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.wethecre8ers.com/products/pumpkin-spinner.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
     <image:image>
       <image:loc>https://www.wethecre8ers.com/images/products/pumpkinspinner-1.jpg</image:loc>
       <image:title>Pumpkin Spinner</image:title>
@@ -375,6 +510,11 @@
       <image:loc>https://www.wethecre8ers.com/images/products/pumpkinspinner-2.jpg</image:loc>
       <image:title>Pumpkin Spinner</image:title>
     </image:image>
+  </url>
+  <url>
+    <loc>https://www.wethecre8ers.com/products/skull-planter.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
     <image:image>
       <image:loc>https://www.wethecre8ers.com/images/products/skullplanter-1.jpg</image:loc>
       <image:title>Skull Planter</image:title>
@@ -387,35 +527,182 @@
       <image:loc>https://www.wethecre8ers.com/images/products/skullplanter-3.jpg</image:loc>
       <image:title>Skull Planter</image:title>
     </image:image>
+  </url>
+  <url>
+    <loc>https://www.wethecre8ers.com/products/halloween-black-cat-lithophane.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
     <image:image>
       <image:loc>https://www.wethecre8ers.com/images/products/halloweenblackcat-1.jpg</image:loc>
-      <image:title>Halloween Themed Black Cat</image:title>
+      <image:title>Halloween Black Cat Lithophane Panel</image:title>
     </image:image>
     <image:image>
       <image:loc>https://www.wethecre8ers.com/images/products/halloweenblackcat-2.jpg</image:loc>
-      <image:title>Halloween Themed Black Cat</image:title>
+      <image:title>Halloween Black Cat Lithophane Panel</image:title>
     </image:image>
     <image:image>
       <image:loc>https://www.wethecre8ers.com/images/products/halloweenblackcat-3.jpg</image:loc>
-      <image:title>Halloween Themed Black Cat</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.wethecre8ers.com/images/products/halloweenskeletoncouple-1.jpg</image:loc>
-      <image:title>Halloween Skeleton Couple</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.wethecre8ers.com/images/products/halloweenskeletoncouple-2.jpg</image:loc>
-      <image:title>Halloween Skeleton Couple</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.wethecre8ers.com/images/products/halloweenskeletoncouple-3.jpg</image:loc>
-      <image:title>Halloween Skeleton Couple</image:title>
+      <image:title>Halloween Black Cat Lithophane Panel</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://www.wethecre8ers.com/shop-fidgets.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.wethecre8ers.com/products/halloween-skeleton-couple-lithophane.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/halloweenskeletoncouple-1.jpg</image:loc>
+      <image:title>Halloween Skeleton Couple Lithophane Panel</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/halloweenskeletoncouple-2.jpg</image:loc>
+      <image:title>Halloween Skeleton Couple Lithophane Panel</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/halloweenskeletoncouple-3.jpg</image:loc>
+      <image:title>Halloween Skeleton Couple Lithophane Panel</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.wethecre8ers.com/products/name-display.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/namedisplay-1.jpg</image:loc>
+      <image:title>Name Display</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/namedisplay-2.jpg</image:loc>
+      <image:title>Name Display</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/namedisplay-3.jpg</image:loc>
+      <image:title>Name Display</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.wethecre8ers.com/products/custom-photo-light-box.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/photolightbox-1.jpg</image:loc>
+      <image:title>Customized Photo Light Box</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/photolightbox-2.jpg</image:loc>
+      <image:title>Customized Photo Light Box</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/photolightbox-3.jpg</image:loc>
+      <image:title>Customized Photo Light Box</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/photolightbox-4.jpg</image:loc>
+      <image:title>Customized Photo Light Box</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/photolightbox-5.jpg</image:loc>
+      <image:title>Customized Photo Light Box</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/photolightbox-6.jpg</image:loc>
+      <image:title>Customized Photo Light Box</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.wethecre8ers.com/products/training-glock-19-replica.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/training-glock19-1.jpg</image:loc>
+      <image:title>Training Glock 19 Replica</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/training-glock19-2.jpg</image:loc>
+      <image:title>Training Glock 19 Replica</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.wethecre8ers.com/products/training-glock-17-magazine.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/training-glock17-mag-1.jpg</image:loc>
+      <image:title>Training Glock 17 Magazine</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.wethecre8ers.com/products/training-karambit-replica.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/training-karambit-1.jpg</image:loc>
+      <image:title>Training Karambit Replica</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.wethecre8ers.com/products/anyway-mother-teresa.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/anyway-mother-teresa-1.jpg</image:loc>
+      <image:title>Anyway - Mother Teresa</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/anyway-mother-teresa-2.jpg</image:loc>
+      <image:title>Anyway - Mother Teresa</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/anyway-mother-teresa-3.jpg</image:loc>
+      <image:title>Anyway - Mother Teresa</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.wethecre8ers.com/products/michael-jordan-lighted-quote.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/mjquote-1.jpg</image:loc>
+      <image:title>Michael Jordan Lighted Quote</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/mjquote-2.jpg</image:loc>
+      <image:title>Michael Jordan Lighted Quote</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/mjquote-3.jpg</image:loc>
+      <image:title>Michael Jordan Lighted Quote</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.wethecre8ers.com/products/troy-aikman-lighted-quote.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/aikmanquote-1.jpg</image:loc>
+      <image:title>Troy Aikman Lighted Quote</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/aikmanquote-2.jpg</image:loc>
+      <image:title>Troy Aikman Lighted Quote</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/aikmanquote-3.jpg</image:loc>
+      <image:title>Troy Aikman Lighted Quote</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.wethecre8ers.com/products/nobody-cares.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/nobodycares-1.jpg</image:loc>
+      <image:title>Nobody Cares</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.wethecre8ers.com/products/crystal-spine-dragon-fidget.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
     <image:image>
       <image:loc>https://www.wethecre8ers.com/images/products/dragonfidget-1.jpg</image:loc>
       <image:title>Crystal Spine Dragon Fidget</image:title>

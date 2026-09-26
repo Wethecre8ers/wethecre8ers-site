@@ -208,9 +208,26 @@ deployed Vercel URL.
 
 `api/catalog.json` is a second copy of your product prices, used only to
 verify charges server-side (so a customer's browser can never pay less than
-it should). **If you change a price or add a product in `index.html`'s
+it should). **If you change a price or add a product in `js/products.js`'s
 `PRODUCTS` list, update `api/catalog.json` too** — otherwise checkout will
 fail for anything missing, or charge the old price for anything out of sync.
+
+## Adding or editing a product
+
+1. Edit the `PRODUCTS` list in `js/products.js`. Every product needs a
+   permanent, unique `slug` (its page is `/products/<slug>.html`); never
+   change an existing slug. Optional `seoTitle` / `seoDesc` set the page's
+   search title (keep it ~60 chars, ending ` | WeTheCre8ers`) and meta
+   description (max 160 chars); optional `related: ['product-id', ...]`
+   overrides the "Related products" row.
+2. Mirror `id`, `name`, `price`, `frameAddon` and `needsPhoto` in
+   `api/catalog.json`.
+3. Run `python3 scripts/build-products.py`. It regenerates every
+   `products/<slug>.html` page, the `<noscript>` product links on the shop
+   pages, and `sitemap.xml`, and it refuses to run if `products.js` and
+   `catalog.json` disagree.
+4. Commit the generated files along with your edits. To verify nothing is
+   stale (without writing anything): `python3 scripts/build-products.py --check`.
 
 ## Still separate: the contact form
 
