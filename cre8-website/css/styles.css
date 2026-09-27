@@ -225,6 +225,7 @@
   .catLinks, .section-head p.catLinks{font-size:13.5px; line-height:1.9; color:var(--silver); margin:18px 0 0; text-align:center;}
   .catLinks a{color:var(--gold); border-bottom:1px solid rgba(200,149,61,.4); transition:border-color .2s;}
   .catLinks a:hover{border-bottom-color:var(--gold);}
+  .catLinks.srOnly, .section-head p.catLinks.srOnly{position:absolute; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden; clip:rect(0,0,0,0); clip-path:inset(50%); white-space:nowrap; border:0;}
   .section-alt{background:var(--charcoal-2); border-top:1px solid rgba(183,185,188,.08); border-bottom:1px solid rgba(183,185,188,.08);}
 
   /* ---------- Process ---------- */
