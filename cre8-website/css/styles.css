@@ -442,6 +442,16 @@
   .swatch.active{border-color:var(--gold); color:var(--gold); background:rgba(200,149,61,.1);}
   .noteBox{font-size:12px; color:var(--silver); background:rgba(200,149,61,.07); border:1px solid rgba(200,149,61,.2); padding:12px 14px; border-radius:var(--radius); line-height:1.6; margin-top:18px;}
 
+  /* ---------- Shipping & Returns policy page ---------- */
+  .policyGrid{display:grid; grid-template-columns:repeat(2,1fr); gap:22px;}
+  .policyCard{background:var(--charcoal); border:1px solid rgba(183,185,188,.14); border-radius:var(--radius); padding:22px 24px;}
+  .policyCard h2{font-family:var(--display); font-weight:600; color:var(--gold); font-size:17px; margin:0 0 10px;}
+  .policyCard p{color:var(--silver); font-size:14.5px; line-height:1.7; margin:0 0 10px;}
+  .policyCard p:last-child{margin-bottom:0;}
+  .policyCard a{color:var(--ivory); text-decoration:underline; text-underline-offset:2px;}
+  .policyCard a:hover{color:var(--gold);}
+  @media (max-width:640px){ .policyGrid{grid-template-columns:1fr;} }
+
   /* ---------- Product links, product pages ---------- */
   a.miniBtn{display:flex; align-items:center; justify-content:center;}
   .card h3 a{color:inherit; transition:color .2s;}

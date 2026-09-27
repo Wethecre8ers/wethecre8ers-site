@@ -41,7 +41,45 @@
     "@type": "Offer",
     "url": "https://www.wethecre8ers.com/products/skull-planter.html",
     "price": "15.99",
-    "priceCurrency": "USD"
+    "priceCurrency": "USD",
+    "priceValidUntil": "2027-09-27",
+    "availability": "https://schema.org/MadeToOrder",
+    "itemCondition": "https://schema.org/NewCondition",
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "6.50",
+        "currency": "USD"
+      },
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "US"
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 3,
+          "maxValue": 5,
+          "unitCode": "d"
+        },
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 5,
+          "maxValue": 10,
+          "unitCode": "d"
+        }
+      }
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "US",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+      "merchantReturnDays": 14,
+      "returnMethod": "https://schema.org/ReturnByMail",
+      "returnFees": "https://schema.org/ReturnShippingFees"
+    }
   }
 }
 </script>

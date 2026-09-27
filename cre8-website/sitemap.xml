@@ -712,4 +712,9 @@
       <image:title>Crystal Spine Dragon Fidget</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://www.wethecre8ers.com/shipping-returns.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
 </urlset>

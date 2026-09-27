@@ -133,6 +133,11 @@ def product_jsonld(p, categories):
             "url": cd.product_url(p),
             "price": f"{p['price']:.2f}",
             "priceCurrency": "USD",
+            "priceValidUntil": cd.price_valid_until(),
+            "availability": "https://schema.org/MadeToOrder",
+            "itemCondition": "https://schema.org/NewCondition",
+            "shippingDetails": cd.offer_shipping_details(),
+            "hasMerchantReturnPolicy": cd.merchant_return_policy(p),
         },
     }
     return json.dumps(data, indent=2, ensure_ascii=False).replace("</", "<\\/")

@@ -120,6 +120,7 @@ function renderChrome(){
           <li><a href="${to('about')}">About</a></li>
           <li><a href="${to('process')}">Our Process</a></li>
           <li><a href="${to('contact')}">Contact</a></li>
+          <li><a href="/shipping-returns.html">Shipping &amp; Returns</a></li>
         </ul>
       </div>
     </div>

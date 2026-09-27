@@ -10,12 +10,85 @@ checkout's price authority). It never writes catalog.json.
 import json
 import os
 import re
+from datetime import date, timedelta
 
 SITE = "https://www.wethecre8ers.com"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # cre8-website/
 PRODUCTS_JS = os.path.join(ROOT, "js", "products.js")
 LAYOUT_JS = os.path.join(ROOT, "js", "layout.js")
 CATALOG_JSON = os.path.join(ROOT, "api", "catalog.json")
+
+# Single source of truth for the shipping/returns policy. Keep this in sync
+# with the prose on shipping-returns.html (hand-written there since it's a
+# reader-facing page, not generated) — this feeds the Offer structured data
+# on every product page instead.
+POLICY = {
+    "shipping_rate_usd": 6.50,
+    "handling_min_days": 3,
+    "handling_max_days": 5,
+    "transit_min_days": 5,
+    "transit_max_days": 10,
+    "ship_country": "US",
+    "standard_return_days": 14,
+    "contact_email": "support@wethecre8ers.com",
+}
+
+
+def is_custom_personalized(p):
+    """Products made to the buyer's own specifics (name, photo) — final
+    sale unless damaged, rather than the standard return window."""
+    return bool(p.get("needsPhoto"))
+
+
+def price_valid_until():
+    return (date.today() + timedelta(days=365)).isoformat()
+
+
+def offer_shipping_details():
+    return {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": f"{POLICY['shipping_rate_usd']:.2f}",
+            "currency": "USD",
+        },
+        "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": POLICY["ship_country"],
+        },
+        "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+                "@type": "QuantitativeValue",
+                "minValue": POLICY["handling_min_days"],
+                "maxValue": POLICY["handling_max_days"],
+                "unitCode": "d",
+            },
+            "transitTime": {
+                "@type": "QuantitativeValue",
+                "minValue": POLICY["transit_min_days"],
+                "maxValue": POLICY["transit_max_days"],
+                "unitCode": "d",
+            },
+        },
+    }
+
+
+def merchant_return_policy(p):
+    if is_custom_personalized(p):
+        return {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": POLICY["ship_country"],
+            "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+        }
+    return {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": POLICY["ship_country"],
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": POLICY["standard_return_days"],
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/ReturnShippingFees",
+    }
 
 
 def _read(path):

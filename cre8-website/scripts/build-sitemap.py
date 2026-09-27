@@ -24,6 +24,11 @@ SITE = cd.SITE
 OUT = os.path.join(cd.ROOT, "sitemap.xml")
 IMG_EXT = (".jpg", ".jpeg", ".png", ".webp", ".gif")
 
+# Static pages with no product grid — (path, changefreq, priority).
+STATIC_PAGES = [
+    ("/shipping-returns.html", "yearly", "0.4"),
+]
+
 
 def xml_escape(s):
     return (s.replace("&", "&amp;").replace("<", "&lt;")
@@ -74,6 +79,9 @@ def build_xml(products=None, categories=None):
     # One entry per product page, with that product's photos.
     for p in products:
         blocks.append(url_block(cd.product_url(p), "monthly", "0.7", imgs_for([p])))
+    # Static informational pages (no product grid).
+    for path, changefreq, priority in STATIC_PAGES:
+        blocks.append(url_block(f"{SITE}{path}", changefreq, priority, []))
 
     return (
         '<?xml version="1.0" encoding="UTF-8"?>\n'
