@@ -3,7 +3,7 @@
 // Receives an entry from the gummy shark contest page and emails it to the
 // shop owner via Resend (same account and approach as send-inquiry.js).
 
-const NOTIFY_EMAIL = 'support@wethecre8ers.com';
+const NOTIFY_EMAIL = 'motiv8@wethecre8ers.com';
 const FROM_EMAIL = 'onboarding@resend.dev'; // swap for a verified wethecre8ers.com address once set up in Resend
 
 // 11:59:59 PM Eastern on Oct 31, 2026 (Halloween). Keep in sync with CONTEST.endsAt in js/layout.js.

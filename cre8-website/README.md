@@ -233,7 +233,7 @@ fail for anything missing, or charge the old price for anything out of sync.
 
 The banner (every page), `contest.html` (entry form), and `contest-rules.html`
 run until the contest ends, then disappear or close on their own. Entries are
-emailed to `support@wethecre8ers.com` by `api/contest-entry.js`.
+emailed to `motiv8@wethecre8ers.com` by `api/contest-entry.js`.
 
 - **Change the end date:** edit `CONTEST.endsAt` (and `endsText`) in
   `js/layout.js` **and** `CONTEST_ENDS_AT` in `api/contest-entry.js` — keep
