@@ -468,6 +468,38 @@
   .ppRelatedRow .fThumb img{position:absolute; inset:0;}
   .ppRelated .catLinks{text-align:left;}
 
+  /* ---------- Contest banner (auto-removed after the contest ends) ---------- */
+  .contestBanner{
+    position:relative; overflow:hidden; background:#FFD84D; color:#3C1053;
+    padding:24px 20px 26px; display:flex; flex-direction:column; align-items:center; gap:14px; text-align:center;
+  }
+  .cbText{position:relative; z-index:2;}
+  .cbHead{font-weight:700; font-size:clamp(24px,4vw,32px); line-height:1.1;}
+  .cbSub{font-size:clamp(14px,2vw,16px); color:#5B2A78; margin-top:6px; line-height:1.4;}
+  .cbBtn{
+    position:relative; z-index:2; display:inline-block; background:#3C1053; color:#FFD84D; border:4px solid #fff;
+    border-radius:999px; padding:14px 44px; font-weight:700; font-size:clamp(24px,4vw,30px); line-height:1;
+    animation:cbPulse 1.4s ease-in-out infinite; transition:background .2s;
+  }
+  .cbBtn:hover{background:#26093a;}
+  .cbClose{
+    position:absolute; top:6px; right:8px; z-index:3; width:32px; height:32px; border-radius:50%;
+    background:transparent; border:none; color:#3C1053; font-size:24px; line-height:1;
+  }
+  .cbClose:hover{background:rgba(60,16,83,.12);}
+  .cbShark{position:absolute; left:-80px; width:56px; height:28px; z-index:1; animation:cbSwim linear infinite, cbBob ease-in-out infinite;}
+  .cbShark svg{width:100%; height:100%; display:block; transform:scaleX(-1);}
+  .cbShark.s1{top:14%; animation-duration:14s,2.2s; animation-delay:-2s,0s;}
+  .cbShark.s2{top:70%; animation-duration:19s,2.8s; animation-delay:-11s,-1s;}
+  .cbShark.s3{top:42%; animation-duration:16s,2.5s; animation-delay:-7s,-2s;}
+  @keyframes cbSwim{from{left:-80px} to{left:100%}}
+  @keyframes cbBob{0%,100%{transform:translateY(-6px)} 50%{transform:translateY(6px)}}
+  @keyframes cbPulse{0%,100%{transform:scale(1)} 50%{transform:scale(1.06)}}
+  @media (prefers-reduced-motion:reduce){
+    .cbShark, .cbBtn{animation:none;}
+    .cbShark.s1{left:6%;} .cbShark.s2{left:82%;} .cbShark.s3{left:46%;}
+  }
+
   .checkoutGrid{display:grid; grid-template-columns:1.1fr .9fr;}
   .coLeft{padding:34px; border-right:1px solid rgba(183,185,188,.14);}
   .coRight{padding:34px; background:var(--charcoal-2);}

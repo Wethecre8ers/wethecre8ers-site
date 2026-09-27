@@ -14,6 +14,44 @@ const CATEGORY_PAGES = [
   { name: 'Tactical Training',                  href: '/shop-tactical-training.html' }
 ];
 
+/* ============================================================
+   GUMMY SHARK CONTEST — banner shown on every page until endsAt,
+   then it disappears on its own. Keep endsAt in sync with
+   CONTEST_ENDS_AT in api/contest-entry.js.
+   ============================================================ */
+const CONTEST = {
+  id: 'gummy-shark-2026',
+  endsAt: '2026-11-01T03:59:59Z', // 11:59:59 PM Eastern on Oct 31, 2026 (Halloween)
+  endsText: 'Halloween, October 31',
+  page: '/contest.html'
+};
+function contestIsOpen(){ return Date.now() < Date.parse(CONTEST.endsAt); }
+function contestSharkSVG(color){
+  return `<svg viewBox="0 0 60 30" aria-hidden="true" focusable="false"><path fill="${color}" d="M4 16C10 4 30 2 44 12L56 4L54 16L58 26L44 20C30 28 10 28 4 16Z"/><path fill="${color}" d="M24 8L30 0L34 9Z"/><circle cx="14" cy="14" r="1.8" fill="#3C1053"/></svg>`;
+}
+function contestBannerDismissed(){
+  try { return localStorage.getItem('cre8_contest_banner') === CONTEST.id; } catch (_) { return false; }
+}
+function dismissContestBanner(){
+  const el = document.getElementById('contestBanner');
+  if (el) el.remove();
+  try { localStorage.setItem('cre8_contest_banner', CONTEST.id); } catch (_) {}
+}
+function contestBannerHTML(){
+  return `
+<div class="contestBanner" id="contestBanner" role="region" aria-label="Gummy shark contest">
+  <button class="cbClose" type="button" onclick="dismissContestBanner()" aria-label="Hide the contest banner">&times;</button>
+  <span class="cbShark s1">${contestSharkSVG('#FF4F9A')}</span>
+  <span class="cbShark s2">${contestSharkSVG('#2FB86B')}</span>
+  <span class="cbShark s3">${contestSharkSVG('#FF7A1A')}</span>
+  <div class="cbText">
+    <div class="cbHead">Find the best gummy shark!</div>
+    <div class="cbSub">Win a bag of fun 3D printed gummy sharks. Contest ends on ${CONTEST.endsText}!</div>
+  </div>
+  <a class="cbBtn" href="${CONTEST.page}">Enter now!</a>
+</div>`;
+}
+
 function renderChrome(){
   const path = location.pathname;
   const onHome = path === '/' || path.endsWith('/index.html');
@@ -56,6 +94,11 @@ function renderChrome(){
     <a href="${to('contact')}" onclick="closeMobileNav()">Contact</a>
   </div>
 </header>`);
+
+  const onContestPage = path === CONTEST.page || path === '/contest-rules.html';
+  if (contestIsOpen() && !onContestPage && !contestBannerDismissed()) {
+    document.body.insertAdjacentHTML('afterbegin', contestBannerHTML());
+  }
 
   document.body.insertAdjacentHTML('beforeend', `
 <footer>

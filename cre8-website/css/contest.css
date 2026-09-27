@@ -1,0 +1,63 @@
+/* Gummy shark contest page — intentionally bright and playful, unlike the rest of the site. */
+.ocean{position:relative; overflow:hidden; background:#9FE3F5; color:#0B3C5D; padding:56px 0 72px; min-height:70vh;}
+.ocean .wrap{position:relative; z-index:2;}
+.oceanDecor{position:absolute; inset:0; z-index:1; pointer-events:none;}
+.oceanDecor .fish{position:absolute; left:-80px; width:60px; height:30px; animation:oSwim linear infinite, oBob ease-in-out infinite;}
+.oceanDecor .fish svg{width:100%; height:100%; display:block; transform:scaleX(-1);}
+.oceanDecor .bub{position:absolute; bottom:-30px; border-radius:50%; background:#fff; opacity:.55; animation:oRise linear infinite;}
+@keyframes oSwim{from{left:-80px} to{left:100%}}
+@keyframes oBob{0%,100%{transform:translateY(-6px)} 50%{transform:translateY(6px)}}
+@keyframes oRise{to{transform:translateY(-110vh)}}
+@keyframes oPulse{0%,100%{transform:scale(1)} 50%{transform:scale(1.04)}}
+
+.oceanHead{text-align:center; max-width:560px; margin:0 auto;}
+.oceanHead .kicker{font-size:12px; letter-spacing:.22em; text-transform:uppercase; font-weight:700; color:#0B6C93;}
+.oceanHead h1{font-family:var(--sans); font-weight:700; font-size:clamp(30px,5.5vw,46px); line-height:1.08; margin:10px 0 12px; color:#0B3C5D;}
+.oceanHead p{font-size:16px; line-height:1.6; color:#14506f; margin:0;}
+
+.entryCard, .noticeCard{
+  background:#fff; border:3px solid #0B3C5D; border-radius:18px; max-width:520px; margin:26px auto 0; padding:26px 24px 28px;
+  color:#0B3C5D;
+}
+.cf{margin-bottom:16px;}
+.cf label{display:block; font-size:14px; font-weight:600; margin-bottom:6px; color:#0B3C5D;}
+.cf .opt{font-weight:400; color:#456b80;}
+.cf input[type=text], .cf input[type=email], .cf textarea{
+  width:100%; box-sizing:border-box; background:#F4FBFE; border:2px solid #0B3C5D; border-radius:10px;
+  padding:12px 14px; font:inherit; font-size:15px; color:#0B3C5D;
+}
+.cf textarea{min-height:96px; resize:vertical;}
+.cf input:focus, .cf textarea:focus{outline:none; border-color:#FF4F9A; box-shadow:0 0 0 3px rgba(255,79,154,.25);}
+.cf small{display:block; font-size:12px; color:#456b80; margin-top:5px;}
+.cf .agree{display:flex; gap:10px; align-items:flex-start; font-weight:400; font-size:14px; line-height:1.5;}
+.cf .agree input{margin-top:3px; width:18px; height:18px; flex:none; accent-color:#FF4F9A;}
+.cf .agree a{color:#0B6C93; text-decoration:underline;}
+.hp{position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;}
+.cErr{color:#B3261E; font-size:14px; font-weight:600; min-height:20px; margin:0 0 10px;}
+.cSubmit{
+  display:block; width:100%; background:#FF4F9A; color:#fff; border:4px solid #0B3C5D; border-radius:999px;
+  padding:16px 20px; font-family:var(--sans); font-weight:700; font-size:clamp(20px,4vw,26px); line-height:1.1;
+  animation:oPulse 1.6s ease-in-out infinite;
+}
+.cSubmit:disabled{opacity:.7; cursor:wait; animation:none;}
+.noticeCard{text-align:center;}
+.noticeCard h2{font-family:var(--sans); font-weight:700; font-size:28px; margin:0 0 10px; color:#0B3C5D;}
+.noticeCard p{font-size:16px; line-height:1.6; margin:0 0 12px; color:#14506f;}
+.noticeCard .bigShark{width:120px; margin:0 auto 10px;}
+.noticeCard .bigShark svg{width:100%; display:block; transform:scaleX(-1); animation:oBob 2.4s ease-in-out infinite;}
+.noticeCard a.back{display:inline-block; margin-top:6px; background:#0B3C5D; color:#fff; border-radius:999px; padding:12px 26px; font-weight:600;}
+.oceanFoot{text-align:center; font-size:13px; margin-top:18px; color:#14506f;}
+.oceanFoot a{text-decoration:underline; color:#0B3C5D;}
+
+.rulesPage{background:var(--charcoal-2); padding:56px 0 80px;}
+.rulesPage .wrap{max-width:760px;}
+.rulesPage h1{font-family:var(--display); font-weight:600; font-size:clamp(26px,4vw,36px); margin:0 0 8px; color:var(--white);}
+.rulesPage h2{font-size:15px; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin:28px 0 8px;}
+.rulesPage p, .rulesPage li{color:var(--silver); font-size:15px; line-height:1.75;}
+.rulesPage ul{padding-left:20px; margin:0;}
+.rulesPage a{color:var(--gold); text-decoration:underline;}
+
+@media (prefers-reduced-motion:reduce){
+  .oceanDecor .fish, .oceanDecor .bub, .cSubmit, .noticeCard .bigShark svg{animation:none;}
+  .oceanDecor .fish{left:10%;}
+}

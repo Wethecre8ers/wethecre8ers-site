@@ -229,6 +229,21 @@ fail for anything missing, or charge the old price for anything out of sync.
 4. Commit the generated files along with your edits. To verify nothing is
    stale (without writing anything): `python3 scripts/build-products.py --check`.
 
+## Gummy shark contest
+
+The banner (every page), `contest.html` (entry form), and `contest-rules.html`
+run until the contest ends, then disappear or close on their own. Entries are
+emailed to `support@wethecre8ers.com` by `api/contest-entry.js`.
+
+- **Change the end date:** edit `CONTEST.endsAt` (and `endsText`) in
+  `js/layout.js` **and** `CONTEST_ENDS_AT` in `api/contest-entry.js` — keep
+  them identical. Dates are UTC (11:59:59 PM Eastern on Oct 31, 2026 is
+  `2026-11-01T03:59:59Z`).
+- **Remove it entirely** after the contest: delete the `CONTEST` block and banner
+  code in `js/layout.js`, the banner CSS in `css/styles.css`, `contest.html`,
+  `contest-rules.html`, `css/contest.css`, and `api/contest-entry.js`.
+- The contest pages are `noindex` and not in the sitemap.
+
 ## Still separate: the contact form
 
 The inquiry form on the site doesn't send anywhere yet — that's a small,

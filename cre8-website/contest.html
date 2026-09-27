@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Find the Best Gummy Shark Contest | WeTheCre8ers</title>
+<meta name="description" content="Tell us your favorite tasting gummy sharks and where you got them for a chance to win a bag of fun 3D printed gummy sharks. Contest ends on Halloween.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://www.wethecre8ers.com/contest.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Find the Best Gummy Shark Contest | WeTheCre8ers">
+<meta property="og:description" content="Tell us your favorite tasting gummy sharks and where you got them for a chance to win a bag of fun 3D printed gummy sharks.">
+<meta property="og:url" content="https://www.wethecre8ers.com/contest.html">
+<meta property="og:site_name" content="WeTheCre8ers">
+<meta name="twitter:card" content="summary">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/contest.css">
+</head>
+<body>
+
+<main class="ocean">
+  <div class="oceanDecor" id="oceanDecor" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="oceanHead">
+      <div class="kicker">Gummy shark contest</div>
+      <h1>Find the best gummy shark!</h1>
+      <p>Tell us your favorite tasting gummy sharks and where you got them. Win a bag of fun 3D printed gummy sharks. Contest ends on Halloween, October 31!</p>
+    </div>
+
+    <form class="entryCard" id="contestForm" novalidate>
+      <div class="cf"><label for="cName">Your name</label><input type="text" id="cName" autocomplete="name" maxlength="100" placeholder="Jamie Rivera"></div>
+      <div class="cf"><label for="cEmail">Email</label><input type="email" id="cEmail" autocomplete="email" maxlength="200" placeholder="jamie@email.com"><small>Only used to contact the winner.</small></div>
+      <div class="cf"><label for="cFavorite">Your favorite tasting gummy sharks</label><input type="text" id="cFavorite" maxlength="300" placeholder="Brand and flavor, like sour blue raspberry"></div>
+      <div class="cf"><label for="cWhere">Where did you get them?</label><input type="text" id="cWhere" maxlength="300" placeholder="Store, website, or town"></div>
+      <div class="cf"><label for="cComments">Anything else? <span class="opt">(optional)</span></label><textarea id="cComments" maxlength="1500" placeholder="What makes them the best?"></textarea></div>
+      <div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" id="cWebsite" tabindex="-1" autocomplete="off"></label></div>
+      <div class="cf"><label class="agree"><input type="checkbox" id="cAgree"><span>I agree to the <a href="/contest-rules.html" target="_blank" rel="noopener">contest rules</a>.</span></label></div>
+      <p class="cErr" id="cErr" role="alert"></p>
+      <button type="submit" class="cSubmit" id="cSubmit">Send my entry!</button>
+      <noscript><p class="cErr">JavaScript is needed to send your entry.</p></noscript>
+    </form>
+
+    <div class="noticeCard" id="contestThanks" hidden>
+      <div class="bigShark" id="thanksShark"></div>
+      <h2>You're in!</h2>
+      <p>Thanks for sharing your favorite gummy sharks. We'll email the winner after the contest ends on Halloween.</p>
+      <a class="back" href="/shop.html">Browse the shop</a>
+    </div>
+
+    <div class="noticeCard" id="contestClosed" hidden>
+      <div class="bigShark" id="closedShark"></div>
+      <h2>The contest has ended</h2>
+      <p>Thanks to everyone who told us their favorite gummy sharks. Check back for the next one.</p>
+      <a class="back" href="/shop.html">Browse the shop</a>
+    </div>
+
+    <div class="oceanFoot"><a href="/contest-rules.html">Contest rules</a></div>
+  </div>
+</main>
+
+<script defer src="/_vercel/insights/script.js"></script>
+<script src="https://js.stripe.com/v3/"></script>
+<script src="/js/products.js"></script>
+<script src="/js/cart.js"></script>
+<script src="/js/checkout.js"></script>
+<script src="/js/layout.js"></script>
+<script>
+/* PAGE BOOTSTRAP — gummy shark contest entry page */
+renderChrome();
+updateCartUI();
+handleCheckoutReturn();
+
+(function(){
+  const colors = ['#FF4F9A', '#FF7A1A', '#2FB86B', '#FFD84D'];
+  const decor = document.getElementById('oceanDecor');
+  let html = '';
+  [[8, 16, -3], [22, 21, -12], [52, 24, -6], [80, 19, -15]].forEach((f, i) => {
+    html += `<span class="fish" style="top:${f[0]}%;animation-duration:${f[1]}s,${2.4 + i * .2}s;animation-delay:${f[2]}s,${-i}s">${contestSharkSVG(colors[i])}</span>`;
+  });
+  [[6, 14, 9, 0], [14, 22, 12, -4], [88, 18, 10, -2], [94, 10, 8, -6], [80, 26, 13, -8], [30, 12, 11, -5]].forEach(b => {
+    html += `<span class="bub" style="left:${b[0]}%;width:${b[1]}px;height:${b[1]}px;animation-duration:${b[2]}s;animation-delay:${b[3]}s"></span>`;
+  });
+  decor.innerHTML = html;
+  document.getElementById('thanksShark').innerHTML = contestSharkSVG('#FF4F9A');
+  document.getElementById('closedShark').innerHTML = contestSharkSVG('#2FB86B');
+
+  const form = document.getElementById('contestForm');
+  const errBox = document.getElementById('cErr');
+  const btn = document.getElementById('cSubmit');
+  const openedAt = Date.now();
+
+  function showClosed(){
+    form.hidden = true;
+    document.getElementById('contestClosed').hidden = false;
+  }
+  if (!contestIsOpen()) showClosed();
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    if (!contestIsOpen()) return showClosed();
+    const v = id => document.getElementById(id).value.trim();
+    const payload = {
+      name: v('cName'), email: v('cEmail'), favorite: v('cFavorite'), where: v('cWhere'), comments: v('cComments'),
+      agree: document.getElementById('cAgree').checked,
+      website: document.getElementById('cWebsite').value,
+      elapsed: Date.now() - openedAt
+    };
+    if (!payload.name || !payload.email || !payload.favorite || !payload.where) {
+      errBox.textContent = 'Fill in your name, email, favorite gummy sharks, and where you got them.';
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.email)) {
+      errBox.textContent = 'That email address doesn\'t look right. Check it and try again.';
+      return;
+    }
+    if (!payload.agree) {
+      errBox.textContent = 'Agree to the contest rules to enter.';
+      return;
+    }
+    errBox.textContent = '';
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    try {
+      const resp = await fetch('/api/contest-entry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const data = await resp.json().catch(() => ({}));
+      if (resp.status === 410) return showClosed();
+      if (!resp.ok) throw new Error(data.error || 'Could not send your entry.');
+      form.hidden = true;
+      document.getElementById('contestThanks').hidden = false;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } catch (err) {
+      errBox.textContent = err.message || 'Something went wrong. Try again.';
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Send my entry!';
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
