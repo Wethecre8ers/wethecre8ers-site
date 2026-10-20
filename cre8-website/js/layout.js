@@ -52,6 +52,15 @@ function contestBannerHTML(){
 </div>`;
 }
 
+// Business contact details shown in the footer. The contact, privacy, terms,
+// and about pages and the homepage Organization JSON-LD repeat these by hand.
+const BUSINESS = {
+  email: 'support@wethecre8ers.com',
+  phone: '352-425-3803',
+  phoneHref: '+13524253803',
+  location: 'Inverness, FL'
+};
+
 function renderChrome(){
   const path = location.pathname;
   const onHome = path === '/' || path.endsWith('/index.html');
@@ -107,6 +116,11 @@ function renderChrome(){
       <div class="footBrand">
         <div class="word">Cre<span>8</span></div>
         <p>The making division of WeTheCre8ers. Envision. Design. Produce.</p>
+        <ul class="footContact">
+          <li><a href="mailto:${BUSINESS.email}">${BUSINESS.email}</a></li>
+          <li><a href="tel:${BUSINESS.phoneHref}">${BUSINESS.phone}</a></li>
+          <li>${BUSINESS.location}</li>
+        </ul>
       </div>
       <div>
         <h5>Shop</h5>
@@ -117,10 +131,17 @@ function renderChrome(){
       <div>
         <h5>Company</h5>
         <ul>
-          <li><a href="${to('about')}">About</a></li>
+          <li><a href="/about.html">About Us</a></li>
           <li><a href="${to('process')}">Our Process</a></li>
-          <li><a href="${to('contact')}">Contact</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Policies</h5>
+        <ul>
           <li><a href="/shipping-returns.html">Shipping &amp; Returns</a></li>
+          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms of Service</a></li>
         </ul>
       </div>
     </div>

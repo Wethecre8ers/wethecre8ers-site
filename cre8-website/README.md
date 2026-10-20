@@ -226,6 +226,11 @@ fail for anything missing, or charge the old price for anything out of sync.
    `products/<slug>.html` page, the `<noscript>` product links on the shop
    pages, and `sitemap.xml`, and it refuses to run if `products.js` and
    `catalog.json` disagree.
+   It also keeps a `<noscript>` block of About, Contact, Shipping & Returns,
+   Privacy, and Terms links on **every** page for crawlers that don't run
+   JavaScript. A brand-new page just needs the
+   `<script defer src="/_vercel/insights/script.js"></script>` line (the
+   generator places the block right before it).
 4. Commit the generated files along with your edits. To verify nothing is
    stale (without writing anything): `python3 scripts/build-products.py --check`.
 

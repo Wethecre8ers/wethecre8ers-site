@@ -349,8 +349,11 @@
   .infoCard{background:var(--charcoal); border:1px solid rgba(183,185,188,.14); padding:32px; border-radius:var(--radius);}
   .infoCard h3{font-family:var(--display); font-size:20px; margin:0 0 14px; color:var(--white);}
   .infoCard p{color:var(--silver); font-size:14px; line-height:1.7; margin:0 0 22px;}
-  .infoRow{display:flex; gap:12px; margin-bottom:14px; font-size:13.5px; color:var(--ivory);}
+  .infoRow{display:flex; flex-wrap:wrap; gap:4px 12px; margin-bottom:14px; font-size:13.5px; color:var(--ivory);}
+  .contactGrid > *{min-width:0;}
   .infoRow b{color:var(--gold); min-width:88px; display:inline-block; font-weight:600;}
+  .infoRow a, .infoCard p a{text-decoration:underline; text-underline-offset:2px;}
+  .infoRow a:hover, .infoCard p a:hover{color:var(--gold);}
   form.stack{display:flex; flex-direction:column; gap:18px;}
   .field label{display:block; font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--silver); margin-bottom:8px;}
   .field input, .field select, .field textarea{
@@ -363,7 +366,7 @@
 
   /* ---------- Footer ---------- */
   footer{background:var(--black); border-top:1px solid rgba(200,149,61,.18); padding:56px 0 26px;}
-  .footGrid{display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:48px; margin-bottom:40px;}
+  .footGrid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px; margin-bottom:40px;}
   .footBrand .word{font-family:var(--display); font-size:20px; font-weight:600;}
   .footBrand .word span{color:var(--gold);}
   .footBrand p{color:var(--silver); font-size:13px; line-height:1.7; margin:14px 0 0; max-width:320px;}
@@ -371,6 +374,12 @@
   footer ul{list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px;}
   footer ul a{color:var(--silver); font-size:13.5px; transition:color .2s;}
   footer ul a:hover{color:var(--gold);}
+  .nsFooter{background:var(--black); border-top:1px solid rgba(200,149,61,.18); padding:28px 0; text-align:center; font-size:13.5px; line-height:1.9; color:var(--silver);}
+  .nsFooter p{margin:0 0 8px;}
+  .nsFooter a{color:var(--silver); text-decoration:underline; text-underline-offset:2px;}
+  .nsFooter a:hover{color:var(--gold);}
+  footer ul.footContact{margin-top:18px; gap:8px;}
+  footer ul.footContact li{color:var(--silver); font-size:13.5px;}
   .footBottom{display:flex; justify-content:space-between; align-items:center; padding-top:26px; border-top:1px solid rgba(183,185,188,.1); font-size:12px; color:var(--silver); flex-wrap:wrap; gap:10px;}
 
   /* ---------- Cart Drawer ---------- */
@@ -441,6 +450,27 @@
   }
   .swatch.active{border-color:var(--gold); color:var(--gold); background:rgba(200,149,61,.1);}
   .noteBox{font-size:12px; color:var(--silver); background:rgba(200,149,61,.07); border:1px solid rgba(200,149,61,.2); padding:12px 14px; border-radius:var(--radius); line-height:1.6; margin-top:18px;}
+
+  /* ---------- Text pages: about, privacy policy, terms ---------- */
+  .docPage{background:var(--charcoal-2); border-top:1px solid rgba(183,185,188,.08); border-bottom:1px solid rgba(183,185,188,.08); padding:64px 0 88px;}
+  .docPage .wrap{max-width:780px;}
+  .docPage h1{font-family:var(--display); font-weight:600; font-size:clamp(28px,4vw,38px); margin:12px 0 10px; color:var(--white);}
+  .docPage .lede{color:var(--ivory); font-size:16.5px; line-height:1.75; margin:0 0 6px;}
+  .docPage .updated{font-size:13px; color:var(--silver); margin:0 0 6px;}
+  .docPage h2{font-size:15px; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); font-weight:600; margin:34px 0 10px;}
+  .docPage p, .docPage li{color:var(--silver); font-size:15px; line-height:1.8;}
+  .docPage p{margin:0 0 14px;}
+  .docPage ul{padding-left:20px; margin:0 0 14px;}
+  .docPage li{margin-bottom:6px;}
+  .docPage a{color:var(--gold); text-decoration:underline; text-underline-offset:2px;}
+  .docPage a:hover{color:var(--ivory);}
+  .docNote{background:var(--charcoal); border:1px solid rgba(200,149,61,.25); border-radius:var(--radius); padding:24px 26px; margin:6px 0 14px;}
+  .docNote p{color:var(--ivory); font-size:15.5px;}
+  .docNote .sign{font-family:var(--display); color:var(--gold); margin:0; font-size:16px;}
+  .docFacts{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:22px 0 4px;}
+  .docFacts div{background:var(--charcoal); border:1px solid rgba(183,185,188,.14); border-radius:var(--radius); padding:16px 18px; font-size:13.5px; color:var(--silver); line-height:1.6;}
+  .docFacts b{display:block; color:var(--gold); font-size:12px; letter-spacing:.1em; text-transform:uppercase; margin-bottom:4px; font-weight:600;}
+  @media (max-width:640px){ .docFacts{grid-template-columns:1fr;} }
 
   /* ---------- Shipping & Returns policy page ---------- */
   .policyGrid{display:grid; grid-template-columns:repeat(2,1fr); gap:22px;}

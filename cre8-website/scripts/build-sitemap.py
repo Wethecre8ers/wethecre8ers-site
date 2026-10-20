@@ -26,7 +26,11 @@ IMG_EXT = (".jpg", ".jpeg", ".png", ".webp", ".gif")
 
 # Static pages with no product grid — (path, changefreq, priority).
 STATIC_PAGES = [
+    ("/about.html", "yearly", "0.5"),
+    ("/contact.html", "yearly", "0.5"),
     ("/shipping-returns.html", "yearly", "0.4"),
+    ("/privacy-policy.html", "yearly", "0.3"),
+    ("/terms.html", "yearly", "0.3"),
 ]
 
 

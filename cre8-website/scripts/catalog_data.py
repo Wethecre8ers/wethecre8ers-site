@@ -10,7 +10,7 @@ checkout's price authority). It never writes catalog.json.
 import json
 import os
 import re
-from datetime import date, timedelta
+from datetime import date
 
 SITE = "https://www.wethecre8ers.com"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # cre8-website/
@@ -34,6 +34,16 @@ POLICY = {
 }
 
 
+# Business contact details. js/layout.js (footer) and the contact, about,
+# privacy, and terms pages repeat these by hand.
+BUSINESS = {
+    "email": "support@wethecre8ers.com",
+    "phone": "352-425-3803",
+    "phone_href": "+13524253803",
+    "location": "Inverness, FL",
+}
+
+
 def is_custom_personalized(p):
     """Products made to the buyer's own specifics (name, photo) — final
     sale unless damaged, rather than the standard return window."""
@@ -41,7 +51,9 @@ def is_custom_personalized(p):
 
 
 def price_valid_until():
-    return (date.today() + timedelta(days=365)).isoformat()
+    # Dec 31 of next year, so generated pages only change once a year
+    # (a rolling "today + 365 days" would make --check stale every day).
+    return f"{date.today().year + 1}-12-31"
 
 
 def offer_shipping_details():
