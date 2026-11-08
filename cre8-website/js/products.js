@@ -35,9 +35,16 @@ const PRODUCTS = [
   {
     id:'dumpling-01', category:'Halloween', name:'Mini Clicker Dumpling (2-Pack)',
     slug:'mini-clicker-dumpling-2-pack', seoTitle:'Mini Clicker Dumpling 2-Pack | WeTheCre8ers',
-    seoDesc:'A pair of squeezable mini clicker dumplings with a friendly painted face, sized for a desk or shelf. 3D printed by Cre8 in your choice of color.',
-    price:10.99, desc:'A pair of squeezable dumpling figures with a friendly painted face, sized for a desk or shelf.',
-    icon:'dumpling', images:['/images/products/dumpling-1.jpg','/images/products/dumpling-2.jpg','/images/products/dumpling-3.jpg'], materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold']
+    seoDesc:'A pair of mini clicker dumplings: press one and it clicks into its base. Sized for a desk or shelf. 3D printed by Cre8, with a color choice for each.',
+    price:10.99, desc:'A pair of clicker dumpling figures with a friendly face: press a dumpling and it clicks into its base. Sized for a desk or shelf.',
+    icon:'dumpling', images:['/images/products/dumpling-1.jpg','/images/products/dumpling-2.jpg','/images/products/dumpling-3.jpg'], colorSlots:2, slotName:'dumpling', materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold'],
+    details:[
+      'The Mini Clicker Dumpling is a small 3D printed dumpling with a pleated top and a smiling face with black eyes and rosy cheeks. Press the dumpling and it clicks as it goes down into its base.',
+      'Together, the dumpling and its base measure 2 inches wide and 1.25 inches tall, so it is sized for a desk or shelf. Each pack comes with two complete dumplings, and they are available all year.',
+      'You choose a color for each of the two dumplings from black, orange, red, brown, blue, white, or Legacy Gold, so a pack can have two different colors. The bases stay black. They are printed in PLA Matte.',
+      'Every pack is made to order in the USA. Layer lines and slight color variation are a normal part of 3D printed pieces.'
+    ],
+    specs:[['Size','2 inches wide, 1.25 inches tall'],['Action','Press the dumpling and it clicks into its base'],['In each pack','2 complete dumplings'],['Material','PLA Matte'],['Colors','Choose a color for each dumpling; bases stay black'],['Available','All year']]
   },
   {
     id:'minicrates-01', category:'Home & Desk', name:'Mini Crates (2-Pack)',
