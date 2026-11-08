@@ -207,7 +207,14 @@ const PRODUCTS = [
     slug:'troy-aikman-lighted-quote', seoTitle:'Troy Aikman Lighted Quote Sign | WeTheCre8ers',
     seoDesc:'A backlit sign with Troy Aikman\'s "I don\'t try to please anybody. I try to win." quote: bold when lit, a clean frosted panel when off. Ships ready to display.',
     price:39.99, desc:'A backlit motivational light board featuring Troy Aikman\'s "I don\'t try to please anybody. I try to win." quote — bold when lit, a clean frosted panel when off. Ships ready to display. Want a different quote or saying? Contact us for a custom quote.',
-    icon:'sign', images:['/images/products/aikmanquote-1.jpg','/images/products/aikmanquote-2.jpg','/images/products/aikmanquote-3.jpg'], asIs:true, materials:[], colors:[]
+    icon:'sign', images:['/images/products/aikmanquote-1.jpg','/images/products/aikmanquote-2.jpg','/images/products/aikmanquote-3.jpg'], asIs:true, materials:[], colors:[],
+    details:[
+      'This backlit light board is 8 inches wide and 6 inches tall and is 1.37 inches deep in its black frame, which is included. It features Troy Aikman\'s quote "I don\'t try to please anybody. I try to win." The panel shows a football player seen from behind, looking out at a stadium, and a line on the left reads "Same effort, a higher standard, every day."',
+      'Unlit, the panel reads as a pale engraved panel, as shown in our second photo. Lit, the quote and image glow in full color, as shown in our first photo. It stands on a desk, plugs into a USB outlet for power, and ships ready to display.',
+      'Want a different quote or saying? Contact us for a custom quote on our [Contact page](/contact.html).',
+      'The light board is printed in PLA. Every light board is made to order in the USA.'
+    ],
+    specs:[['Size','8 inches wide, 6 inches tall'],['Depth','1.37 inches, in the frame'],['Frame','Black, included'],['Display','Stands on a desk'],['Power','Plugs into a USB outlet'],['Material','PLA']]
   },
   {
     id:'nobodycares-01', category:'Inspirational Signs & Light Boards', name:'Nobody Cares',
