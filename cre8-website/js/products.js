@@ -100,7 +100,14 @@ const PRODUCTS = [
     slug:'halloween-black-cat-lithophane', seoTitle:'Halloween Black Cat Lithophane Panel | WeTheCre8ers',
     seoDesc:'A "Happy Halloween" lithophane panel featuring a black cat, jack-o-lanterns, and a "Trick or Treat" sign. Ships ready to display.',
     price:39.99, desc:'A "Happy Halloween" lithophane panel featuring a black cat, jack-o-lanterns, and a "Trick or Treat" sign — a clean engraved scene that catches the light beautifully. Ships ready to display.',
-    icon:'sign', images:['/images/products/halloweenblackcat-1.jpg','/images/products/halloweenblackcat-2.jpg','/images/products/halloweenblackcat-3.jpg'], asIs:true, materials:[], colors:[]
+    icon:'sign', images:['/images/products/halloweenblackcat-1.jpg','/images/products/halloweenblackcat-2.jpg','/images/products/halloweenblackcat-3.jpg'], asIs:true, materials:[], colors:[],
+    details:[
+      'This lithophane panel shows a Halloween porch scene: a black cat sitting beside a jack-o-lantern and a lantern, a "Trick or Treat" sign, autumn trees, a house with a white picket fence, bats, and a spiderweb under "Happy Halloween" lettering.',
+      'A lithophane is a thin 3D printed panel with a relief surface. Thicker areas block more light and thinner areas let more light through, so the picture appears when the panel is lit from behind. Unlit, it looks like a pale engraved relief, as shown in our second photo. Lit, the scene glows in full color, as shown in our comparison photo.',
+      'The panel measures 6.14 inches by 6.14 inches and is 1.37 inches deep in its black frame, which is included. It stands on a desk, plugs into a USB outlet for power, and ships ready to display.',
+      'The panel is printed in PLA. Each panel is made to order in the USA.'
+    ],
+    specs:[['Size','6.14 x 6.14 inches'],['Depth','1.37 inches, in the frame'],['Frame','Black, included'],['Display','Stands on a desk'],['Power','Plugs into a USB outlet'],['Material','PLA']]
   },
   {
     id:'halloweenskeletoncouple-01', category:'Halloween', name:'Halloween Skeleton Couple Lithophane Panel',
