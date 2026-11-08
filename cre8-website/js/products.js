@@ -114,7 +114,14 @@ const PRODUCTS = [
     slug:'halloween-skeleton-couple-lithophane', seoTitle:'Halloween Skeleton Couple Lithophane | WeTheCre8ers',
     seoDesc:'A Halloween lithophane panel of two skeletons on a bench forming a heart with their hands, with a "Till Death Do Us Part" sign. Ships ready to display.',
     price:39.99, desc:'A lithophane panel featuring two skeletons on a bench forming a heart with their joined hands, a "Till Death Do Us Part" sign, a black cat, jack-o-lanterns, and a full moon — a charming engraved scene that catches the light beautifully. Ships ready to display.',
-    icon:'sign', images:['/images/products/halloweenskeletoncouple-1.jpg','/images/products/halloweenskeletoncouple-2.jpg','/images/products/halloweenskeletoncouple-3.jpg'], asIs:true, materials:[], colors:[]
+    icon:'sign', images:['/images/products/halloweenskeletoncouple-1.jpg','/images/products/halloweenskeletoncouple-2.jpg','/images/products/halloweenskeletoncouple-3.jpg'], asIs:true, materials:[], colors:[],
+    details:[
+      'This lithophane panel shows two skeletons sitting side by side on a bench with their hands joined to form a heart. One wears a flowered witch hat. Around them are a "Till Death Do Us Part" sign, a black cat, two jack-o-lanterns, a lantern hanging from a tree, a full moon, and bats.',
+      'A lithophane is a thin 3D printed panel with a relief surface. Thicker areas block more light and thinner areas let more light through, so the picture appears when the panel is lit from behind. Unlit, it looks like a pale engraved relief, as shown in our second photo. Lit, the scene glows in full color, as shown in our comparison photo.',
+      'The panel measures 6.14 inches by 6.14 inches and is 1.37 inches deep in its black frame, which is included. It stands on a desk, plugs into a USB outlet for power, and ships ready to display.',
+      'The panel is printed in PLA. Each panel is made to order in the USA.'
+    ],
+    specs:[['Size','6.14 x 6.14 inches'],['Depth','1.37 inches, in the frame'],['Frame','Black, included'],['Display','Stands on a desk'],['Power','Plugs into a USB outlet'],['Material','PLA']]
   },
   {
     id:'namedisplay-01', category:'Personalized', name:'Name Display',
