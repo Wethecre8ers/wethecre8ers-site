@@ -70,9 +70,16 @@ const PRODUCTS = [
   {
     id:'pumpkinspinner-01', category:'Halloween', name:'Pumpkin Spinner',
     slug:'pumpkin-spinner', seoTitle:'Pumpkin Spinner Jack-o-Lantern Figure | WeTheCre8ers',
-    seoDesc:'A 3D printed jack-o-lantern figure with a spinning stem, sized for a desk or seasonal display. Made by Cre8.',
-    price:12.99, desc:'A jack-o-lantern figure with a spinning stem, sized for a desk or seasonal display.',
-    icon:'pumpkin', images:['/images/products/pumpkinspinner-1.jpg','/images/products/pumpkinspinner-2.jpg'], asIs:true, materials:[], colors:[]
+    seoDesc:'A 3D printed jack-o-lantern figure that spins while you hold its stem and bottom, sized for a desk or seasonal display. Made by Cre8.',
+    price:12.99, desc:'A jack-o-lantern figure that spins while you hold its stem and bottom, sized for a desk or seasonal display.',
+    icon:'pumpkin', images:['/images/products/pumpkinspinner-1.jpg','/images/products/pumpkinspinner-2.jpg'], asIs:true, materials:[], colors:[],
+    details:[
+      'The Pumpkin Spinner is a 3D printed jack-o-lantern that measures 2 inches tall and 2 inches wide. It has ridged orange sides, a carved face with angled eyes and jagged teeth, and a green stem on top.',
+      'Hold the stem and the bottom of the pumpkin, and the pumpkin itself spins. The inside is semi-hollow and the pumpkin sits flat on its own, so it is sized for a desk or a seasonal display when you are not spinning it.',
+      'It is printed in PLA with the colors built into the print, so it ships exactly as shown, with no material or color options to choose.',
+      'Every Pumpkin Spinner is made to order in the USA. The fine ridges on the surface come from the layer-by-layer printing process.'
+    ],
+    specs:[['Height','2 inches'],['Width','2 inches'],['Material','PLA'],['Spins','Held by the stem and bottom'],['Inside','Semi-hollow, sits flat'],['Colors','Fixed, ships as shown']]
   },
   {
     id:'skullplanter-01', category:'Halloween', name:'Skull Planter',
