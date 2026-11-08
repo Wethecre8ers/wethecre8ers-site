@@ -23,7 +23,14 @@ const PRODUCTS = [
     slug:'mini-pallets-3-pack', seoTitle:'Mini Pallets 3-Pack Desk Organizer | WeTheCre8ers',
     seoDesc:'A set of three stackable mini pallets, sized to hold a stack of sticky notes or small desk items. 3D printed by Cre8, with a color choice for each pallet.',
     price:9.99, desc:'A set of three stackable mini pallets, sized to hold a stack of sticky notes or small desk items.',
-    icon:'pallet', images:['/images/products/minipallets-1.jpg','/images/products/minipallets-2.jpg'], colorSlots:3, materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold']
+    icon:'pallet', images:['/images/products/minipallets-1.jpg','/images/products/minipallets-2.jpg'], colorSlots:3, materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','Green','White','Legacy Gold'],
+    details:[
+      'These mini pallets are small 3D printed versions of the wooden shipping pallets used in warehouses, with the same slatted top and open sides. Each set includes three pallets, and you choose a color for every one of them: black, orange, red, brown, blue, green, white, or Legacy Gold.',
+      'Each pallet measures 3 1/8 inches long, 3 1/4 inches wide, and 9/16 inch tall. A standard 3 by 3 inch sticky note pad fits on top of a pallet, which is one of the fun ways to use them. They also hold small desk items, and they stack neatly on top of each other, so you can keep all three together on a shelf or desk.',
+      'The pallets are printed in PLA Matte, which gives them a flat, non-glossy finish.',
+      'Every set is made to order in the USA, so your color picks are printed for you. Layer lines and slight color variation are a normal part of 3D printed pieces.'
+    ],
+    specs:[['Length','3 1/8 inches'],['Width','3 1/4 inches'],['Height','9/16 inch'],['Material','PLA Matte'],['Colors','Choose a color for each pallet'],['In each set','3 pallets that stack']]
   },
   {
     id:'dumpling-01', category:'Halloween', name:'Mini Clicker Dumpling (2-Pack)',
