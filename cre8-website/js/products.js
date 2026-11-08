@@ -193,7 +193,14 @@ const PRODUCTS = [
     slug:'training-karambit-replica', seoTitle:'Blunt Karambit Training Replica | WeTheCre8ers',
     seoDesc:'A solid, blunt karambit-profile trainer for grip, retention, and flow drills. Inert training replica with no cutting edge or point.',
     price:10.99, desc:'A solid, blunt karambit-profile trainer for grip, retention, and flow drills. Inert training replica — no cutting edge or point.',
-    icon:'karambit', images:['/images/products/training-karambit-1.jpg'], materials:['PLA Matte'], colors:['Red','Blue','Yellow'], 
+    icon:'karambit', images:['/images/products/training-karambit-1.jpg'], materials:['PLA Matte'], colors:['Red','Blue','Yellow'],
+    details:[
+      'This training replica is a full-size, solid, blunt replica in the shape of a karambit, a curved knife with a finger ring at the end of the handle. It is one piece, with the ring, finger grooves, and curved blade of the original shape. It is not sharp: it has no cutting edge and no point, and it cannot cut. It is made for grip, retention, and flow drills.',
+      'Choose your color from red, blue, or yellow. It is printed in PLA Matte.',
+      'This item is an inert training replica, not a knife, and we recommend it for adults only. Use it safely and follow the laws and rules that apply where you live and train.',
+      'Every replica is made to order in the USA. Layer lines are a normal part of a 3D printed piece.'
+    ],
+    specs:[['Scale','Full size'],['Build','One solid piece'],['Blade','Blunt: no edge, no point, cannot cut'],['Material','PLA Matte'],['Colors','Red, blue, or yellow'],['Recommended for','Adults only']]
   },
   {
     id:'anyway-mother-teresa-01', category:'Inspirational Signs & Light Boards', name:'Anyway - Mother Teresa',
