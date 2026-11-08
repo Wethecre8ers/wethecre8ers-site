@@ -151,7 +151,14 @@ const PRODUCTS = [
     slug:'custom-photo-light-box', seoTitle:'Custom Photo Light Box | WeTheCre8ers',
     seoDesc:'A backlit photo panel made from your own picture, engraved so it glows when lit. Made to order: email your photo after checkout.',
     price:34.99, desc:'A backlit photo panel made from your own picture, engraved so it glows when lit. Made to order — after checkout, email your photo to support@wethecre8ers.com with your order confirmation.',
-    icon:'lightbox', images:['/images/products/photolightbox-1.jpg','/images/products/photolightbox-2.jpg','/images/products/photolightbox-3.jpg','/images/products/photolightbox-movie.mp4','/images/products/photolightbox-4.jpg','/images/products/photolightbox-5.jpg','/images/products/photolightbox-6.jpg'], asIs:true, needsPhoto:true, materials:[], colors:[], featured:4
+    icon:'lightbox', images:['/images/products/photolightbox-1.jpg','/images/products/photolightbox-2.jpg','/images/products/photolightbox-3.jpg','/images/products/photolightbox-movie.mp4','/images/products/photolightbox-4.jpg','/images/products/photolightbox-5.jpg','/images/products/photolightbox-6.jpg'], asIs:true, needsPhoto:true, materials:[], colors:[], featured:4,
+    details:[
+      'The Customized Photo Light Box turns your own picture into a backlit photo panel in a black frame. Our sample panel is 6 inches tall and 4 inches wide, and it is 1.37 inches deep in the frame. It can be made in either orientation, upright or sideways, to suit your photo. The picture is engraved into the panel, so it appears in color when the box is lit from behind and reads as a pale, textured relief when it is off. Our photos show sample pictures lit and unlit, and our video shows what a real light box looks like lit up.',
+      'The light box stands on a desk and plugs into a USB outlet for power.',
+      'To order, check out, then email your photo to support@wethecre8ers.com with your order confirmation. We use your photo only to make your light box, as described in our [Privacy Policy](/privacy-policy.html).',
+      'The light box is printed in PLA. Each one is made to order in the USA from the photo you send us. Because it is made from your picture, it is final sale unless it arrives damaged or incorrect.'
+    ],
+    specs:[['Sample size','6 x 4 inches'],['Depth','1.37 inches, in the frame'],['Orientation','Upright or sideways'],['Frame','Black'],['Power','Plugs into a USB outlet'],['Display','Stands on a desk'],['Material','PLA'],['Ordering','Email your photo after checkout']]
   },
   {
     id:'training-glock19-01', category:'Tactical Training', name:'Training Glock 19 Replica',

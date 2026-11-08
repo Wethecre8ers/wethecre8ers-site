@@ -509,6 +509,8 @@
   .ppSpecs dt{color:var(--gold); font-weight:600; letter-spacing:.04em;}
   .ppSpecs dd{margin:0; color:var(--ivory); text-align:right;}
   .ppAbout .ppMade{margin-top:22px; font-size:13.5px; line-height:1.7;}
+  .ppAbout p a{color:var(--ivory); text-decoration:underline; text-underline-offset:2px;}
+  .ppAbout p a:hover{color:var(--gold);}
   .ppAbout .ppMade a{text-decoration:underline; text-underline-offset:2px;}
   @media (max-width:640px){ .ppAbout{padding:24px 20px;} .ppSpecs{grid-template-columns:1fr;} }
   .ppRelated{margin-top:56px;}
