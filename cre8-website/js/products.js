@@ -23,7 +23,7 @@ const PRODUCTS = [
     slug:'mini-pallets-3-pack', seoTitle:'Mini Pallets 3-Pack Desk Organizer | WeTheCre8ers',
     seoDesc:'A set of three stackable mini pallets, sized to hold a stack of sticky notes or small desk items. 3D printed by Cre8, with a color choice for each pallet.',
     price:9.99, desc:'A set of three stackable mini pallets, sized to hold a stack of sticky notes or small desk items.',
-    icon:'pallet', images:['/images/products/minipallets-1.jpg','/images/products/minipallets-2.jpg'], colorSlots:3, materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','Green','White','Legacy Gold'],
+    icon:'pallet', images:['/images/products/minipallets-1.jpg','/images/products/minipallets-2.jpg'], colorSlots:3, slotName:'pallet', materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','Green','White','Legacy Gold'],
     details:[
       'These mini pallets are small 3D printed versions of the wooden shipping pallets used in warehouses, with the same slatted top and open sides. Each set includes three pallets, and you choose a color for every one of them: black, orange, red, brown, blue, green, white, or Legacy Gold.',
       'Each pallet measures 3 1/8 inches long, 3 1/4 inches wide, and 9/16 inch tall. A standard 3 by 3 inch sticky note pad fits on top of a pallet, which is one of the fun ways to use them. They also hold small desk items, and they stack neatly on top of each other, so you can keep all three together on a shelf or desk.',
@@ -42,9 +42,16 @@ const PRODUCTS = [
   {
     id:'minicrates-01', category:'Home & Desk', name:'Mini Crates (2-Pack)',
     slug:'mini-crates-2-pack', seoTitle:'Mini Crates 2-Pack Stackable Desk Totes | WeTheCre8ers',
-    seoDesc:'A pair of stackable milk-crate-style mini totes, sized for small desk items, candy, or trinkets. 3D printed by Cre8 in your choice of color.',
-    price:10.99, desc:'A pair of stackable milk-crate-style totes, sized for small desk items, candy, or trinkets.',
-    icon:'crate', images:['/images/products/minicrates-1.jpg','/images/products/minicrates-2.jpg'], materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold']
+    seoDesc:'A pair of stackable milk-crate-style mini totes, sized for small desk items, wrapped candy, or trinkets. 3D printed by Cre8, with a color choice for each crate.',
+    price:10.99, desc:'A pair of stackable milk-crate-style totes, sized for small desk items, wrapped candy, or trinkets.',
+    icon:'crate', images:['/images/products/minicrates-1.jpg','/images/products/minicrates-2.jpg'], colorSlots:2, slotName:'crate', materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','Green','White','Legacy Gold'],
+    details:[
+      'These mini crates are small 3D printed versions of the milk crates found in stores and garages, with a lattice pattern on the sides and cut-out handles. Each pack includes two crates that stack on top of each other, and you choose a color for each one: black, orange, red, brown, blue, green, white, or Legacy Gold.',
+      'Each crate measures 1.25 inches wide, 1.25 inches deep, and 1.25 inches tall. They are sized for small desk items, wrapped candy, or trinkets, and they stack neatly so you can keep both together on a desk or shelf.',
+      'The crates are printed in PLA Matte.',
+      'Every pack is made to order in the USA, so your color picks are printed for you. Layer lines and slight color variation are a normal part of 3D printed pieces.'
+    ],
+    specs:[['Width','1.25 inches'],['Depth','1.25 inches'],['Height','1.25 inches'],['Material','PLA Matte'],['Colors','Choose a color for each crate'],['In each pack','2 crates that stack']]
   },
   {
     id:'flexiturtle-01', category:'Home & Desk', name:'Flexi Turtle',
@@ -428,13 +435,15 @@ function quickAdd(id){
 // Option controls + Add to Cart button + trailing note for one product.
 // Shared by the quick-view modal and the standalone product pages.
 function productPurchaseHTML(p){
+  const slotName = p.slotName || 'item';
+  const slotLabel = slotName.charAt(0).toUpperCase() + slotName.slice(1);
   const colorBlockHtml = p.colorSlots && p.colorSlots > 1 ? `
     <div class="optGroup">
-      <label>Choose ${p.colorSlots} Colors (one per pallet)</label>
+      <label>Choose ${p.colorSlots} Colors (one per ${slotName})</label>
       <div style="display:flex; flex-direction:column; gap:10px;">
         ${Array.from({length:p.colorSlots}).map((_,i)=>`
           <select id="colorSlot${i}" style="width:100%;background:var(--charcoal-2);border:1px solid rgba(183,185,188,.25);color:var(--ivory);padding:11px 12px;border-radius:var(--radius);font-family:var(--sans);font-size:13.5px;">
-            ${p.colors.map((c,ci)=>`<option value="${c}" ${ci===(i % p.colors.length)?'selected':''}>Pallet ${i+1}: ${c}</option>`).join('')}
+            ${p.colors.map((c,ci)=>`<option value="${c}" ${ci===(i % p.colors.length)?'selected':''}>${slotLabel} ${i+1}: ${c}</option>`).join('')}
           </select>
         `).join('')}
       </div>
