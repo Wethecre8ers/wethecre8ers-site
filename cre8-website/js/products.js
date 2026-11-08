@@ -179,7 +179,14 @@ const PRODUCTS = [
     slug:'training-glock-17-magazine', seoTitle:'Training Pistol Magazine (Glock 17 Profile) | WeTheCre8ers',
     seoDesc:'A solid dummy magazine in the Glock 17 profile, for reload and malfunction drills. Inert training replica that does not hold or feed ammunition.',
     price:10.99, desc:'A solid dummy magazine in the Glock 17 profile, for reload and malfunction drills. Inert training replica — does not hold or feed ammunition and has no functional parts.',
-    icon:'magazine', images:['/images/products/training-glock17-mag-1.jpg'], materials:['PLA Matte'], colors:['Blue','Red','Yellow']
+    icon:'magazine', images:['/images/products/training-glock17-mag-1.jpg'], materials:['PLA Matte'], colors:['Blue','Red','Yellow'],
+    details:[
+      'This training pistol magazine is a full-size, solid dummy magazine made in the profile of a Glock 17 magazine, 3D printed in plastic. It is a filler for drills, made for reload and malfunction drills. It holds no ammunition, does not feed ammunition, and has no functional parts.',
+      'Choose your color from blue, red, or yellow. It is printed in PLA Matte.',
+      'This item is an inert training replica, and we recommend it for adults only. Use it safely and follow the laws and rules that apply where you live and train.',
+      'Every magazine is made to order in the USA. Layer lines are a normal part of a 3D printed piece.'
+    ],
+    specs:[['Scale','Full size'],['Use','Filler for reload and malfunction drills'],['Function','Inert: holds no ammunition, no functional parts'],['Material','PLA Matte'],['Colors','Blue, red, or yellow'],['Recommended for','Adults only']]
   },
   {
     id:'training-karambit-01', category:'Tactical Training', name:'Training Karambit Replica',
