@@ -9,7 +9,14 @@ const PRODUCTS = [
     slug:'concho-the-frog', seoTitle:'Concho the Frog 3D Printed Desk Figurine | WeTheCre8ers',
     seoDesc:'Concho the Frog is a small 3D printed desk companion figurine with clean lines and a friendly presence, made by Cre8 for any workspace.',
     price:29.99, desc:'A small desk companion figurine, designed with clean lines and a friendly presence for any workspace.',
-    icon:'frog', images:['/images/products/concho-frog-1.jpg','/images/products/concho-frog-2.jpg','/images/products/concho-frog-3.jpg'], asIs:true, materials:[], colors:[], featured:1
+    icon:'frog', images:['/images/products/concho-frog-1.jpg','/images/products/concho-frog-2.jpg','/images/products/concho-frog-3.jpg'], asIs:true, materials:[], colors:[], featured:1,
+    details:[
+      'Concho the Frog is a full-color 3D printed figurine that stands 8.19 inches tall and 5.60 inches wide. The frog wears a blue button-up jacket with a cream chest pocket, red drawstring pants with white cuffs, and blue slippers with white stars on the toes, and holds up a peace sign.',
+      'Turn Concho around and the back of the jacket carries the words "Voy a mimir" in script lettering.',
+      'Concho is printed in PLA with the colors built into the print, so it ships exactly as shown, with no material or color options to choose. Concho stands on its own with no stand or base needed, and the clean lines and friendly look suit a desk, shelf, or bookcase.',
+      'Every Concho is 3D printed to order in the USA. Layer lines and slight color variation are a normal part of a printed figurine.'
+    ],
+    specs:[['Height','8.19 inches'],['Width','5.60 inches'],['Material','PLA'],['Colors','Printed in full color'],['Options','None, ships as shown'],['Stands','On its own, no base needed']]
   },
   {
     id:'minipallets-01', category:'Home & Desk', name:'Mini Pallets (3-Pack)',

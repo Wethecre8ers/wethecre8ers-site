@@ -217,6 +217,14 @@ def validate(products, categories):
         for img in p.get("images", []):
             if not os.path.exists(os.path.join(ROOT, img.lstrip("/"))):
                 problems.append(f"{pid}: image file missing: {img}")
+        det = p.get("details")
+        if det is not None and not (isinstance(det, list) and det and all(isinstance(x, str) and x.strip() for x in det)):
+            problems.append(f"{pid}: details must be a non-empty list of paragraphs")
+        sp = p.get("specs")
+        if sp is not None and not (isinstance(sp, list) and all(isinstance(x, list) and len(x) == 2 and all(isinstance(y, str) and y.strip() for y in x) for x in sp)):
+            problems.append(f"{pid}: specs must be a list of [label, value] pairs")
+        if sp and not det:
+            problems.append(f"{pid}: specs need details (the About section shows both)")
         title, desc = seo_title(p), seo_desc(p)
         if title in seen_titles:
             problems.append(f"{pid}: SEO title duplicates {seen_titles[title]}")

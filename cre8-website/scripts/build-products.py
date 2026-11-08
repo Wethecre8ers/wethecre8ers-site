@@ -95,6 +95,35 @@ def thumbs_html(p):
     return '\n          <div class="ppThumbs" id="galleryThumbs">' + "".join(buttons) + "</div>"
 
 
+def made_block(p):
+    pol = cd.POLICY
+    returns = ("Personalized items are final sale unless they arrive damaged or incorrect."
+               if cd.is_custom_personalized(p)
+               else f"Standard items can be returned within {pol['standard_return_days']} days of delivery.")
+    return (
+        '<div class="noteBox ppMade"><b>Made to order in the USA.</b> '
+        "Every piece from WeTheCre8ers, a veteran-owned company, is 3D printed after you order. "
+        f"Allow {pol['handling_min_days']}&ndash;{pol['handling_max_days']} business days to print and pack, "
+        f"then {pol['transit_min_days']}&ndash;{pol['transit_max_days']} business days for delivery within the US. "
+        f"Shipping is a flat ${pol['shipping_rate_usd']:.2f}. {returns} "
+        'See <a href="/shipping-returns.html">Shipping &amp; Returns</a> for details.</div>'
+    )
+
+
+def about_html(p):
+    """Longer description + specs + shared shipping note. Empty (and no markup
+    at all) for products that haven't been given `details` yet."""
+    if not p.get("details"):
+        return ""
+    paras = "".join(f"\n      <p>{esc(x)}</p>" for x in p["details"])
+    specs = ""
+    if p.get("specs"):
+        rows = "".join(f"<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>" for k, v in p["specs"])
+        specs = f'\n      <dl class="ppSpecs">{rows}</dl>'
+    return (f'\n    <section class="ppAbout">\n      <h2>About {esc(p["name"])}</h2>{paras}{specs}\n'
+            f'      {made_block(p)}\n    </section>')
+
+
 def related_html(p, products, categories):
     rel = related_products(p, products)
     if not rel:
@@ -174,6 +203,7 @@ def render_product_page(p, products, categories):
         "ID": esc(p["id"]),
         "MAIN_IMAGE": main_image_html(p),
         "THUMBS": thumbs_html(p),
+        "ABOUT": about_html(p),
         "RELATED": related_html(p, products, categories),
     }
     out = tpl
