@@ -186,7 +186,14 @@ const PRODUCTS = [
     slug:'anyway-mother-teresa', seoTitle:'Mother Teresa Anyway Lighted Sign | WeTheCre8ers',
     seoDesc:'A backlit light board engraved with the "Anyway" poem attributed to Mother Teresa. A clean frosted panel when off, a warm glow when lit. Ships ready to display.',
     price:39.99, desc:'A backlit light board engraved with the "Anyway" poem attributed to Mother Teresa — the words glow warmly when lit and read as a clean frosted panel when off. Ships ready to display. Want a different quote or saying? Contact us for a custom quote.',
-    icon:'sign', images:['/images/products/anyway-mother-teresa-1.jpg','/images/products/anyway-mother-teresa-2.jpg','/images/products/anyway-mother-teresa-3.jpg'], asIs:true, materials:[], colors:[], featured:3
+    icon:'sign', images:['/images/products/anyway-mother-teresa-1.jpg','/images/products/anyway-mother-teresa-2.jpg','/images/products/anyway-mother-teresa-3.jpg'], asIs:true, materials:[], colors:[], featured:3,
+    details:[
+      'This backlit light board is 6 inches wide and 9 inches tall and is 1.37 inches deep in its black frame, which is included. It is engraved with the "Anyway" poem attributed to Mother Teresa. The poem is set in rows, with a bold line ending in "anyway" after each stanza, and a credit line at the bottom reads "Mother Teresa."',
+      'Unlit, the panel reads as a clean frosted panel with engraved lettering, as shown in our second photo. Lit, the words glow warmly, as shown in our first photo. It stands on a desk, plugs into a USB outlet for power, and ships ready to display.',
+      'Want a different quote or saying? Contact us for a custom quote on our [Contact page](/contact.html).',
+      'The light board is printed in PLA. Every light board is made to order in the USA.'
+    ],
+    specs:[['Size','6 inches wide, 9 inches tall'],['Depth','1.37 inches, in the frame'],['Frame','Black, included'],['Display','Stands on a desk'],['Power','Plugs into a USB outlet'],['Material','PLA']]
   },
   {
     id:'mjquote-01', category:'Inspirational Signs & Light Boards', name:'Michael Jordan Lighted Quote',
