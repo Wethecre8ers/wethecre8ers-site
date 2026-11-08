@@ -58,7 +58,14 @@ const PRODUCTS = [
     slug:'flexi-turtle', seoTitle:'Flexi Turtle Poseable 3D Printed Fidget | WeTheCre8ers',
     seoDesc:'A hand-sized, poseable 3D printed turtle with a flexible design, made by Cre8 as a fun fidget or shelf piece.',
     price:10.99, desc:'A hand-sized, poseable turtle figure with a flexible design — a fun fidget or shelf piece.',
-    icon:'turtle', images:['/images/products/flexiturtle-1.jpg','/images/products/flexiturtle-2.jpg'], asIs:true, materials:[], colors:[]
+    icon:'turtle', images:['/images/products/flexiturtle-1.jpg','/images/products/flexiturtle-2.jpg'], asIs:true, materials:[], colors:[],
+    details:[
+      'The Flexi Turtle is a small 3D printed sea turtle with a tan segmented shell, a green head and flippers, and black eyes. It measures 2 inches long and 2 inches wide at its widest point, and it is 5/8 inch tall at the shell, so it is hand-sized. One of our photos shows it resting in an adult palm.',
+      'Its flexible design lets the head and front flippers move, so you can pose the turtle and use it as a fun fidget at your desk, or set it on a shelf as a small display piece.',
+      'The turtle is printed in PLA with the colors built into the print, so it ships exactly as shown, with no color or material options to choose.',
+      'Every Flexi Turtle is made to order in the USA. The ridged texture you can see on the shell and flippers comes from the layer-by-layer printing process, and slight color variation is normal.'
+    ],
+    specs:[['Length','2 inches'],['Width','2 inches at the widest point'],['Height','5/8 inch at the shell'],['Material','PLA'],['Moves','Head and front flippers'],['Colors','Fixed, ships as shown']]
   },
   {
     id:'pumpkinspinner-01', category:'Halloween', name:'Pumpkin Spinner',
