@@ -218,7 +218,14 @@ const PRODUCTS = [
     seoDesc:'A fully articulated dragon fidget covered in crystal-like spikes, flexible from head to tail. About 2ft long, in your choice of color; pictured in Pink/Green.',
     price:15.99, desc:'A fully articulated dragon fidget covered in crystal-like spikes — flexible from head to tail for satisfying twisting, coiling, and stress relief. Pictured in Pink/Green; choose your color below. Approximately 2ft long.',
     icon:'dragon', images:['/images/products/dragonfidget-1.jpg','/images/products/dragonfidget-2.jpg'],
-    materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold']
+    materials:['PLA'], colors:['Pink/Green','Black','Orange','Red','Brown','Blue','White','Legacy Gold'],
+    details:[
+      'The Crystal Spine Dragon Fidget is a fully articulated 3D printed dragon about 2 feet long. Its head and body are covered in sharp, crystal-like spikes, and its joints let it flex from head to tail. It moves like a snake, so you can twist it, coil it into a spiral like the one in our photos, or pose it across a desk.',
+      'Our photos show the dragon in pink and green, and you can order that look as Pink/Green. You can also choose black, orange, red, brown, blue, white, or Legacy Gold. The dragon is printed in PLA.',
+      'The dragon has no small parts, and we recommend it for ages 8 and up.',
+      'Every dragon is made to order in the USA. Layer lines and slight color variation are a normal part of a 3D printed piece.'
+    ],
+    specs:[['Length','About 2 feet'],['Movement','Flexes head to tail, like a snake'],['Material','PLA'],['Colors','8, including Pink/Green'],['Small parts','None'],['Recommended age','8 and up']]
   }
 ];
 
