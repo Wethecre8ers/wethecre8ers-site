@@ -115,7 +115,10 @@ def about_html(p):
     at all) for products that haven't been given `details` yet."""
     if not p.get("details"):
         return ""
-    paras = "".join(f"\n      <p>{esc(x)}</p>" for x in p["details"])
+    def para(x):
+        # Only internal links are allowed: [text](/path)
+        return re.sub(r"\[([^\]]+)\]\((/[^)\s]*)\)", r'<a href="\2">\1</a>', esc(x))
+    paras = "".join(f"\n      <p>{para(x)}</p>" for x in p["details"])
     specs = ""
     if p.get("specs"):
         rows = "".join(f"<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>" for k, v in p["specs"])

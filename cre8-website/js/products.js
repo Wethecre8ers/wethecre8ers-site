@@ -135,9 +135,16 @@ const PRODUCTS = [
     slug:'name-display', seoTitle:'Personalized Name Display Sign | WeTheCre8ers',
     seoDesc:'A clean standing name sign for a desk, shelf, or door, made to order with the name of your choice. 3D printed by Cre8.',
     price:8.99, desc:'A clean standing name sign for a desk, shelf, or door. Made to order in the name of your choice.',
-    icon:'plate', images:['/images/products/namedisplay-1.jpg','/images/products/namedisplay-2.jpg','/images/products/namedisplay-3.jpg'], needsPhoto:true,
+    icon:'plate', images:['/images/products/namedisplay-1.jpg','/images/products/namedisplay-2.jpg','/images/products/namedisplay-3.jpg'], needsPhoto:true, colorSlots:2, slotLabels:['First initial','Full name'],
     madeToOrderNote:'after checkout, email the name you\'d like on your Name Display to support@wethecre8ers.com along with your order confirmation so we can get started. We can also make it in other sizes — email us for a quote.',
-    materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold']
+    materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold'],
+    details:[
+      'The Name Display is a 3D printed name sign made from the name you choose. Our sample shows the name "Mulconrey" in flowing script, layered in front of a large first initial, and it measures 4.50 inches wide and 2.50 inches tall. The size adjusts slightly for each name. It can stand upright or lie flat.',
+      'You choose two colors: one for the first initial and one for the full name. The colors are black, orange, red, brown, blue, white, or Legacy Gold, and the sign is printed in PLA Matte.',
+      'After checkout, email the name you\'d like to support@wethecre8ers.com along with your order confirmation, and we\'ll get started. The lettering is in the script shown. If you want a custom script, please fill out a custom request on our [Contact page](/contact.html). We can also make it in other sizes. Email us for a quote.',
+      'Each Name Display is made to order in the USA from the details you send us. Personalized items are final sale unless they arrive damaged or incorrect, so please double-check the spelling before you send it.'
+    ],
+    specs:[['Sample size','4.50 x 2.50 inches'],['Colors','Two: first initial and full name'],['Lettering','Script shown; custom on request'],['Display','Stands or lies flat'],['Material','PLA Matte'],['Ordering','Email your name after checkout']]
   },
   {
     id:'photolightbox-01', category:'Personalized', name:'Customized Photo Light Box',
@@ -466,7 +473,7 @@ function quickAdd(id){
   } else if (p.asIs) {
     color = 'As-is';
   } else if (p.colorSlots && p.colorSlots > 1) {
-    color = Array.from({length:p.colorSlots}).map((_,i)=>p.colors[i % p.colors.length]).join(', ');
+    color = slotColorString(p, Array.from({length:p.colorSlots}).map((_,i)=>p.colors[i % p.colors.length]));
   } else {
     color = p.colors[0];
   }
@@ -476,16 +483,22 @@ function quickAdd(id){
 
 // Option controls + Add to Cart button + trailing note for one product.
 // Shared by the quick-view modal and the standalone product pages.
+// Color string for a cart line with several color slots. Products that name
+// their slots (slotLabels) record which color is which, e.g. "First initial: Black, Full name: Legacy Gold".
+function slotColorString(p, values){
+  return p.slotLabels ? values.map((v,i)=>`${p.slotLabels[i]}: ${v}`).join(', ') : values.join(', ');
+}
+
 function productPurchaseHTML(p){
   const slotName = p.slotName || 'item';
   const slotLabel = slotName.charAt(0).toUpperCase() + slotName.slice(1);
   const colorBlockHtml = p.colorSlots && p.colorSlots > 1 ? `
     <div class="optGroup">
-      <label>Choose ${p.colorSlots} Colors (one per ${slotName})</label>
+      <label>Choose ${p.colorSlots} Colors (${p.slotLabels ? p.slotLabels.join(' and ').toLowerCase() : 'one per ' + slotName})</label>
       <div style="display:flex; flex-direction:column; gap:10px;">
         ${Array.from({length:p.colorSlots}).map((_,i)=>`
           <select id="colorSlot${i}" style="width:100%;background:var(--charcoal-2);border:1px solid rgba(183,185,188,.25);color:var(--ivory);padding:11px 12px;border-radius:var(--radius);font-family:var(--sans);font-size:13.5px;">
-            ${p.colors.map((c,ci)=>`<option value="${c}" ${ci===(i % p.colors.length)?'selected':''}>${slotLabel} ${i+1}: ${c}</option>`).join('')}
+            ${p.colors.map((c,ci)=>`<option value="${c}" ${ci===(i % p.colors.length)?'selected':''}>${p.slotLabels ? p.slotLabels[i] : slotLabel + ' ' + (i+1)}: ${c}</option>`).join('')}
           </select>
         `).join('')}
       </div>
@@ -628,7 +641,7 @@ function addFromModal(id){
   } else if (p.asIs) {
     col = 'As-is';
   } else if (p.colorSlots && p.colorSlots > 1) {
-    col = Array.from({length:p.colorSlots}).map((_,i)=>document.getElementById(`colorSlot${i}`).value).join(', ');
+    col = slotColorString(p, Array.from({length:p.colorSlots}).map((_,i)=>document.getElementById(`colorSlot${i}`).value));
   } else {
     col = document.querySelector('#colSwatches .active').dataset.val;
   }
