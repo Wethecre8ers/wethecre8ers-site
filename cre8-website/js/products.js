@@ -86,7 +86,14 @@ const PRODUCTS = [
     slug:'skull-planter', seoTitle:'3D Printed Skull Planter for Succulents | WeTheCre8ers',
     seoDesc:'A carved skull-and-vine planter, designed to hold a small succulent or cutting. 3D printed by Cre8 in your choice of color.',
     price:15.99, desc:'A carved skull-and-vine planter, designed to hold a small succulent or cutting.',
-    icon:'skull', images:['/images/products/skullplanter-1.jpg','/images/products/skullplanter-2.jpg','/images/products/skullplanter-3.jpg'], materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Blue','White','Legacy Gold'], featured:5
+    icon:'skull', images:['/images/products/skullplanter-1.jpg','/images/products/skullplanter-2.jpg','/images/products/skullplanter-3.jpg'], materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Tan','Blue','Green','White','Legacy Gold'], featured:5,
+    details:[
+      'The Skull Planter is a 3D printed skull with an open top that forms the planting bowl. A vine with leaves wraps around one side of the skull, and the skull rests on a faceted, rock-like base. It stands 4.75 inches tall and 5.25 inches wide.',
+      'It is designed to hold a small succulent or cutting. The bowl has a small drainage hole. This planter is for indoor use only.',
+      'Choose your color from black, orange, red, brown, tan, blue, green, white, or Legacy Gold. It is printed in PLA Matte.',
+      'Every planter is made to order in the USA. Layer lines and slight color variation are a normal part of 3D printed pieces.'
+    ],
+    specs:[['Height','4.75 inches'],['Width','5.25 inches'],['Drainage','Small drainage hole'],['Use','Indoor only'],['Material','PLA Matte'],['Colors','9 colors to choose from']]
   },
   {
     id:'halloweenblackcat-01', category:'Halloween', name:'Halloween Black Cat Lithophane Panel',
