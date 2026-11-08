@@ -102,7 +102,8 @@ def made_block(p):
                else f"Standard items can be returned within {pol['standard_return_days']} days of delivery.")
     return (
         '<div class="noteBox ppMade"><b>Made to order in the USA.</b> '
-        "Every piece from WeTheCre8ers, a veteran-owned company, is 3D printed after you order. "
+        "Every piece from WeTheCre8ers, a veteran-owned company, is 3D printed after you order"
+        + (" (the optional frame is the one exception)" if p.get("frameAddon") else "") + ". "
         f"Allow {pol['handling_min_days']}&ndash;{pol['handling_max_days']} business days to print and pack, "
         f"then {pol['transit_min_days']}&ndash;{pol['transit_max_days']} business days for delivery within the US. "
         f"Shipping is a flat ${pol['shipping_rate_usd']:.2f}. {returns} "

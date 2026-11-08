@@ -231,7 +231,14 @@ const PRODUCTS = [
     icon:'sign', images:['/images/products/nobodycares-1.jpg'], asIs:true,
     wordColors:['Red','Grey','Green','White'],
     frameAddon:8.99, frameColors:['Black','Brown','Grey'],
-    materials:[], colors:[]
+    materials:[], colors:[],
+    details:[
+      'The Nobody Cares panel is a textured 3D printed panel that carries the words "Nobody Cares. Work Harder." in rough, brush-style lettering, with a small mountain and moon scene between the lines. It measures 8 inches by 6 inches. It does not light up.',
+      'You choose the color of the words: red, grey, green, or white. The panel is thin and does not stand on its own. If you want, you can stick it to a wall or a fridge, but magnets and adhesive are not included.',
+      'A frame is optional: add one for $8.99 in black, brown, or grey. The frame is not 3D printed.',
+      'The panel is printed in PLA. Every panel is made to order in the USA.'
+    ],
+    specs:[['Size','8 x 6 inches'],['Surface','Textured, does not light up'],['Word colors','Red, grey, green, or white'],['Display','Stick to a wall or fridge; no adhesive included'],['Frame','Optional add-on, not 3D printed'],['Material','PLA (the panel)']]
   },
   {
     id:'dragonfidget-01', category:'Fidgets', name:'Crystal Spine Dragon Fidget',
