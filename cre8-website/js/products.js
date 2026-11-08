@@ -161,17 +161,24 @@ const PRODUCTS = [
     specs:[['Sample size','6 x 4 inches'],['Depth','1.37 inches, in the frame'],['Orientation','Upright or sideways'],['Frame','Black'],['Power','Plugs into a USB outlet'],['Display','Stands on a desk'],['Material','PLA'],['Ordering','Email your photo after checkout']]
   },
   {
-    id:'training-glock19-01', category:'Tactical Training', name:'Training Glock 19 Replica',
-    slug:'training-glock-19-replica', seoTitle:'Inert Glock 19 Training Replica | WeTheCre8ers',
-    seoDesc:'A solid, non-functional Glock 19-profile training replica for holster fit, draw practice, and handling drills. Inert plastic that cannot fire.',
-    price:23.99, desc:'A solid, non-functional Glock 19-profile training replica for holster fit, draw practice, and handling drills. Inert plastic — no moving parts and cannot fire.',
-    icon:'pistol', images:['/images/products/training-glock19-1.jpg','/images/products/training-glock19-2.jpg'], materials:['PLA Matte'], colors:['Blue','Red','Yellow','Green']
+    id:'training-glock19-01', category:'Tactical Training', name:'Training Pistol Replica (Glock 19 profile)',
+    slug:'training-glock-19-replica', seoTitle:'Training Pistol Replica (Glock 19 Profile) | WeTheCre8ers',
+    seoDesc:'A solid, non-functional training pistol replica in the Glock 19 profile, for holster fit, draw practice, and handling drills. Inert plastic that cannot fire.',
+    price:23.99, desc:'A solid, non-functional training pistol replica in the Glock 19 profile, for holster fit, draw practice, and handling drills. Inert plastic — no moving parts and cannot fire.',
+    icon:'pistol', images:['/images/products/training-glock19-1.jpg','/images/products/training-glock19-2.jpg'], materials:['PLA Matte'], colors:['Blue','Red','Yellow','Green'],
+    details:[
+      'This training pistol replica is a full-size, solid, non-functional replica made in the profile of a Glock 19, 3D printed in plastic. It is one solid piece with no moving parts, and it cannot fire. It is made for holster fit, draw practice, and handling drills.',
+      'Choose your color from blue, red, yellow, or green. It is printed in PLA Matte.',
+      'This item is an inert training replica, not a firearm, and we recommend it for adults only. Use it safely and follow the laws and rules that apply where you live and train.',
+      'Every replica is made to order in the USA. Layer lines are a normal part of a 3D printed piece.'
+    ],
+    specs:[['Scale','Full size'],['Build','One solid piece'],['Function','Inert: no moving parts, cannot fire'],['Material','PLA Matte'],['Colors','Blue, red, yellow, or green'],['Recommended for','Adults only']]
   },
   {
-    id:'training-glock17-mag-01', category:'Tactical Training', name:'Training Glock 17 Magazine',
-    slug:'training-glock-17-magazine', seoTitle:'Glock 17 Dummy Magazine Training Replica | WeTheCre8ers',
-    seoDesc:'A solid Glock 17-profile dummy magazine for reload and malfunction drills. Inert training replica that does not hold or feed ammunition.',
-    price:10.99, desc:'A solid Glock 17-profile dummy magazine for reload and malfunction drills. Inert training replica — does not hold or feed ammunition and has no functional parts.',
+    id:'training-glock17-mag-01', category:'Tactical Training', name:'Training Pistol Magazine (Glock 17 profile)',
+    slug:'training-glock-17-magazine', seoTitle:'Training Pistol Magazine (Glock 17 Profile) | WeTheCre8ers',
+    seoDesc:'A solid dummy magazine in the Glock 17 profile, for reload and malfunction drills. Inert training replica that does not hold or feed ammunition.',
+    price:10.99, desc:'A solid dummy magazine in the Glock 17 profile, for reload and malfunction drills. Inert training replica — does not hold or feed ammunition and has no functional parts.',
     icon:'magazine', images:['/images/products/training-glock17-mag-1.jpg'], materials:['PLA Matte'], colors:['Blue','Red','Yellow']
   },
   {
