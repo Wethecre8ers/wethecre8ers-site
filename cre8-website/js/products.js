@@ -193,7 +193,14 @@ const PRODUCTS = [
     slug:'michael-jordan-lighted-quote', seoTitle:'Michael Jordan Lighted Quote Sign | WeTheCre8ers',
     seoDesc:'A backlit sign featuring Michael Jordan\'s "I\'ve missed more than 9000 shots" quote: bold when lit, a clean frosted panel when off. Ships ready to display.',
     price:39.99, desc:'A backlit motivational light board featuring Michael Jordan\'s "I\'ve missed more than 9000 shots" quote — bold when lit, a clean frosted panel when off. Ships ready to display. Want a different quote or saying? Contact us for a custom quote.',
-    icon:'sign', images:['/images/products/mjquote-1.jpg','/images/products/mjquote-2.jpg','/images/products/mjquote-3.jpg'], asIs:true, materials:[], colors:[], featured:2
+    icon:'sign', images:['/images/products/mjquote-1.jpg','/images/products/mjquote-2.jpg','/images/products/mjquote-3.jpg'], asIs:true, materials:[], colors:[], featured:2,
+    details:[
+      'This backlit light board measures 8 inches tall and 6 inches wide and is 1.37 inches deep in its black frame, which is included. It features Michael Jordan\'s "I\'ve missed more than 9000 shots" quote. The quote is about learning from failure, and the panel pairs it with an image of a basketball player in a red jersey going up for a shot.',
+      'Unlit, the panel reads as a pale engraved panel, as shown in our second photo. Lit, the quote and image glow in full color, as shown in our first photo. It stands on a desk, plugs into a USB outlet for power, and ships ready to display.',
+      'Want a different quote or saying? Contact us for a custom quote on our [Contact page](/contact.html).',
+      'The light board is printed in PLA. Every light board is made to order in the USA.'
+    ],
+    specs:[['Size','8 inches tall, 6 inches wide'],['Depth','1.37 inches, in the frame'],['Frame','Black, included'],['Display','Stands on a desk'],['Power','Plugs into a USB outlet'],['Material','PLA']]
   },
   {
     id:'aikmanquote-01', category:'Inspirational Signs & Light Boards', name:'Troy Aikman Lighted Quote',
