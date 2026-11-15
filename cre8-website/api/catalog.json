@@ -20,5 +20,6 @@
   { "id": "dragonfidget-01", "name": "Crystal Spine Dragon Fidget", "price": 15.99 },
   { "id": "christmasfrog-01", "name": "Christmas Frog", "price": 24.99 },
   { "id": "christmascookiecutters-01", "name": "Christmas Cookie Cutters", "price": 9.99 },
-  { "id": "christmasimprintcutters-01", "name": "Christmas Imprintable Cookie Cutters", "price": 19.99 }
+  { "id": "christmasimprintcutters-01", "name": "Christmas Imprintable Cookie Cutters", "price": 19.99 },
+  { "id": "proteincup-01", "name": "Protein Cup", "price": 9.99 }
 ]

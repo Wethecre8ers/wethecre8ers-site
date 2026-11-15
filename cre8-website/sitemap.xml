@@ -234,6 +234,18 @@
       <image:loc>https://www.wethecre8ers.com/images/products/christmasimprintcutters-3.jpg</image:loc>
       <image:title>Christmas Imprintable Cookie Cutters</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/proteincup-1.jpg</image:loc>
+      <image:title>Protein Cup</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/proteincup-2.jpg</image:loc>
+      <image:title>Protein Cup</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/proteincup-3.jpg</image:loc>
+      <image:title>Protein Cup</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.wethecre8ers.com/shop-christmas.html</loc>
@@ -344,6 +356,23 @@
     <image:image>
       <image:loc>https://www.wethecre8ers.com/images/products/halloweenskeletoncouple-3.jpg</image:loc>
       <image:title>Halloween Skeleton Couple Lithophane Panel</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.wethecre8ers.com/shop-health-fitness.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/proteincup-1.jpg</image:loc>
+      <image:title>Protein Cup</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/proteincup-2.jpg</image:loc>
+      <image:title>Protein Cup</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/proteincup-3.jpg</image:loc>
+      <image:title>Protein Cup</image:title>
     </image:image>
   </url>
   <url>
@@ -826,6 +855,23 @@
     <image:image>
       <image:loc>https://www.wethecre8ers.com/images/products/christmasimprintcutters-3.jpg</image:loc>
       <image:title>Christmas Imprintable Cookie Cutters</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.wethecre8ers.com/products/protein-cup.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/proteincup-1.jpg</image:loc>
+      <image:title>Protein Cup</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/proteincup-2.jpg</image:loc>
+      <image:title>Protein Cup</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/proteincup-3.jpg</image:loc>
+      <image:title>Protein Cup</image:title>
     </image:image>
   </url>
   <url>

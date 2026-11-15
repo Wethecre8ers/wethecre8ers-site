@@ -319,10 +319,27 @@ const PRODUCTS = [
       'Every set is made to order in the USA. Layer lines and slight color variation are a normal part of 3D printed pieces.'
     ],
     specs:[['Set','7 designs, 14 pieces (a stamp and a cutter for each)'],['Designs','Santa, Mrs. Claus, snowman, reindeer, gingerbread man, ornament, tree'],['Santa size','3.09 x 2.46 x 0.63 inches'],['Other designs','About the same size'],['Material','PLA'],['Colors','8 colors; one color per set'],['Care','Hand wash in lukewarm water'],['Recommended age','8 and up']]
+  },
+  {
+    id:'proteincup-01', category:'Health & Fitness', name:'Protein Cup',
+    slug:'protein-cup', seoTitle:'Protein Cup, 3D Printed Powder Container | WeTheCre8ers',
+    seoDesc:'A small 3D printed protein cup that holds about 2 scoops of powder, with a screw-on lid and a small vitamin cap. Choose your color. Made in the USA.',
+    price:9.99, desc:'A small 3D printed cup that holds about 2 scoops of protein powder, with a screw-on lid, a carrying handle, and a small cap for vitamins. Choose your color.',
+    icon:'cup', images:['/images/products/proteincup-1.jpg','/images/products/proteincup-2.jpg','/images/products/proteincup-3.jpg'],
+    materials:['PLA'], colors:['Black','Orange','Red','Brown','Blue','Green','White','Legacy Gold'],
+    details:[
+      'The Protein Cup is a small 3D printed container that holds about 2 scoops of protein powder. It is 2.56 inches (65 mm) wide and 2.95 inches (75 mm) tall with the lid on. The word PROTEIN is embossed on the side of the cup, and the lid has a carrying handle.',
+      'The black lid screws onto the cup. The small cap on top of the lid is a second, smaller container that holds a small amount of vitamins.',
+      'You choose the color of the cup from black, orange, red, brown, blue, green, white, or Legacy Gold. The lid and cap are black. Our photos show blue and brown cups. The cup is printed in PLA.',
+      'The cup is for dry powder only. To clean it, wash it by hand in lukewarm water. Please do not use hot water, and do not put it in the dishwasher. We recommend it for ages 8 and up.',
+      'Every Protein Cup is made to order in the USA. Layer lines and slight color variation are a normal part of 3D printed pieces.'
+    ],
+    specs:[['Holds','About 2 scoops of powder'],['Width','2.56 inches (65 mm)'],['Height','2.95 inches (75 mm), with the lid on'],['Lid','Screws on; black, with a carrying handle'],['Vitamin cap','Small cap on the lid holds a small amount of vitamins'],['Material','PLA'],['Colors','8 colors for the cup; lid and cap are black'],['Use','Dry powder only'],['Care','Hand wash in lukewarm water'],['Recommended age','8 and up']]
   }
 ];
 
 const ICONS = {
+  cup:`<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="28" y="26" width="44" height="12" rx="2" stroke="#B7B9BC" stroke-width="2.5"/><path d="M32 38 L32 74 Q32 80 38 80 L62 80 Q68 80 68 74 L68 38" stroke="#C8953D" stroke-width="2.5"/><path d="M38 54 L62 54" stroke="#8A5B1E" stroke-width="2"/><path d="M42 26 C42 14 58 14 58 26" stroke="#B7B9BC" stroke-width="2.5"/></svg>`,
   plate:`<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="40" width="72" height="26" rx="3" stroke="#C8953D" stroke-width="2.5"/><text x="50" y="58" font-family="Cinzel, serif" font-size="16" fill="#B7B9BC" text-anchor="middle">Cre8</text><line x1="14" y1="70" x2="86" y2="70" stroke="#8A5B1E" stroke-width="2"/></svg>`,
   planter:`<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28 40 L72 40 L64 82 L36 82 Z" stroke="#C8953D" stroke-width="2.5" stroke-linejoin="round"/><line x1="24" y1="40" x2="76" y2="40" stroke="#B7B9BC" stroke-width="2.5"/><path d="M40 40 C40 24 60 24 60 40" stroke="#8A5B1E" stroke-width="2"/></svg>`,
   stand:`<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 78 L78 78 L70 46 L30 46 Z" stroke="#B7B9BC" stroke-width="2.5" stroke-linejoin="round"/><rect x="38" y="20" width="24" height="34" rx="2" stroke="#C8953D" stroke-width="2.5" transform="rotate(-8 50 37)"/></svg>`,
