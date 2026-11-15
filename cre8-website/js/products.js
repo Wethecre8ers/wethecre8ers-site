@@ -93,7 +93,7 @@ const PRODUCTS = [
     slug:'skull-planter', seoTitle:'3D Printed Skull Planter for Succulents | WeTheCre8ers',
     seoDesc:'A carved skull-and-vine planter, designed to hold a small succulent or cutting. 3D printed by Cre8 in your choice of color.',
     price:15.99, desc:'A carved skull-and-vine planter, designed to hold a small succulent or cutting.',
-    icon:'skull', images:['/images/products/skullplanter-1.jpg','/images/products/skullplanter-2.jpg','/images/products/skullplanter-3.jpg'], materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Tan','Blue','Green','White','Legacy Gold'], featured:6,
+    icon:'skull', images:['/images/products/skullplanter-1.jpg','/images/products/skullplanter-2.jpg','/images/products/skullplanter-3.jpg'], materials:['PLA Matte'], colors:['Black','Orange','Red','Brown','Tan','Blue','Green','White','Legacy Gold'], featured:7,
     details:[
       'The Skull Planter is a 3D printed skull with an open top that forms the planting bowl. A vine with leaves wraps around one side of the skull, and the skull rests on a faceted, rock-like base. It stands 4.75 inches tall and 5.25 inches wide.',
       'It is designed to hold a small succulent or cutting. The bowl has a small drainage hole. This planter is for indoor use only.',
@@ -151,7 +151,7 @@ const PRODUCTS = [
     slug:'custom-photo-light-box', seoTitle:'Custom Photo Light Box | WeTheCre8ers',
     seoDesc:'A backlit photo panel made from your own picture, engraved so it glows when lit. Made to order: email your photo after checkout.',
     price:34.99, desc:'A backlit photo panel made from your own picture, engraved so it glows when lit. Made to order — after checkout, email your photo to support@wethecre8ers.com with your order confirmation.',
-    icon:'lightbox', images:['/images/products/photolightbox-1.jpg','/images/products/photolightbox-2.jpg','/images/products/photolightbox-3.jpg','/images/products/photolightbox-movie.mp4','/images/products/photolightbox-4.jpg','/images/products/photolightbox-5.jpg','/images/products/photolightbox-6.jpg'], asIs:true, needsPhoto:true, materials:[], colors:[], featured:5,
+    icon:'lightbox', images:['/images/products/photolightbox-1.jpg','/images/products/photolightbox-2.jpg','/images/products/photolightbox-3.jpg','/images/products/photolightbox-movie.mp4','/images/products/photolightbox-4.jpg','/images/products/photolightbox-5.jpg','/images/products/photolightbox-6.jpg'], asIs:true, needsPhoto:true, materials:[], colors:[], featured:6,
     details:[
       'The Customized Photo Light Box turns your own picture into a backlit photo panel in a black frame. Our sample panel is 6 inches tall and 4 inches wide, and it is 1.37 inches deep in the frame. It can be made in either orientation, upright or sideways, to suit your photo. The picture is engraved into the panel, so it appears in color when the box is lit from behind and reads as a pale, textured relief when it is off. Our photos show sample pictures lit and unlit, and our video shows what a real light box looks like lit up.',
       'The light box stands on a desk and plugs into a USB outlet for power.',
@@ -207,7 +207,7 @@ const PRODUCTS = [
     slug:'anyway-mother-teresa', seoTitle:'Mother Teresa Anyway Lighted Sign | WeTheCre8ers',
     seoDesc:'A backlit light board engraved with the "Anyway" poem attributed to Mother Teresa. A clean frosted panel when off, a warm glow when lit. Ships ready to display.',
     price:39.99, desc:'A backlit light board engraved with the "Anyway" poem attributed to Mother Teresa — the words glow warmly when lit and read as a clean frosted panel when off. Ships ready to display. Want a different quote or saying? Contact us for a custom quote.',
-    icon:'sign', images:['/images/products/anyway-mother-teresa-1.jpg','/images/products/anyway-mother-teresa-2.jpg','/images/products/anyway-mother-teresa-3.jpg'], asIs:true, materials:[], colors:[], featured:4,
+    icon:'sign', images:['/images/products/anyway-mother-teresa-1.jpg','/images/products/anyway-mother-teresa-2.jpg','/images/products/anyway-mother-teresa-3.jpg'], asIs:true, materials:[], colors:[], featured:5,
     details:[
       'This backlit light board is 6 inches wide and 9 inches tall and is 1.37 inches deep in its black frame, which is included. It is engraved with the "Anyway" poem attributed to Mother Teresa. The poem is set in rows, with a bold line ending in "anyway" after each stanza, and a credit line at the bottom reads "Mother Teresa."',
       'Unlit, the panel reads as a clean frosted panel with engraved lettering, as shown in our second photo. Lit, the words glow warmly, as shown in our first photo. It stands on a desk, plugs into a USB outlet for power, and ships ready to display.',
@@ -221,7 +221,7 @@ const PRODUCTS = [
     slug:'michael-jordan-lighted-quote', seoTitle:'Michael Jordan Lighted Quote Sign | WeTheCre8ers',
     seoDesc:'A backlit sign featuring Michael Jordan\'s "I\'ve missed more than 9000 shots" quote: bold when lit, a clean frosted panel when off. Ships ready to display.',
     price:39.99, desc:'A backlit motivational light board featuring Michael Jordan\'s "I\'ve missed more than 9000 shots" quote — bold when lit, a clean frosted panel when off. Ships ready to display. Want a different quote or saying? Contact us for a custom quote.',
-    icon:'sign', images:['/images/products/mjquote-1.jpg','/images/products/mjquote-2.jpg','/images/products/mjquote-3.jpg'], asIs:true, materials:[], colors:[], featured:3,
+    icon:'sign', images:['/images/products/mjquote-1.jpg','/images/products/mjquote-2.jpg','/images/products/mjquote-3.jpg'], asIs:true, materials:[], colors:[], featured:4,
     details:[
       'This backlit light board measures 8 inches tall and 6 inches wide and is 1.37 inches deep in its black frame, which is included. It features Michael Jordan\'s "I\'ve missed more than 9000 shots" quote. The quote is about learning from failure, and the panel pairs it with an image of a basketball player in a red jersey going up for a shot.',
       'Unlit, the panel reads as a pale engraved panel, as shown in our second photo. Lit, the quote and image glow in full color, as shown in our first photo. It stands on a desk, plugs into a USB outlet for power, and ships ready to display.',
@@ -310,7 +310,7 @@ const PRODUCTS = [
     seoDesc:'A set of seven 3D printed Christmas cookie cutters with matching imprint stamps: Santa, Mrs. Claus, snowman, reindeer and more. Choose your color.',
     price:19.99, desc:'A set of seven 3D printed Christmas cookie cutters with matching imprint stamps: Santa, Mrs. Claus, snowman, reindeer, gingerbread man, ornament, and tree. Choose your color.',
     icon:'ornament', images:['/images/products/christmasimprintcutters-1.jpg','/images/products/christmasimprintcutters-2.jpg','/images/products/christmasimprintcutters-3.jpg'],
-    materials:['PLA'], colors:['Black','Orange','Red','Brown','Blue','Green','White','Legacy Gold'],
+    materials:['PLA'], colors:['Black','Orange','Red','Brown','Blue','Green','White','Legacy Gold'], featured:3,
     details:[
       'Christmas Imprintable Cookie Cutters is a set of seven Christmas designs, and each design comes as a pair: an imprint stamp and a matching cutter. The designs are Santa, Mrs. Claus, a snowman, a reindeer, a gingerbread man, an ornament, and a Christmas tree with gifts, so the set has 14 pieces in all.',
       'To use a pair, press the imprint stamp into rolled dough to mark the design, then cut around it with the matching cutter. The Santa piece in our dimensions photo is 3.09 inches tall, 2.46 inches wide, and 0.63 inch deep, and the other designs are about the same size.',
