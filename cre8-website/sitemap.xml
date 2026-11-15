@@ -202,6 +202,35 @@
       <image:loc>https://www.wethecre8ers.com/images/products/dragonfidget-2.jpg</image:loc>
       <image:title>Crystal Spine Dragon Fidget</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/christmasfrog-1.jpg</image:loc>
+      <image:title>Christmas Frog</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/christmasfrog-2.jpg</image:loc>
+      <image:title>Christmas Frog</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/christmasfrog-3.jpg</image:loc>
+      <image:title>Christmas Frog</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.wethecre8ers.com/shop-christmas.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/christmasfrog-1.jpg</image:loc>
+      <image:title>Christmas Frog</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/christmasfrog-2.jpg</image:loc>
+      <image:title>Christmas Frog</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/christmasfrog-3.jpg</image:loc>
+      <image:title>Christmas Frog</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.wethecre8ers.com/shop-fidgets.html</loc>
@@ -710,6 +739,23 @@
     <image:image>
       <image:loc>https://www.wethecre8ers.com/images/products/dragonfidget-2.jpg</image:loc>
       <image:title>Crystal Spine Dragon Fidget</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.wethecre8ers.com/products/christmas-frog.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/christmasfrog-1.jpg</image:loc>
+      <image:title>Christmas Frog</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/christmasfrog-2.jpg</image:loc>
+      <image:title>Christmas Frog</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/christmasfrog-3.jpg</image:loc>
+      <image:title>Christmas Frog</image:title>
     </image:image>
   </url>
   <url>

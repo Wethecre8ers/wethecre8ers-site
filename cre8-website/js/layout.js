@@ -6,6 +6,7 @@
    ============================================================ */
 
 const CATEGORY_PAGES = [
+  { name: 'Christmas',                         href: '/shop-christmas.html' },
   { name: 'Fidgets',                            href: '/shop-fidgets.html' },
   { name: 'Halloween',                          href: '/shop-halloween.html' },
   { name: 'Home & Desk',                        href: '/shop-home-desk.html' },

@@ -275,6 +275,19 @@ const PRODUCTS = [
       'Every dragon is made to order in the USA. Layer lines and slight color variation are a normal part of a 3D printed piece.'
     ],
     specs:[['Length','About 2 feet'],['Movement','Flexes head to tail, like a snake'],['Material','PLA'],['Colors','8, including Pink/Green'],['Small parts','None'],['Recommended age','8 and up']]
+  },
+  {
+    id:'christmasfrog-01', category:'Christmas', name:'Christmas Frog',
+    slug:'christmas-frog', seoTitle:'Christmas Frog Santa Figurine | WeTheCre8ers',
+    seoDesc:'A 3D printed Christmas frog figurine in a Santa suit and hat, holding up a peace sign. 4 inches tall, made to order by Cre8 in the USA.',
+    price:24.99, desc:'A 3D printed frog figurine dressed as Santa Claus, with a red suit and hat and a peace sign. 4 inches tall.',
+    icon:'frog', images:['/images/products/christmasfrog-1.jpg','/images/products/christmasfrog-2.jpg','/images/products/christmasfrog-3.jpg'], asIs:true, materials:[], colors:[],
+    details:[
+      'Christmas Frog is a 3D printed figurine of a frog dressed as Santa Claus. It wears a red Santa hat with white trim and a pom-pom, a red suit with white trim and a black belt with a gold buckle, and blue slippers with white stars, and it holds up a peace sign. The figurine is 4.00 inches tall, 2.54 inches wide, and 1.58 inches deep.',
+      'Christmas Frog is printed in PLA and ships exactly as shown, with no color or material options to choose. It stands on its own, with no stand or base needed.',
+      'Every Christmas Frog is 3D printed to order in the USA. Layer lines and slight color variation are a normal part of a printed figurine.'
+    ],
+    specs:[['Height','4.00 inches'],['Width','2.54 inches'],['Depth','1.58 inches'],['Material','PLA'],['Stands','On its own, no base needed']]
   }
 ];
 
