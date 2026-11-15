@@ -335,11 +335,26 @@ const PRODUCTS = [
       'Every Protein Cup is made to order in the USA. Layer lines and slight color variation are a normal part of 3D printed pieces.'
     ],
     specs:[['Holds','About 2 scoops of powder'],['Width','2.56 inches (65 mm)'],['Height','2.95 inches (75 mm), with the lid on'],['Lid','Screws on; black, with a carrying handle'],['Vitamin cap','Small cap on the lid holds a small amount of vitamins'],['Material','PLA'],['Colors','8 colors for the cup; lid and cap are black'],['Use','Dry powder only'],['Care','Hand wash in lukewarm water'],['Recommended age','8 and up']]
+  },
+  {
+    id:'vitamincontainer-01', category:'Health & Fitness', name:'Vitamin Container (2-Pack)',
+    slug:'vitamin-container-2-pack', seoTitle:'Vitamin Container 2-Pack, 3D Printed Hinged Case | WeTheCre8ers',
+    seoDesc:'A 2-pack of small 3D printed hinged vitamin containers with a snap latch. Choose a color for each container. Made to order in the USA.',
+    price:9.99, desc:'A pair of small 3D printed hinged containers for carrying vitamins, with a latch that snaps shut. Choose a color for each container.',
+    icon:'capsule', images:['/images/products/vitamincontainer-1.jpg','/images/products/vitamincontainer-2.jpg','/images/products/vitamincontainer-3.jpg'], colorSlots:2, slotName:'container', materials:['PLA'], colors:['Black','Orange','Red','Brown','Blue','Green','White','Legacy Gold'],
+    details:[
+      'The Vitamin Container is a small 3D printed hinged case for carrying vitamins. It opens like a clamshell into two sections and snaps shut with a latch on the front, and a capsule icon is on the lid. Each pack includes two containers, and you choose a color for each one: black, orange, red, brown, blue, green, white, or Legacy Gold.',
+      'A container is 1.75 inches wide when closed, and its total length, including the hinges, is 2.5 inches. It is 1 inch tall. Inside, the chamber measures 1.5 by 1.5 inches and is 0.75 inch deep.',
+      'The containers are printed in PLA. To clean one, wash it by hand in lukewarm water. Please do not use hot water, and do not put it in the dishwasher. We recommend them for ages 8 and up, and please keep them out of reach of young children.',
+      'Every pack is made to order in the USA, so your color picks are printed for you. Layer lines and slight color variation are a normal part of 3D printed pieces.'
+    ],
+    specs:[['In each pack','2 containers'],['Width (closed)','1.75 inches (44.5 mm)'],['Total length','2.5 inches (63.5 mm), including the hinges'],['Height','1 inch (25.4 mm)'],['Chamber','1.5 x 1.5 inches, 0.75 inch deep'],['Closure','Hinged, with a snap latch'],['Material','PLA'],['Colors','Choose a color for each container'],['Care','Hand wash in lukewarm water'],['Recommended age','8 and up']]
   }
 ];
 
 const ICONS = {
   cup:`<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="28" y="26" width="44" height="12" rx="2" stroke="#B7B9BC" stroke-width="2.5"/><path d="M32 38 L32 74 Q32 80 38 80 L62 80 Q68 80 68 74 L68 38" stroke="#C8953D" stroke-width="2.5"/><path d="M38 54 L62 54" stroke="#8A5B1E" stroke-width="2"/><path d="M42 26 C42 14 58 14 58 26" stroke="#B7B9BC" stroke-width="2.5"/></svg>`,
+  capsule:`<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="26" y="30" width="48" height="40" rx="6" stroke="#C8953D" stroke-width="2.5"/><line x1="26" y1="50" x2="74" y2="50" stroke="#B7B9BC" stroke-width="2"/><rect x="40" y="36" width="20" height="8" rx="4" stroke="#8A5B1E" stroke-width="2"/><path d="M44 50 L44 56 Q50 62 56 56 L56 50" stroke="#B7B9BC" stroke-width="2"/></svg>`,
   plate:`<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="40" width="72" height="26" rx="3" stroke="#C8953D" stroke-width="2.5"/><text x="50" y="58" font-family="Cinzel, serif" font-size="16" fill="#B7B9BC" text-anchor="middle">Cre8</text><line x1="14" y1="70" x2="86" y2="70" stroke="#8A5B1E" stroke-width="2"/></svg>`,
   planter:`<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28 40 L72 40 L64 82 L36 82 Z" stroke="#C8953D" stroke-width="2.5" stroke-linejoin="round"/><line x1="24" y1="40" x2="76" y2="40" stroke="#B7B9BC" stroke-width="2.5"/><path d="M40 40 C40 24 60 24 60 40" stroke="#8A5B1E" stroke-width="2"/></svg>`,
   stand:`<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 78 L78 78 L70 46 L30 46 Z" stroke="#B7B9BC" stroke-width="2.5" stroke-linejoin="round"/><rect x="38" y="20" width="24" height="34" rx="2" stroke="#C8953D" stroke-width="2.5" transform="rotate(-8 50 37)"/></svg>`,

@@ -246,6 +246,18 @@
       <image:loc>https://www.wethecre8ers.com/images/products/proteincup-3.jpg</image:loc>
       <image:title>Protein Cup</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/vitamincontainer-1.jpg</image:loc>
+      <image:title>Vitamin Container (2-Pack)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/vitamincontainer-2.jpg</image:loc>
+      <image:title>Vitamin Container (2-Pack)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/vitamincontainer-3.jpg</image:loc>
+      <image:title>Vitamin Container (2-Pack)</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.wethecre8ers.com/shop-christmas.html</loc>
@@ -373,6 +385,18 @@
     <image:image>
       <image:loc>https://www.wethecre8ers.com/images/products/proteincup-3.jpg</image:loc>
       <image:title>Protein Cup</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/vitamincontainer-1.jpg</image:loc>
+      <image:title>Vitamin Container (2-Pack)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/vitamincontainer-2.jpg</image:loc>
+      <image:title>Vitamin Container (2-Pack)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/vitamincontainer-3.jpg</image:loc>
+      <image:title>Vitamin Container (2-Pack)</image:title>
     </image:image>
   </url>
   <url>
@@ -872,6 +896,23 @@
     <image:image>
       <image:loc>https://www.wethecre8ers.com/images/products/proteincup-3.jpg</image:loc>
       <image:title>Protein Cup</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.wethecre8ers.com/products/vitamin-container-2-pack.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/vitamincontainer-1.jpg</image:loc>
+      <image:title>Vitamin Container (2-Pack)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/vitamincontainer-2.jpg</image:loc>
+      <image:title>Vitamin Container (2-Pack)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/vitamincontainer-3.jpg</image:loc>
+      <image:title>Vitamin Container (2-Pack)</image:title>
     </image:image>
   </url>
   <url>
