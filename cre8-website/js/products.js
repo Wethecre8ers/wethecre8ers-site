@@ -288,6 +288,21 @@ const PRODUCTS = [
       'Every Christmas Frog is 3D printed to order in the USA. Layer lines and slight color variation are a normal part of a printed figurine.'
     ],
     specs:[['Height','4.00 inches'],['Width','2.54 inches'],['Depth','1.58 inches'],['Material','PLA'],['Stands','On its own, no base needed']]
+  },
+  {
+    id:'christmascookiecutters-01', category:'Christmas', name:'Christmas Cookie Cutters',
+    slug:'christmas-cookie-cutters', seoTitle:'Christmas Cookie Cutters, 6-Piece 3D Printed Set | WeTheCre8ers',
+    seoDesc:'A set of six 3D printed Christmas cookie cutters: snowman, gingerbread man, reindeer, snowflake, tree, and bell. Choose your color. Made to order in the USA.',
+    price:9.99, desc:'A set of six 3D printed Christmas cookie cutters: a snowman, gingerbread man, reindeer, snowflake, Christmas tree, and bell. Choose your color.',
+    icon:'ornament', images:['/images/products/christmascookiecutters-1.jpg','/images/products/christmascookiecutters-2.jpg'],
+    materials:['PLA'], colors:['Black','Orange','Red','Brown','Blue','Green','White','Legacy Gold'],
+    details:[
+      'Christmas Cookie Cutters is a set of six 3D printed cookie cutters in holiday shapes: a snowman, a gingerbread man, a reindeer, a snowflake, a Christmas tree, and a bell. The snowman cutter measures 3.55 inches tall, 2.38 inches wide, and 0.79 inch deep, and the other five cutters are about the same size.',
+      'The whole set is printed in one color, which you choose from black, orange, red, brown, blue, green, white, or Legacy Gold. Our photos show the set in red. The cutters are printed in PLA.',
+      'To clean the cutters, wash them by hand in lukewarm water. Please do not use hot water, and do not put them in the dishwasher. We recommend them for ages 8 and up.',
+      'Every set is made to order in the USA. Layer lines and slight color variation are a normal part of 3D printed pieces.'
+    ],
+    specs:[['Set','6 cutters'],['Shapes','Snowman, gingerbread man, reindeer, snowflake, tree, bell'],['Snowman size','3.55 x 2.38 x 0.79 inches'],['Other cutters','About the same size'],['Material','PLA'],['Colors','8 colors; one color per set'],['Care','Hand wash in lukewarm water'],['Recommended age','8 and up']]
   }
 ];
 

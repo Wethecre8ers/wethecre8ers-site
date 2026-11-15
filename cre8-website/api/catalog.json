@@ -18,5 +18,6 @@
   { "id": "aikmanquote-01", "name": "Troy Aikman Lighted Quote", "price": 39.99 },
   { "id": "nobodycares-01", "name": "Nobody Cares", "price": 5.99, "frameAddon": 8.99 },
   { "id": "dragonfidget-01", "name": "Crystal Spine Dragon Fidget", "price": 15.99 },
-  { "id": "christmasfrog-01", "name": "Christmas Frog", "price": 24.99 }
+  { "id": "christmasfrog-01", "name": "Christmas Frog", "price": 24.99 },
+  { "id": "christmascookiecutters-01", "name": "Christmas Cookie Cutters", "price": 9.99 }
 ]

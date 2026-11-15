@@ -214,6 +214,14 @@
       <image:loc>https://www.wethecre8ers.com/images/products/christmasfrog-3.jpg</image:loc>
       <image:title>Christmas Frog</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/christmascookiecutters-1.jpg</image:loc>
+      <image:title>Christmas Cookie Cutters</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/christmascookiecutters-2.jpg</image:loc>
+      <image:title>Christmas Cookie Cutters</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.wethecre8ers.com/shop-christmas.html</loc>
@@ -230,6 +238,14 @@
     <image:image>
       <image:loc>https://www.wethecre8ers.com/images/products/christmasfrog-3.jpg</image:loc>
       <image:title>Christmas Frog</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/christmascookiecutters-1.jpg</image:loc>
+      <image:title>Christmas Cookie Cutters</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/christmascookiecutters-2.jpg</image:loc>
+      <image:title>Christmas Cookie Cutters</image:title>
     </image:image>
   </url>
   <url>
@@ -756,6 +772,19 @@
     <image:image>
       <image:loc>https://www.wethecre8ers.com/images/products/christmasfrog-3.jpg</image:loc>
       <image:title>Christmas Frog</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.wethecre8ers.com/products/christmas-cookie-cutters.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/christmascookiecutters-1.jpg</image:loc>
+      <image:title>Christmas Cookie Cutters</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/christmascookiecutters-2.jpg</image:loc>
+      <image:title>Christmas Cookie Cutters</image:title>
     </image:image>
   </url>
   <url>
