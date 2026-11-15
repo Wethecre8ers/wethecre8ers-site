@@ -95,7 +95,7 @@ function xmasBannerHTML(){
       <img src="/images/banner/xmas-cutters.jpg" alt="" width="64" height="64" decoding="async">
       <img src="/images/banner/xmas-imprint.jpg" alt="" width="64" height="64" decoding="async">
     </span>
-    <span class="xbText"><strong>Christmas is here!</strong> <span class="xbSub">Shop our Christmas Frog and cookie cutters</span></span>
+    <span class="xbText"><strong>Christmas is here!</strong> <span class="xbSub">Shop our Christmas Frog and Cookie Cutters</span></span>
     <span class="xbGo">Shop<span class="xbGoMore"> Christmas</span> &rarr;</span>
   </a>
   <button class="xbClose" type="button" onclick="dismissXmasBanner()" aria-label="Hide the Christmas banner">&times;</button>
