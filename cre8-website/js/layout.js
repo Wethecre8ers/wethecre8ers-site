@@ -53,6 +53,41 @@ function contestBannerHTML(){
 </div>`;
 }
 
+/* ============================================================
+   CHRISTMAS BANNER — slim strip on every page except the Christmas
+   page itself. It disappears on its own after endsAt, and a visitor
+   can hide it with the X (remembered until the next season's id).
+   ============================================================ */
+const XMAS = {
+  id: 'christmas-2026',
+  endsAt: '2026-12-26T04:59:59Z', // 11:59:59 PM Eastern on Dec 25, 2026
+  page: '/shop-christmas.html'
+};
+function xmasIsOpen(){ return Date.now() < Date.parse(XMAS.endsAt); }
+function xmasBannerDismissed(){
+  try { return localStorage.getItem('cre8_xmas_banner') === XMAS.id; } catch (_) { return false; }
+}
+function dismissXmasBanner(){
+  const el = document.getElementById('xmasBanner');
+  if (el) el.remove();
+  try { localStorage.setItem('cre8_xmas_banner', XMAS.id); } catch (_) {}
+}
+function xmasSnowflakeSVG(){
+  return '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2v20M3.3 7l17.4 10M3.3 17L20.7 7"/><path d="M9.5 3.8L12 6l2.5-2.2M9.5 20.2L12 18l2.5 2.2M4 10.2l3-.5-.8-2.9M20 13.8l-3 .5.8 2.9M4 13.8l3 .5-.8 2.9M20 10.2l-3-.5.8-2.9"/></g></svg>';
+}
+function xmasBannerHTML(){
+  return `
+<div class="xmasBanner" id="xmasBanner" role="region" aria-label="Christmas">
+  <a class="xbLink" href="${XMAS.page}">
+    <span class="xbFlake">${xmasSnowflakeSVG()}</span>
+    <span class="xbText"><strong>Christmas is here!</strong> <span class="xbSub">Shop our Christmas Frog and cookie cutters</span></span>
+    <span class="xbGo">Shop Christmas &rarr;</span>
+    <span class="xbFlake xbFlake2">${xmasSnowflakeSVG()}</span>
+  </a>
+  <button class="xbClose" type="button" onclick="dismissXmasBanner()" aria-label="Hide the Christmas banner">&times;</button>
+</div>`;
+}
+
 // Business contact details shown in the footer. The contact, privacy, terms,
 // and about pages and the homepage Organization JSON-LD repeat these by hand.
 const BUSINESS = {
@@ -108,6 +143,10 @@ function renderChrome(){
   const onContestPage = path === CONTEST.page || path === '/contest-rules.html';
   if (contestIsOpen() && !onContestPage && !contestBannerDismissed()) {
     document.body.insertAdjacentHTML('afterbegin', contestBannerHTML());
+  }
+
+  if (xmasIsOpen() && path !== XMAS.page && !xmasBannerDismissed()) {
+    document.body.insertAdjacentHTML('afterbegin', xmasBannerHTML());
   }
 
   document.body.insertAdjacentHTML('beforeend', `

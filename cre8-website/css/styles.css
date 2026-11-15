@@ -553,6 +553,35 @@
     .cbShark.s1{left:6%;} .cbShark.s2{left:82%;} .cbShark.s3{left:46%;}
   }
 
+  /* ---------- Christmas banner (auto-removed after Dec 25) ---------- */
+  .xmasBanner{
+    position:relative; background:linear-gradient(90deg,#7A1620,#9B1C2B 50%,#7A1620); color:#fff;
+    border-bottom:1px solid var(--gold);
+  }
+  .xbLink{
+    display:flex; align-items:center; justify-content:center; gap:14px; padding:11px 52px 11px 20px;
+    color:#fff; text-align:center; font-size:14px; line-height:1.35;
+  }
+  .xbLink:hover .xbGo{background:var(--gold); color:var(--black);}
+  .xbText strong{font-family:var(--display); font-weight:700; letter-spacing:.03em;}
+  .xbSub{color:#F6DDE0;}
+  .xbGo{
+    flex:none; border:1px solid var(--gold); color:var(--gold); padding:5px 14px; border-radius:999px;
+    font-size:12px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; white-space:nowrap; transition:background .2s,color .2s;
+  }
+  .xbFlake{flex:none; width:18px; height:18px; color:#F5F1E8; opacity:.9;}
+  .xbFlake svg{width:100%; height:100%; display:block;}
+  .xbClose{
+    position:absolute; top:50%; right:10px; transform:translateY(-50%); width:32px; height:32px; border-radius:50%;
+    background:transparent; border:none; color:#fff; font-size:22px; line-height:1;
+  }
+  .xbClose:hover{background:rgba(255,255,255,.15);}
+  @media (max-width:640px){
+    .xbLink{flex-wrap:wrap; gap:6px 10px; padding:10px 44px 10px 14px; font-size:13px;}
+    .xbSub, .xbFlake{display:none;}
+    .xbGo{padding:4px 12px;}
+  }
+
   .checkoutGrid{display:grid; grid-template-columns:1.1fr .9fr;}
   .coLeft{padding:34px; border-right:1px solid rgba(183,185,188,.14);}
   .coRight{padding:34px; background:var(--charcoal-2);}
