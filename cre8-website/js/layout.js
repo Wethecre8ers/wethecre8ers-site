@@ -75,14 +75,28 @@ function dismissXmasBanner(){
 function xmasSnowflakeSVG(){
   return '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2v20M3.3 7l17.4 10M3.3 17L20.7 7"/><path d="M9.5 3.8L12 6l2.5-2.2M9.5 20.2L12 18l2.5 2.2M4 10.2l3-.5-.8-2.9M20 13.8l-3 .5.8 2.9M4 13.8l3 .5-.8 2.9M20 10.2l-3-.5.8-2.9"/></g></svg>';
 }
+// Fixed positions and timings (no randomness) so the snow looks the same every visit.
+const XMAS_FLAKES = [
+  [4,12,9,0],[11,9,13,-4],[18,14,10,-7],[26,10,12,-2],[33,12,9,-9],[41,9,14,-5],[49,13,10,-1],
+  [57,10,12,-8],[64,14,9,-3],[72,9,13,-6],[79,12,10,-10],[86,10,12,-2],[93,13,9,-5],[97,9,11,-8]
+]; // [left %, size px, fall seconds, delay seconds]
+function xmasSnowHTML(){
+  return XMAS_FLAKES.map(([l,sz,d,dl]) =>
+    `<span class="xbSnow" style="left:${l}%;width:${sz}px;height:${sz}px;animation-duration:${d}s;animation-delay:${dl}s">${xmasSnowflakeSVG()}</span>`
+  ).join('');
+}
 function xmasBannerHTML(){
   return `
 <div class="xmasBanner" id="xmasBanner" role="region" aria-label="Christmas">
+  <div class="xbSnowField" aria-hidden="true">${xmasSnowHTML()}</div>
   <a class="xbLink" href="${XMAS.page}">
-    <span class="xbFlake">${xmasSnowflakeSVG()}</span>
+    <span class="xbPics" aria-hidden="true">
+      <img src="/images/banner/xmas-frog.jpg" alt="" width="64" height="64" decoding="async">
+      <img src="/images/banner/xmas-cutters.jpg" alt="" width="64" height="64" decoding="async">
+      <img src="/images/banner/xmas-imprint.jpg" alt="" width="64" height="64" decoding="async">
+    </span>
     <span class="xbText"><strong>Christmas is here!</strong> <span class="xbSub">Shop our Christmas Frog and cookie cutters</span></span>
-    <span class="xbGo">Shop Christmas &rarr;</span>
-    <span class="xbFlake xbFlake2">${xmasSnowflakeSVG()}</span>
+    <span class="xbGo">Shop<span class="xbGoMore"> Christmas</span> &rarr;</span>
   </a>
   <button class="xbClose" type="button" onclick="dismissXmasBanner()" aria-label="Hide the Christmas banner">&times;</button>
 </div>`;

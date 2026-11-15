@@ -555,32 +555,53 @@
 
   /* ---------- Christmas banner (auto-removed after Dec 25) ---------- */
   .xmasBanner{
-    position:relative; background:linear-gradient(90deg,#7A1620,#9B1C2B 50%,#7A1620); color:#fff;
+    position:relative; overflow:hidden; background:linear-gradient(90deg,#7A1620,#9B1C2B 50%,#7A1620); color:#fff;
     border-bottom:1px solid var(--gold);
   }
   .xbLink{
-    display:flex; align-items:center; justify-content:center; gap:14px; padding:11px 52px 11px 20px;
-    color:#fff; text-align:center; font-size:14px; line-height:1.35;
+    position:relative; z-index:2; display:flex; align-items:center; justify-content:center; gap:22px;
+    padding:14px 56px 14px 20px; color:#fff; text-align:center; line-height:1.3;
   }
   .xbLink:hover .xbGo{background:var(--gold); color:var(--black);}
-  .xbText strong{font-family:var(--display); font-weight:700; letter-spacing:.03em;}
-  .xbSub{color:#F6DDE0;}
+  .xbPics{display:flex; flex:none; gap:8px;}
+  .xbPics img{width:64px; height:64px; object-fit:cover; border-radius:50%; border:2px solid var(--gold); background:#5b0f18; display:block;}
+  .xbText strong{display:block; font-family:var(--display); font-weight:700; letter-spacing:.03em; font-size:22px;}
+  .xbSub{display:block; margin-top:3px; font-size:15px; color:#F6DDE0;}
   .xbGo{
-    flex:none; border:1px solid var(--gold); color:var(--gold); padding:5px 14px; border-radius:999px;
-    font-size:12px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; white-space:nowrap; transition:background .2s,color .2s;
+    flex:none; border:1px solid var(--gold); color:var(--gold); padding:9px 20px; border-radius:999px;
+    font-size:13px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; white-space:nowrap; transition:background .2s,color .2s;
   }
-  .xbFlake{flex:none; width:18px; height:18px; color:#F5F1E8; opacity:.9;}
-  .xbFlake svg{width:100%; height:100%; display:block;}
   .xbClose{
-    position:absolute; top:50%; right:10px; transform:translateY(-50%); width:32px; height:32px; border-radius:50%;
+    position:absolute; top:50%; right:10px; transform:translateY(-50%); z-index:3; width:32px; height:32px; border-radius:50%;
     background:transparent; border:none; color:#fff; font-size:22px; line-height:1;
   }
   .xbClose:hover{background:rgba(255,255,255,.15);}
-  @media (max-width:640px){
-    .xbLink{flex-wrap:wrap; gap:6px 10px; padding:10px 44px 10px 14px; font-size:13px;}
-    .xbSub, .xbFlake{display:none;}
-    .xbGo{padding:4px 12px;}
+  .xbSnowField{position:absolute; inset:0; z-index:1; pointer-events:none; overflow:hidden;}
+  .xbSnow{position:absolute; top:-24px; color:#fff; opacity:.75; animation:xbFall linear infinite;}
+  .xbSnow svg{width:100%; height:100%; display:block;}
+  @keyframes xbFall{
+    0%{transform:translate(0,0) rotate(0deg);}
+    50%{transform:translate(10px,60px) rotate(120deg);}
+    100%{transform:translate(-6px,130px) rotate(240deg);}
   }
+  @media (max-width:760px){
+    .xbLink{gap:12px; padding:12px 46px 12px 12px;}
+    .xbPics{gap:5px;}
+    .xbPics img{width:40px; height:40px; border-width:1.5px;}
+    .xbText strong{font-size:16px;}
+    .xbSub{display:none;}
+    .xbGo{padding:7px 12px; font-size:11px;}
+  }
+  @media (max-width:520px){
+    .xbLink{gap:8px; padding:10px 40px 10px 10px;}
+    .xbPics img{width:34px; height:34px;}
+    .xbPics img:nth-child(3){display:none;}
+    .xbText strong{font-size:14px; white-space:nowrap;}
+    .xbGoMore{display:none;}
+    .xbGo{padding:6px 11px;}
+  }
+  @media (max-width:360px){ .xbPics img:nth-child(2){display:none;} }
+  @media (prefers-reduced-motion:reduce){ .xbSnowField{display:none;} }
 
   .checkoutGrid{display:grid; grid-template-columns:1.1fr .9fr;}
   .coLeft{padding:34px; border-right:1px solid rgba(183,185,188,.14);}
