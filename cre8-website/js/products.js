@@ -303,6 +303,22 @@ const PRODUCTS = [
       'Every set is made to order in the USA. Layer lines and slight color variation are a normal part of 3D printed pieces.'
     ],
     specs:[['Set','6 cutters'],['Shapes','Snowman, gingerbread man, reindeer, snowflake, tree, bell'],['Snowman size','3.55 x 2.38 x 0.79 inches'],['Other cutters','About the same size'],['Material','PLA'],['Colors','8 colors; one color per set'],['Care','Hand wash in lukewarm water'],['Recommended age','8 and up']]
+  },
+  {
+    id:'christmasimprintcutters-01', category:'Christmas', name:'Christmas Imprintable Cookie Cutters',
+    slug:'christmas-imprintable-cookie-cutters', seoTitle:'Imprintable Christmas Cookie Cutters, 7-Design Set | WeTheCre8ers',
+    seoDesc:'A set of seven 3D printed Christmas cookie cutters with matching imprint stamps: Santa, Mrs. Claus, snowman, reindeer and more. Choose your color.',
+    price:19.99, desc:'A set of seven 3D printed Christmas cookie cutters with matching imprint stamps: Santa, Mrs. Claus, snowman, reindeer, gingerbread man, ornament, and tree. Choose your color.',
+    icon:'ornament', images:['/images/products/christmasimprintcutters-1.jpg','/images/products/christmasimprintcutters-2.jpg','/images/products/christmasimprintcutters-3.jpg'],
+    materials:['PLA'], colors:['Black','Orange','Red','Brown','Blue','Green','White','Legacy Gold'],
+    details:[
+      'Christmas Imprintable Cookie Cutters is a set of seven Christmas designs, and each design comes as a pair: an imprint stamp and a matching cutter. The designs are Santa, Mrs. Claus, a snowman, a reindeer, a gingerbread man, an ornament, and a Christmas tree with gifts, so the set has 14 pieces in all.',
+      'To use a pair, press the imprint stamp into rolled dough to mark the design, then cut around it with the matching cutter. The Santa piece in our dimensions photo is 3.09 inches tall, 2.46 inches wide, and 0.63 inch deep, and the other designs are about the same size.',
+      'The whole set is printed in one color, which you choose from black, orange, red, brown, blue, green, white, or Legacy Gold. Our photos show the set in green. The pieces are printed in PLA.',
+      'To clean the pieces, wash them by hand in lukewarm water. Please do not use hot water, and do not put them in the dishwasher. We recommend them for ages 8 and up.',
+      'Every set is made to order in the USA. Layer lines and slight color variation are a normal part of 3D printed pieces.'
+    ],
+    specs:[['Set','7 designs, 14 pieces (a stamp and a cutter for each)'],['Designs','Santa, Mrs. Claus, snowman, reindeer, gingerbread man, ornament, tree'],['Santa size','3.09 x 2.46 x 0.63 inches'],['Other designs','About the same size'],['Material','PLA'],['Colors','8 colors; one color per set'],['Care','Hand wash in lukewarm water'],['Recommended age','8 and up']]
   }
 ];
 
