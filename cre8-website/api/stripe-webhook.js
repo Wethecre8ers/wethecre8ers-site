@@ -12,7 +12,7 @@
 const Stripe = require('stripe');
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
 
-const NOTIFY_EMAIL = 'support@wethecre8ers.com';
+const NOTIFY_EMAIL = 'motiv8@wethecre8ers.com'; // Resend's test sender only delivers to the Resend account's own address; verify wethecre8ers.com in Resend to send anywhere else
 const FROM_EMAIL = 'onboarding@resend.dev'; // Resend's reserved test sender — swap for a verified wethecre8ers.com address once set up in Resend
 
 module.exports.config = {

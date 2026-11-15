@@ -4,7 +4,7 @@
 // the shop owner via Resend. Uses the same Resend account already set
 // up for order notifications (see stripe-webhook.js).
 
-const NOTIFY_EMAIL = 'support@wethecre8ers.com';
+const NOTIFY_EMAIL = 'motiv8@wethecre8ers.com'; // Resend's test sender only delivers to the Resend account's own address; verify wethecre8ers.com in Resend to send anywhere else
 const FROM_EMAIL = 'onboarding@resend.dev'; // swap for a verified wethecre8ers.com address once set up in Resend
 
 module.exports = async (req, res) => {
