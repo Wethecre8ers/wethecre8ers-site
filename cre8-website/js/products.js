@@ -352,6 +352,44 @@ const PRODUCTS = [
   }
 ];
 
+/* ---- Gift guide (/gift-guide.html) -------------------------------------
+   Sections in page order; each item is [product id, blurb]. The blurb is
+   shown on the card INSTEAD of the product's own `desc` (render-time only;
+   the catalog is untouched). Names, prices, photos, and cart behavior all
+   come from PRODUCTS above. The headings and lead sentences live in
+   gift-guide.html (the `title` here must match the page's <h2>; the generator
+   checks). scripts/build-products.py reads this list for the page's
+   no-JavaScript links, JSON-LD, and sitemap entry. Use curly quotes in
+   blurbs (no straight apostrophes) so the generator can parse them. */
+const GIFT_GUIDE = [
+  { id:'stocking-stuffers', title:'Stocking Stuffers Under $15', items:[
+    ['minipallets-01', 'For someone who keeps sticky notes or small items on their desk. This set of three stackable mini pallets holds a stack of notes or other little desk things.'],
+    ['minicrates-01', 'A good fit for a tidy desk or a candy dish. The two milk-crate-style totes stack and hold small items, wrapped candy, or trinkets.'],
+    ['nobodycares-01', 'For someone who likes a short, direct reminder at their desk. This small “Nobody Cares — Work Harder” panel comes in the word color you choose, and a frame is optional.'],
+    ['proteincup-01', 'For anyone who packs protein powder on the go. The cup holds about two scoops, with a screw-on lid, a carrying handle, and a small cap for vitamins.'],
+    ['vitamincontainer-01', 'For someone who likes to keep vitamins in a bag or at a desk. This is a two-pack of small hinged containers with a latch that snaps shut, in the colors you choose.']
+  ]},
+  { id:'gifts-for-bakers', title:'Gifts for Bakers', items:[
+    ['christmascookiecutters-01', 'For the person who bakes at the holidays. This set includes six shapes — a snowman, gingerbread man, reindeer, snowflake, Christmas tree, and bell — in the color you choose.'],
+    ['christmasimprintcutters-01', 'For a baker who wants designs on the cookies, not just the shape. The set has seven cutters with matching imprint stamps, including Santa, Mrs. Claus, a snowman, reindeer, gingerbread man, an ornament, and a tree.']
+  ]},
+  { id:'desk-office', title:'Desk & Office Gifts', items:[
+    ['christmasfrog-01', 'A holiday figurine for a desk, shelf, or mantel. This 4-inch frog is dressed as Santa Claus, with a red suit and hat, and holds up a peace sign.'],
+    ['concho-frog-01', 'A friendly desk or shelf figurine for someone who likes a little character in their workspace. Concho stands just over 8 inches tall and ships as shown, in full color.'],
+    ['anyway-mother-teresa-01', 'For someone who would like a lighted quote on a desk or wall. This backlit board is engraved with the “Anyway” poem attributed to Mother Teresa, and it ships ready to display.'],
+    ['mjquote-01', 'A good desk or office gift for a basketball fan. The board lights up Michael Jordan’s “I’ve missed more than 9,000 shots” quote, and it ships ready to display.'],
+    ['aikmanquote-01', 'For a football fan, or anyone who likes a short competitive quote at their desk. The board lights up Troy Aikman’s “I don’t try to please anybody. I try to win.” line, and it ships ready to display.']
+  ]},
+  { id:'gifts-for-fidgeters', title:'Gifts for Fidgeters', items:[
+    ['dragonfidget-01', 'For someone who likes a fidget they can twist and coil. This articulated dragon is covered in crystal-like spikes and flexes from head to tail. Choose your color.'],
+    ['flexiturtle-01', 'A smaller, hand-sized option for a fidget or a shelf. The turtle is poseable, with a flexible design.']
+  ]},
+  { id:'personalized-gifts', title:'Personalized Gifts', items:[
+    ['namedisplay-01', 'A made-to-order standing name sign for a desk, shelf, or door, printed in the name you choose.'],
+    ['photolightbox-01', 'A backlit panel made from a photo you send after checkout. The picture is engraved so it glows when the box is lit.']
+  ]}
+];
+
 const ICONS = {
   cup:`<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="28" y="26" width="44" height="12" rx="2" stroke="#B7B9BC" stroke-width="2.5"/><path d="M32 38 L32 74 Q32 80 38 80 L62 80 Q68 80 68 74 L68 38" stroke="#C8953D" stroke-width="2.5"/><path d="M38 54 L62 54" stroke="#8A5B1E" stroke-width="2"/><path d="M42 26 C42 14 58 14 58 26" stroke="#B7B9BC" stroke-width="2.5"/></svg>`,
   capsule:`<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="26" y="30" width="48" height="40" rx="6" stroke="#C8953D" stroke-width="2.5"/><line x1="26" y1="50" x2="74" y2="50" stroke="#B7B9BC" stroke-width="2"/><rect x="40" y="36" width="20" height="8" rx="4" stroke="#8A5B1E" stroke-width="2"/><path d="M44 50 L44 56 Q50 62 56 56 L56 50" stroke="#B7B9BC" stroke-width="2"/></svg>`,
@@ -543,6 +581,23 @@ function renderCategoryGrid(category){
   const grid = document.getElementById('productGrid');
   if (!grid) return;
   grid.innerHTML = PRODUCTS.filter(p => p.category === category).map(productCardHTML).join('');
+  initCardGalleries();
+}
+
+// Gift guide: fill each section's grid (#gg-<section id>) with the normal
+// product cards, swapping in the guide's blurb for the description. A
+// product id that isn't in PRODUCTS is skipped, never invented.
+function renderGiftGuide(){
+  GIFT_GUIDE.forEach(section => {
+    const grid = document.getElementById('gg-' + section.id);
+    if (!grid) return;
+    grid.innerHTML = section.items
+      .map(([id, blurb]) => {
+        const p = PRODUCTS.find(x => x.id === id);
+        return p ? productCardHTML({ ...p, desc: blurb }) : '';
+      })
+      .join('');
+  });
   initCardGalleries();
 }
 

@@ -16,6 +16,10 @@ const CATEGORY_PAGES = [
   { name: 'Tactical Training',                  href: '/shop-tactical-training.html' }
 ];
 
+// Curated gift page shown at the top of the Shop menu, mobile menu, and footer.
+// Not a product category, so it stays out of CATEGORY_PAGES.
+const GIFT_GUIDE_PAGE = { name: 'Gift Guide', href: '/gift-guide.html' };
+
 /* ============================================================
    GUMMY SHARK CONTEST — banner shown on every page until endsAt,
    then it disappears on its own. Keep endsAt in sync with
@@ -128,9 +132,12 @@ function renderChrome(){
   const to = (id) => (onHome ? '' : '/') + '#' + id;
   const here = (href) => path === href || path.endsWith(href);
 
-  const shopSub = CATEGORY_PAGES
-    .map(c => `<a href="${c.href}"${here(c.href) ? ' class="current"' : ''}>${c.name}</a>`)
-    .join('');
+  // The gift guide sits at the top of the Shop menus. It is a curated page,
+  // not a product category, so it is not in CATEGORY_PAGES.
+  const shopSub = `<a href="${GIFT_GUIDE_PAGE.href}"${here(GIFT_GUIDE_PAGE.href) ? ' class="current"' : ''}>${GIFT_GUIDE_PAGE.name}</a>`
+    + CATEGORY_PAGES
+      .map(c => `<a href="${c.href}"${here(c.href) ? ' class="current"' : ''}>${c.name}</a>`)
+      .join('');
 
   document.body.insertAdjacentHTML('afterbegin', `
 <header>
@@ -155,6 +162,7 @@ function renderChrome(){
     </div>
   </div>
   <div class="mobileMenu" id="mobileMenu">
+    <a href="${GIFT_GUIDE_PAGE.href}" onclick="closeMobileNav()">Shop — ${GIFT_GUIDE_PAGE.name}</a>
     <a href="/shop.html" onclick="closeMobileNav()">Shop — All Products</a>
     ${CATEGORY_PAGES.map(c => `<a href="${c.href}" onclick="closeMobileNav()">Shop — ${c.name}</a>`).join('\n    ')}
     <a href="${to('process')}" onclick="closeMobileNav()">Process</a>
@@ -192,6 +200,7 @@ function renderChrome(){
       <div>
         <h5>Shop</h5>
         <ul>
+          <li><a href="${GIFT_GUIDE_PAGE.href}">${GIFT_GUIDE_PAGE.name}</a></li>
           ${CATEGORY_PAGES.map(c => `<li><a href="${c.href}">${c.name}</a></li>`).join('')}
         </ul>
       </div>

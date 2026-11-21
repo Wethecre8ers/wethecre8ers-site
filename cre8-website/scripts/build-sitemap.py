@@ -7,7 +7,7 @@ Reads (via scripts/catalog_data.py):
   - js/layout.js     -> CATEGORY_PAGES (category name -> /shop-*.html)
 
 Writes:
-  - sitemap.xml  (home, shop, every category page, and every product page)
+  - sitemap.xml  (home, shop, every category page, the gift guide, and every product page)
 
 Normally you don't run this directly: `python3 scripts/build-products.py`
 regenerates the product pages and calls this. Run it on its own with
@@ -80,6 +80,15 @@ def build_xml(products=None, categories=None):
     for cat_name, href in categories:
         in_cat = [p for p in products if p["category"] == cat_name]
         blocks.append(url_block(f"{SITE}{href}", "weekly", "0.8", imgs_for(in_cat)))
+    # Gift guide: a curated page, listed with each featured product's main photo.
+    by_id = {p["id"]: p for p in products}
+    guide_imgs = []
+    for sec in cd.load_gift_guide():
+        for pid, _blurb in sec["items"]:
+            p = by_id[pid]
+            if cd.photos(p):
+                guide_imgs.append((cd.photos(p)[0], p["name"]))
+    blocks.append(url_block(f"{SITE}/gift-guide.html", "weekly", "0.8", guide_imgs))
     # One entry per product page, with that product's photos.
     for p in products:
         blocks.append(url_block(cd.product_url(p), "monthly", "0.7", imgs_for([p])))
@@ -110,7 +119,7 @@ def main():
     open(OUT, "w", encoding="utf-8").write(xml)
     total_imgs = sum(len(p["images"]) for p in products)
     print(f"Wrote {OUT}")
-    print(f"  {2 + len(categories)} site pages + {len(products)} product pages, {total_imgs} product photos")
+    print(f"  {3 + len(categories)} site pages + {len(products)} product pages, {total_imgs} product photos")
 
 
 if __name__ == "__main__":

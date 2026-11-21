@@ -166,6 +166,34 @@ def load_products():
     return json.loads(_js_to_json(m.group(1)))
 
 
+def load_gift_guide():
+    """[{id, title, items: [[product id, blurb], ...]}, ...] from GIFT_GUIDE."""
+    text = _read(PRODUCTS_JS)
+    m = re.search(r"const GIFT_GUIDE\s*=\s*(\[.*?\n\]);", text, re.S)
+    if not m:
+        raise SystemExit("Could not find GIFT_GUIDE in js/products.js")
+    return json.loads(_js_to_json(m.group(1)))
+
+
+def validate_gift_guide(guide, products):
+    """Problems with the gift guide list (empty means OK)."""
+    problems = []
+    ids = {p["id"] for p in products}
+    seen = set()
+    for sec in guide:
+        if not sec.get("title") or not sec.get("items"):
+            problems.append(f"gift guide section {sec.get('id', '?')}: needs a title and items")
+        for pid, blurb in sec.get("items", []):
+            if pid not in ids:
+                problems.append(f"gift guide {sec.get('id')}: unknown product id {pid!r}")
+            if pid in seen:
+                problems.append(f"gift guide: product {pid!r} is listed twice")
+            seen.add(pid)
+            if not blurb.strip():
+                problems.append(f"gift guide: {pid} has an empty blurb")
+    return problems
+
+
 def load_categories():
     """[(name, '/shop-*.html'), ...] in CATEGORY_PAGES order."""
     m = re.search(r"const CATEGORY_PAGES\s*=\s*\[(.*?)\];", _read(LAYOUT_JS), re.S)

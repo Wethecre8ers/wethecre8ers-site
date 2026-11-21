@@ -548,6 +548,75 @@
     </image:image>
   </url>
   <url>
+    <loc>https://www.wethecre8ers.com/gift-guide.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/minipallets-1.jpg</image:loc>
+      <image:title>Mini Pallets (3-Pack)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/minicrates-1.jpg</image:loc>
+      <image:title>Mini Crates (2-Pack)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/nobodycares-1.jpg</image:loc>
+      <image:title>Nobody Cares</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/proteincup-1.jpg</image:loc>
+      <image:title>Protein Cup</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/vitamincontainer-1.jpg</image:loc>
+      <image:title>Vitamin Container (2-Pack)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/christmascookiecutters-1.jpg</image:loc>
+      <image:title>Christmas Cookie Cutters</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/christmasimprintcutters-1.jpg</image:loc>
+      <image:title>Christmas Imprintable Cookie Cutters</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/christmasfrog-1.jpg</image:loc>
+      <image:title>Christmas Frog</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/concho-frog-1.jpg</image:loc>
+      <image:title>Concho The Frog</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/anyway-mother-teresa-1.jpg</image:loc>
+      <image:title>Anyway - Mother Teresa</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/mjquote-1.jpg</image:loc>
+      <image:title>Michael Jordan Lighted Quote</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/aikmanquote-1.jpg</image:loc>
+      <image:title>Troy Aikman Lighted Quote</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/dragonfidget-1.jpg</image:loc>
+      <image:title>Crystal Spine Dragon Fidget</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/flexiturtle-1.jpg</image:loc>
+      <image:title>Flexi Turtle</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/namedisplay-1.jpg</image:loc>
+      <image:title>Name Display</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wethecre8ers.com/images/products/photolightbox-1.jpg</image:loc>
+      <image:title>Customized Photo Light Box</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.wethecre8ers.com/products/concho-the-frog.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
