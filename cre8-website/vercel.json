@@ -1,4 +1,10 @@
 {
+  "rewrites": [
+    { "source": "/tiktok", "destination": "/tiktok.html" },
+    { "source": "/tiktok/", "destination": "/tiktok.html" },
+    { "source": "/tiktok-signs", "destination": "/tiktok-signs.html" },
+    { "source": "/tiktok-signs/", "destination": "/tiktok-signs.html" }
+  ],
   "headers": [
     {
       "source": "/(.*).xml",

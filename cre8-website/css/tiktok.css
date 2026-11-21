@@ -1,0 +1,52 @@
+/* ============================================================
+   TikTok link-in-bio pages (/tiktok.html and /tiktok-signs.html).
+   Shared by both so they look like a pair. Mobile-first: a single
+   narrow column of large tap targets, centered on desktop.
+   ============================================================ */
+.ttPage{max-width:480px; margin:0 auto; padding:28px 20px 56px; text-align:center;}
+.ttLogo{display:inline-block; margin:0 auto 14px;}
+.ttLogo img{height:84px; width:auto; margin:0 auto;}
+.ttTag{
+  margin:0 0 26px; font-size:14px; line-height:1.6; font-style:italic;
+  color:var(--silver);
+}
+
+.ttBtns{display:flex; flex-direction:column; gap:12px;}
+.ttBtn{
+  display:flex; align-items:center; justify-content:center; text-align:center;
+  min-height:58px; padding:14px 20px; border-radius:var(--radius);
+  font-family:var(--sans); font-size:14px; font-weight:600;
+  letter-spacing:.1em; text-transform:uppercase; line-height:1.3;
+  border:1px solid rgba(245,241,232,.35); color:var(--ivory); background:transparent;
+  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease, color .18s ease;
+}
+.ttBtn:hover, .ttBtn:focus-visible{border-color:var(--gold); color:var(--gold);}
+.ttBtn.gold{
+  background:linear-gradient(135deg, var(--gold), var(--gold-deep));
+  border-color:transparent; color:var(--black);
+}
+.ttBtn.gold:hover, .ttBtn.gold:focus-visible{
+  color:var(--black); transform:translateY(-2px); box-shadow:0 10px 26px rgba(200,149,61,.28);
+}
+/* The one main action on Randy's page: bigger than the rest. */
+.ttBtn.big{min-height:68px; font-size:15.5px; letter-spacing:.08em;}
+/* Secondary buttons: still comfortably tappable. */
+.ttBtn.small{min-height:50px; font-size:12.5px;}
+
+.ttSection{margin-top:34px; padding:0;} /* beats the site-wide section{padding:96px 0} */
+.ttSection .eyebrow{margin-bottom:16px;}
+.ttGrid{display:grid; grid-template-columns:1fr 1fr; gap:14px; text-align:left;}
+.ttGrid .featuredCard{flex:none; width:auto; min-width:0;}
+.ttGrid .featuredCard .fBody{padding:12px 12px 14px;}
+.ttGrid .featuredCard .fName{font-size:13px;}
+.ttGrid .featuredCard .fBody .price{font-size:14px;}
+.ttBtns + .ttSection{margin-top:34px;}
+.ttSection + .ttBtns{margin-top:28px;}
+.ttBtns.afterTop{margin-top:22px;}
+
+.ttNoscript{margin-top:24px; font-size:13.5px; line-height:1.9; color:var(--silver);}
+.ttNoscript a{color:var(--gold); border-bottom:1px solid rgba(200,149,61,.4);}
+
+@media (min-width:640px){
+  .ttPage{padding-top:44px;}
+}

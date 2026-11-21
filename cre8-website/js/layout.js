@@ -160,7 +160,11 @@ function renderChrome(){
     document.body.insertAdjacentHTML('afterbegin', contestBannerHTML());
   }
 
-  if (xmasIsOpen() && path !== XMAS.page && !xmasBannerDismissed()) {
+  // The Christmas page itself and the TikTok bio pages (/tiktok, /tiktok-signs,
+  // with or without .html or a trailing slash) skip the banner.
+  const barePath = path.length > 1 ? path.replace(/\/+$/, '') : path;
+  const onXmasSkipPage = path === XMAS.page || /^\/tiktok(-signs)?(\.html)?$/.test(barePath);
+  if (xmasIsOpen() && !onXmasSkipPage && !xmasBannerDismissed()) {
     document.body.insertAdjacentHTML('afterbegin', xmasBannerHTML());
   }
 
