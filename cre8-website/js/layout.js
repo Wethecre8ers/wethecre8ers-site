@@ -60,11 +60,19 @@ function contestBannerHTML(){
    can hide it with the X (remembered until the next season's id).
    ============================================================ */
 const XMAS = {
-  id: 'christmas-2026',
+  id: 'christmas-2026-orderby', // new id re-shows the banner once to visitors who dismissed the old one
   endsAt: '2026-12-26T04:59:59Z', // 11:59:59 PM Eastern on Dec 25, 2026
+  orderByText: 'Dec 15th',
+  orderByAt: '2026-12-16T04:59:59Z', // 11:59:59 PM Eastern on Dec 15, 2026
   page: '/shop-christmas.html'
 };
 function xmasIsOpen(){ return Date.now() < Date.parse(XMAS.endsAt); }
+function xmasBeforeOrderBy(){ return Date.now() < Date.parse(XMAS.orderByAt); }
+function xmasDeadlineText(){
+  return xmasBeforeOrderBy()
+    ? `Order by ${XMAS.orderByText} for Christmas delivery`
+    : 'Orders placed now may arrive after Christmas';
+}
 function xmasBannerDismissed(){
   try { return localStorage.getItem('cre8_xmas_banner') === XMAS.id; } catch (_) { return false; }
 }
@@ -96,7 +104,7 @@ function xmasBannerHTML(){
       <img src="/images/banner/xmas-cutters.jpg" alt="" width="64" height="64" decoding="async">
       <img src="/images/banner/xmas-imprint.jpg" alt="" width="64" height="64" decoding="async">
     </span>
-    <span class="xbText"><strong>Christmas is here!</strong> <span class="xbSub">Shop our Christmas Frog and Cookie Cutters</span></span>
+    <span class="xbText"><strong>Christmas is here!</strong> <span class="xbSub">Shop our Christmas Frog and Cookie Cutters</span><span class="xbDeadline">${xmasDeadlineText()}</span></span>
     <span class="xbGo">Shop<span class="xbGoMore"> Christmas</span> &rarr;</span>
   </a>
   <button class="xbClose" type="button" onclick="dismissXmasBanner()" aria-label="Hide the Christmas banner">&times;</button>
